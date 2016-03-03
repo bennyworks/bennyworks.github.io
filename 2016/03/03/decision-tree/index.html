@@ -124,7 +124,7 @@ ID
 3
 多">
 <meta property="og:image" content="http://jianbin.info/2016/03/03/decision-tree/decision_tree1.png">
-<meta property="og:updated_time" content="2016-03-03T17:01:40.935Z">
+<meta property="og:updated_time" content="2016-03-03T17:03:33.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
 <meta name="twitter:description" content="解决问题影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。
@@ -529,9 +529,9 @@ ID
 </table>
 <p>以上是2周时间内我们得到的天气预报记录。我们将通过该记录构建决策树，用于分析什么样的天气适合运动，以此参与运动用户量。</p>
 <h3 id="u6784_u9020_u51B3_u7B56_u6811"><a href="#u6784_u9020_u51B3_u7B56_u6811" class="headerlink" title="构造决策树"></a><strong>构造决策树</strong></h3><p>步骤：</p>
-<p>1.建立决策树：利用训练样本生成决策树模型<br>: a)开始，数据都在根节点;<br>: b)递归的进行数据分片</p>
-<p>2.修剪决策树：去掉一些可能是噪音或者异常的数据<br>: </p>
-<p>3.使用决策树对未知数据进行分类：按照决策树上采用的分割属性逐层往下，直到一个叶子节点<br>: </p>
+<p>1.建立决策树：利用训练样本生成决策树模型<br> a)开始，数据都在根节点;<br> b)递归的进行数据分片</p>
+<p>2.修剪决策树：去掉一些可能是噪音或者异常的数据</p>
+<p>3.使用决策树对未知数据进行分类：按照决策树上采用的分割属性逐层往下，直到一个叶子节点</p>
 <p>在建立决策树时，希望是节点分裂的动作尽量减少，这样建立起来的树深度就比较浅，决策树就会比较小，所以必须有一种指标来衡量节点分裂的质量，即量化纯度。</p>
 <p>如何度量决策树的纯度呢？熵和信息增益被引入到决策树算法中。熵越大表示越“不纯”，越小表示越“纯”。纯度差，则称为信息增益。</p>
 <h3 id="ID3_u7B97_u6CD5"><a href="#ID3_u7B97_u6CD5" class="headerlink" title="ID3算法"></a><strong>ID3算法</strong></h3><p>ID3算法是决策分类算法中最重要的一个算法，其他后续算法都是从ID3演变而来。</p>
