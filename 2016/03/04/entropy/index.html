@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据挖掘, 人工智能, 大数据" />
+  <meta name="keywords" content="熵, 信息量," />
 
 
 
@@ -51,37 +51,25 @@
 
 
 
-<meta name="description" content="title: 熵与信息量date: 2016-03-04 00:56:04tags:
-
-熵 
-信息量
-
-###问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
+<meta name="description" content="###问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
 ###定义
-熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。">
+熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。
+当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在通往数据挖掘的路上">
+<meta property="og:title" content="熵与信息量">
 <meta property="og:url" content="http://jianbin.info/2016/03/04/entropy/index.html">
 <meta property="og:site_name" content="在通往数据挖掘的路上">
-<meta property="og:description" content="title: 熵与信息量date: 2016-03-04 00:56:04tags:
-
-熵 
-信息量
-
-###问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
+<meta property="og:description" content="###问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
 ###定义
-熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。">
-<meta property="og:updated_time" content="2016-03-03T16:58:00.775Z">
+熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。
+当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定">
+<meta property="og:updated_time" content="2016-03-03T17:01:02.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在通往数据挖掘的路上">
-<meta name="twitter:description" content="title: 熵与信息量date: 2016-03-04 00:56:04tags:
-
-熵 
-信息量
-
-###问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
+<meta name="twitter:title" content="熵与信息量">
+<meta name="twitter:description" content="###问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
 ###定义
-熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。">
+熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。
+当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定">
 
 
 
@@ -93,7 +81,7 @@
   };
 </script>
 
-  <title>  | 在通往数据挖掘的路上 </title>
+  <title> 熵与信息量 | 在通往数据挖掘的路上 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -279,7 +267,7 @@
             
             
               
-                
+                熵与信息量
               
             
           </h1>
@@ -288,7 +276,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-04T00:58:00+08:00" content="2016-03-04">
+            <time itemprop="dateCreated" datetime="2016-03-04T00:56:04+08:00" content="2016-03-04">
               2016-03-04
             </time>
           </span>
@@ -319,12 +307,7 @@
       
 
       
-        <span itemprop="articleBody"><p>title: 熵与信息量<br>date: 2016-03-04 00:56:04<br>tags:</p>
-<ul>
-<li>熵 </li>
-<li>信息量</li>
-</ul>
-<p>###<strong>问题</strong><br>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
+        <span itemprop="articleBody"><p>###<strong>问题</strong><br>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
 <p>###<strong>定义</strong></p>
 <p><strong>熵</strong>，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。</p>
 <p>当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功”也就越大。而这里要消除不确定性所要做的事情就是<strong>信息量</strong>。</p>
@@ -347,6 +330,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/熵-信息量/" rel="tag">#熵, 信息量</a>
+          
+        </div>
       
 
       
@@ -387,7 +376,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/03/04/entropy/"
-           data-title="" data-url="http://jianbin.info/2016/03/04/entropy/">
+           data-title="熵与信息量" data-url="http://jianbin.info/2016/03/04/entropy/">
       </div>
     
   </div>
@@ -445,7 +434,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
