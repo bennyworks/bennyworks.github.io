@@ -124,7 +124,7 @@ ID
 3
 多">
 <meta property="og:image" content="http://jianbin.info/2016/03/03/decision-tree/decision_tree1.png">
-<meta property="og:updated_time" content="2016-03-03T15:11:18.127Z">
+<meta property="og:updated_time" content="2016-03-03T16:58:20.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
 <meta name="twitter:description" content="解决问题影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。
@@ -573,8 +573,8 @@ ID
 </tbody>
 </table>
 <p>最终构造的决策树如下：<br><img src="/2016/03/03/decision-tree/decision_tree1.png" alt="This is an decision tree image" title="This is an decision tree image"></p>
-<p>###<strong>停止条件</strong><br>决策树的构建过程是一个递归的过程，所以需要确定停止条件，否则过程将不会结束。一种最直观的方式是当每个子节点只有一种类型的记录时停止，但是这样往往会使得树的节点过多，导致过拟合问题（Over-Fitting）。另一种可行的方法是当前节点中的记录数低于一个最小的阀值，那么就停止分裂，将max(P(i))对应的分类作为当前叶节点的分类。</p>
-<p>###<strong>决策树的剪枝</strong><br>剪枝的目的是消除决策树的Over-Fitting问题，其实质是去除决策树中的噪声和异常。</p>
+<h3 id="u505C_u6B62_u6761_u4EF6"><a href="#u505C_u6B62_u6761_u4EF6" class="headerlink" title="停止条件"></a><strong>停止条件</strong></h3><p>决策树的构建过程是一个递归的过程，所以需要确定停止条件，否则过程将不会结束。一种最直观的方式是当每个子节点只有一种类型的记录时停止，但是这样往往会使得树的节点过多，导致过拟合问题（Over-Fitting）。另一种可行的方法是当前节点中的记录数低于一个最小的阀值，那么就停止分裂，将max(P(i))对应的分类作为当前叶节点的分类。</p>
+<h3 id="u51B3_u7B56_u6811_u7684_u526A_u679D"><a href="#u51B3_u7B56_u6811_u7684_u526A_u679D" class="headerlink" title="决策树的剪枝"></a><strong>决策树的剪枝</strong></h3><p>剪枝的目的是消除决策树的Over-Fitting问题，其实质是去除决策树中的噪声和异常。</p>
 <p>剪枝方法是很丰富的，主要有两种剪枝方法：</p>
 <blockquote>
 <ul>
@@ -600,6 +600,10 @@ ID
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/04/entropy/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -671,7 +675,7 @@ ID
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -734,7 +738,7 @@ ID
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6784_u9020_u51B3_u7B56_u6811"><span class="nav-number">4.</span> <span class="nav-text">构造决策树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID3_u7B97_u6CD5"><span class="nav-number">5.</span> <span class="nav-text">ID3算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6784_u9020_u51B3_u7B56_u6811"><span class="nav-number">4.</span> <span class="nav-text">构造决策树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID3_u7B97_u6CD5"><span class="nav-number">5.</span> <span class="nav-text">ID3算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u505C_u6B62_u6761_u4EF6"><span class="nav-number">6.</span> <span class="nav-text">停止条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51B3_u7B56_u6811_u7684_u526A_u679D"><span class="nav-number">7.</span> <span class="nav-text">决策树的剪枝</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
