@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="决策树, 分类, 预测, ID3, id3, 熵, 信息量," />
+  <meta name="keywords" content="关联规则, Apriori, apriori, 数据挖掘," />
 
 
 
@@ -51,116 +51,22 @@
 
 
 
-<meta name="description" content="解决问题影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。
-原理决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。
-经典案例先看看下面的数据表格(T1)：
-
-
-
-ID
-天气
-温度
-湿度
-风况
-运动
-
-
-
-
-1
-晴
-热
-高
-无
-不适合
-
-
-2
-晴
-热
-高
-有
-不适合
-
-
-3
-多">
+<meta name="description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
+原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
+比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
 <meta property="og:type" content="article">
-<meta property="og:title" content="决策树">
-<meta property="og:url" content="http://jianbin.info/2016/03/03/decision-tree/index.html">
+<meta property="og:title" content="关联规则">
+<meta property="og:url" content="http://jianbin.info/2016/03/04/association-rules/index.html">
 <meta property="og:site_name" content="在通往数据挖掘的路上">
-<meta property="og:description" content="解决问题影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。
-原理决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。
-经典案例先看看下面的数据表格(T1)：
-
-
-
-ID
-天气
-温度
-湿度
-风况
-运动
-
-
-
-
-1
-晴
-热
-高
-无
-不适合
-
-
-2
-晴
-热
-高
-有
-不适合
-
-
-3
-多">
-<meta property="og:image" content="http://jianbin.info/2016/03/03/decision-tree/decision_tree1.png">
-<meta property="og:updated_time" content="2016-03-04T02:28:13.648Z">
+<meta property="og:description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
+原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
+比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
+<meta property="og:updated_time" content="2016-03-04T10:36:10.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="决策树">
-<meta name="twitter:description" content="解决问题影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。
-原理决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。
-经典案例先看看下面的数据表格(T1)：
-
-
-
-ID
-天气
-温度
-湿度
-风况
-运动
-
-
-
-
-1
-晴
-热
-高
-无
-不适合
-
-
-2
-晴
-热
-高
-有
-不适合
-
-
-3
-多">
+<meta name="twitter:title" content="关联规则">
+<meta name="twitter:description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
+原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
+比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
 
 
 
@@ -172,7 +78,7 @@ ID
   };
 </script>
 
-  <title> 决策树 | 在通往数据挖掘的路上 </title>
+  <title> 关联规则 | 在通往数据挖掘的路上 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -358,7 +264,7 @@ ID
             
             
               
-                决策树
+                关联规则
               
             
           </h1>
@@ -367,8 +273,8 @@ ID
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-03T14:09:09+08:00" content="2016-03-03">
-              2016-03-03
+            <time itemprop="dateCreated" datetime="2016-03-04T18:08:35+08:00" content="2016-03-04">
+              2016-03-04
             </time>
           </span>
 
@@ -393,8 +299,8 @@ ID
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/03/decision-tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/decision-tree/" itemprop="commentsCount"></span>
+                <a href="/2016/03/04/association-rules/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/association-rules/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -413,190 +319,423 @@ ID
       
 
       
-        <span itemprop="articleBody"><h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。</p>
-<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。</p>
-<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>先看看下面的数据表格(T1)：</p>
+        <span itemprop="articleBody"><h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。</p>
+<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。</p>
+<p>比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设计、商场货架的布置、生产安排、具有针对性的市场营销等。</p>
+<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>某在线商店货架上有多种货物，例如，帽子、裙子、鞋子等,我们应用关联规则就是为了发现当一个人已经购买了帽子时，那他有多大可能还会买裙子呢？</p>
+<p>以某在线商店的购物系统为例，数据库中有 <strong>5</strong> 条用户客户购买记录表(T1)：</p>
 <table>
 <thead>
 <tr>
-<th>ID</th>
-<th>天气</th>
-<th>温度</th>
-<th>湿度</th>
-<th>风况</th>
-<th>运动</th>
+<th>项目ID</th>
+<th>帽子</th>
+<th>裙子</th>
+<th>鞋子</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>晴</td>
-<td>热</td>
-<td>高</td>
-<td>无</td>
-<td>不适合</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>2</td>
-<td>晴</td>
-<td>热</td>
-<td>高</td>
-<td>有</td>
-<td>不适合</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>3</td>
-<td>多云</td>
-<td>热</td>
-<td>高</td>
-<td>无</td>
-<td>适合</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>4</td>
-<td>有雨</td>
-<td>适中</td>
-<td>高</td>
-<td>无</td>
-<td>适合</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
 </tr>
 <tr>
 <td>5</td>
-<td>有雨</td>
-<td>凉</td>
-<td>适中</td>
-<td>无</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>6</td>
-<td>有雨</td>
-<td>凉</td>
-<td>适中</td>
-<td>有</td>
-<td>不适合</td>
-</tr>
-<tr>
-<td>7</td>
-<td>多云</td>
-<td>凉</td>
-<td>适中</td>
-<td>有</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>8</td>
-<td>晴</td>
-<td>适中</td>
-<td>高</td>
-<td>无</td>
-<td>不适合</td>
-</tr>
-<tr>
-<td>9</td>
-<td>晴</td>
-<td>凉</td>
-<td>适中</td>
-<td>无</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>10</td>
-<td>有雨</td>
-<td>适中</td>
-<td>适中</td>
-<td>无</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>11</td>
-<td>晴</td>
-<td>适中</td>
-<td>适中</td>
-<td>有</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>12</td>
-<td>多云</td>
-<td>适中</td>
-<td>高</td>
-<td>有</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>13</td>
-<td>多云</td>
-<td>热</td>
-<td>适中</td>
-<td>无</td>
-<td>适合</td>
-</tr>
-<tr>
-<td>14</td>
-<td>有雨</td>
-<td>适中</td>
-<td>高</td>
-<td>有</td>
-<td>不适合</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
-<p>以上是2周时间内我们得到的天气预报记录。我们将通过该记录构建决策树，用于分析什么样的天气适合运动，以此参与运动用户量。</p>
-<h3 id="u6784_u9020_u51B3_u7B56_u6811"><a href="#u6784_u9020_u51B3_u7B56_u6811" class="headerlink" title="构造决策树"></a><strong>构造决策树</strong></h3><p>步骤：</p>
-<p>1.建立决策树：利用训练样本生成决策树模型<br> a)开始，数据都在根节点;<br> b)递归的进行数据分片</p>
-<p>2.修剪决策树：去掉一些可能是噪音或者异常的数据</p>
-<p>3.使用决策树对未知数据进行分类：按照决策树上采用的分割属性逐层往下，直到一个叶子节点</p>
-<p>在建立决策树时，希望是节点分裂的动作尽量减少，这样建立起来的树深度就比较浅，决策树就会比较小，所以必须有一种指标来衡量节点分裂的质量，即量化纯度。</p>
-<p>如何度量决策树的纯度呢？熵和信息增益被引入到决策树算法中。熵越大表示越“不纯”，越小表示越“纯”。纯度差，则称为信息增益。</p>
-<h3 id="ID3_u7B97_u6CD5"><a href="#ID3_u7B97_u6CD5" class="headerlink" title="ID3算法"></a><strong>ID3算法</strong></h3><p>ID3算法是决策分类算法中最重要的一个算法，其他后续算法都是从ID3演变而来。</p>
-<p>其基本思想是：构造决策树，决策树的每个节点对应一个非类别属性，每条边对应该属性的每个可能值。以信息熵的下降速度作为选取测试属性的标准，即所选的测试属性是从根到当前节点的路径上，尚未被考虑的具有最高增益的属性。ID3算法选用信息增益进行属性选择。</p>
-<p><strong>举例如下：</strong><br>设表T1的记录训练集S，类C1运动=“适合”，类C2运动=“不适合”，s1是S中属于类C1的记录的个数，s2是S中属于类C2的记录的个数。</p>
-<p>计算训练集在分类下的总信息量为：<br>$$<br>I(s1+s2)=I(9,5)=-{9\over14}\log_2{9\over14}-{5\over14}\log_2{5\over14}=0.940<br>$$</p>
-<p>计算天气属性的熵：<br>$$<br>E(天气)={5\over14}I(2,3)+{4\over14}I(4,0)+{5\over14}I(3,2)=0.694<br>$$</p>
-<p>天气属性的信息增益为：<br>$$<br>Gain(天气)=I(9,5)-E(天气)=0.264<br>$$</p>
-<p>采用同样的方法可得：<br>$$<br>Gain(温度)=0.029,Gain(湿度)=0.151,Gain(风况)=0.048<br>$$</p>
-<p>根据以上计算可知，按照“天气”的属性进行分裂，可以得到纯度最高的决策树。<br>分裂结果如下(T2)：</p>
+<p>通过Apriori算法进行处理，过程为（1）扫描（2）计数（3）比较（4）产生频繁项集（5）连接、剪枝，产生候选集。重复步骤（1）~（5）直到不能发现更大的频集</p>
+<p>具体操作步骤如下：<br><strong>Step1.首先扫描表T1，产生候选集C1：</strong></p>
 <table>
 <thead>
 <tr>
-<th>天气</th>
-<th>C1</th>
-<th>C2</th>
-<th>I(pi,ni)</th>
+<th>项目集</th>
+<th>支持度</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>晴朗</td>
-<td>2</td>
-<td>3</td>
-<td>0.347</td>
+<td>帽子</td>
+<td>3/5</td>
 </tr>
 <tr>
-<td>多云</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
+<td>裙子</td>
+<td>4/5</td>
 </tr>
 <tr>
-<td>有雨</td>
-<td>3</td>
-<td>2</td>
-<td>0.347</td>
+<td>鞋子</td>
+<td>1/5</td>
 </tr>
 </tbody>
 </table>
-<p>最终构造的决策树如下：<br><img src="/2016/03/03/decision-tree/decision_tree1.png" alt="This is an decision tree image" title="This is an decision tree image"></p>
-<h3 id="u505C_u6B62_u6761_u4EF6"><a href="#u505C_u6B62_u6761_u4EF6" class="headerlink" title="停止条件"></a><strong>停止条件</strong></h3><p>决策树的构建过程是一个递归的过程，所以需要确定停止条件，否则过程将不会结束。一种最直观的方式是当每个子节点只有一种类型的记录时停止，但是这样往往会使得树的节点过多，导致过拟合问题（Over-Fitting）。另一种可行的方法是当前节点中的记录数低于一个最小的阀值，那么就停止分裂，将max(P(i))对应的分类作为当前叶节点的分类。</p>
-<h3 id="u51B3_u7B56_u6811_u7684_u526A_u679D"><a href="#u51B3_u7B56_u6811_u7684_u526A_u679D" class="headerlink" title="决策树的剪枝"></a><strong>决策树的剪枝</strong></h3><p>剪枝的目的是消除决策树的Over-Fitting问题，其实质是去除决策树中的噪声和异常。</p>
-<p>剪枝方法是很丰富的，主要有两种剪枝方法：</p>
+<p><strong>Step2.如果最小支持度为2/5，比较产生频集L1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子</td>
+<td>3/5</td>
+</tr>
+<tr>
+<td>裙子</td>
+<td>4/5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step3.由L1连接、计数产生候选集C2</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子,裙子</td>
+<td>2/5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step4.再次扫描表T1，由C2比较产生L2频集：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子,裙子</td>
+<td>2/5</td>
+</tr>
+</tbody>
+</table>
+<p>L2为得出的最终频集。<br>由此可以计算买帽子的人同时也会买裙子的置信度为：<br>$$<br>confidence(帽子\Rightarrow裙子)=P(帽子|裙子)=\frac{\frac{2}{5}}{3\over5}={\frac{2}{3}}<br>$$</p>
+<p>可以计算买裙子的人同时也会买帽子的置信度为：<br>$$<br>confidence(裙子\Rightarrow帽子)=P(裙子|帽子)=\frac{\frac{2}{5}}{\frac{4}{5}}=\frac{1}{2}<br>$$</p>
+<p>由此可以看到买帽子的人也买裙子的可能性(67%)高于买裙子的人也买帽子的可能性(50%)。帽子和裙子关联的支持度已足够高了，意味着这是一条有意义的关联规则。</p>
+<h3 id="Apriori_u7B97_u6CD5"><a href="#Apriori_u7B97_u6CD5" class="headerlink" title="Apriori算法"></a><strong>Apriori算法</strong></h3><p>在Apriori算法中，每一步创建该步的侯选集，统计每个侯选项目集的支持度，并和预定义的最小支持度比较，来确定该步的最大项目集。</p>
+<p>以数据库D1为例, 其中有四个事务记录，分别如下：</p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>I1,I3,I4</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>I2,I3,I5</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>I1.I2.I3,I5</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>I2,I5</td>
+</tr>
+</tbody>
+</table>
+<p>设定项目集的最小支持度(support)：2，开始算法：</p>
+<p><strong>Step1.第一次扫描D1，得到候选集C1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1}</td>
+<td>2</td>
+</tr>
+<tr>
+<td>{I2}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>{I3}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>{I4}</td>
+<td>1</td>
+</tr>
+<tr>
+<td>{I5}</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step2.比较最小支持度2得到频集L1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1}</td>
+<td>2</td>
+</tr>
+<tr>
+<td>{I2}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>{I3}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>{I5}</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step3.由L1连接、扫描D1并计数得到候选集C2：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1，I2}</td>
+<td>1</td>
+</tr>
+<tr>
+<td>{I1，I3}</td>
+<td>2</td>
+</tr>
+<tr>
+<td>{I1，I5}</td>
+<td>1</td>
+</tr>
+<tr>
+<td>{I2，I3}</td>
+<td>2</td>
+</tr>
+<tr>
+<td>{I2，I5}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>{I3，I5}</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step4.C2比较最小支持度2得到频集L2：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1，I3}</td>
+<td>2</td>
+</tr>
+<tr>
+<td>{I2，I3}</td>
+<td>2</td>
+</tr>
+<tr>
+<td>{I2，I5}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>{I3，I5}</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step5.连接、扫描D1并计数得到候选集C3：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1,I2,I3}</td>
+<td>1</td>
+</tr>
+<tr>
+<td>{I1,I3,I5}</td>
+<td>1</td>
+</tr>
+<tr>
+<td>{I2,I3,I5}</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step6.比较最小支持度2得到频集L3:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I2,I3,I5}</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>由此可以得出I2，I3，I5关联的支持度为2/4=50%， 很有可能是一种潜在的规律。</p>
+<h3 id="Apriori_u6539_u8FDB_u7B97_u6CD5"><a href="#Apriori_u6539_u8FDB_u7B97_u6CD5" class="headerlink" title="Apriori改进算法"></a><strong>Apriori改进算法</strong></h3><p>Apriori算法存在明显的缺陷<br>: 1.在每一步产生侯选项目集时循环产生的组合过多，没有排除不应该参与组合的元素;<br>: 2.每次计算项集的支持度时，都对数据库D中的全部记录进行了一遍扫描比较，如果是一个大型的数据库的话，这种扫描比较会大大增加计算机系统的I/O开销。而这种代价是随着数据库的记录的增加呈现出几何级数的增加。</p>
+<p>以数据库D2为例，总共有9个事务，具体如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>1346</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>234</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>123</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>26</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>2345</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>235</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>12346</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>13456</td>
+</tr>
+<tr>
+<td>T9</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>设定最小支持度为<strong>3</strong>，算法思路演示如下：</p>
+<p><strong>Step1.扫描D2，得到候选集C1，由于项集的支持度都&gt;=3，因此候选集C1=频集L1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<ul>
-<li>同步剪枝</li>
-<li>迟滞剪枝</li>
-</ul>
+<p><strong>Note</strong><br>由于下一步要计算项集有2个元素的情况，而T9只有1个元素，所以下次计数将不再扫描T9，设 <em>D2</em> 删除T9后为 <em>D2’</em><br>项目ID|项集<br>—–|—-<br>T1|1346<br>T2|234<br>T3|123<br>T4|26<br>T5|2345<br>T6|235<br>T7|12346<br>T8|13456</p>
 </blockquote>
+<p><strong>Step2.由L1连接、扫描 <em>D2’</em> 并计数产生候选集C2:</strong><br>项集|支持度<br>—-|—-<br>12|2<br>13|4<br>14|3<br>15|1<br>16|3<br>23|5<br>24|3<br>25|2<br>26|2<br>34|5<br>35|3<br>36|3<br>45|2<br>46|3<br>56|1</p>
+<p><strong>Step3.比较最小支持度3得到频集L2:</strong><br>项集|支持度<br>—|—<br>13|4<br>14|3<br>16|3<br>23|5<br>24|3<br>34|5<br>35|3<br>36|3<br>46|3</p>
+<blockquote>
+<p><strong>Note</strong><br>由于下一步要计算项集有3个元素的情况，而T4只有2个元素，所以下次计数将不再扫描T4，设 <em>D2’</em> 删除T4后为 <em>D2’’</em><br>项目ID|项集<br>—–|—-<br>T1|1346<br>T2|234<br>T3|123<br>T5|2345<br>T6|235<br>T7|12346<br>T8|13456</p>
+</blockquote>
+<p><strong>Step5.计算元素1-6在频集L2中出现的次数：</strong><br>元素|出现次数<br>—|——<br>1|3<br>2|2<br>3|5<br>4|4<br>5|1<br>6|3</p>
+<blockquote>
+<p><strong>Note</strong><br>由于元素5出现次数只有1次，那么将不会出现元素数量为3的项集中，进行项集连接时可以忽略</p>
+</blockquote>
+<p><strong>Step6.由L2连接、扫描 <em>D2’’</em> 计算产生候选集C3=L3:</strong><br>项集|支持度<br>—|—-<br>134|3<br>136|3<br>146|3<br>234|3<br>346|3</p>
+<blockquote>
+<p><strong>Note</strong><br>由于下一步要计算项集有4个元素的情况，而T2，T3，T6只有3个元素，所以下次计数将不再扫描T2，T3，T6，设 <em>D2’’</em> 删除T2，T3，T6后为 <em>D2’’’</em><br>项目ID|项集<br>—–|—-<br>T1|1346<br>T5|2345<br>T7|12346<br>T8|13456</p>
+</blockquote>
+<p><strong>Step7.计算元素在频集L3中的出现次数：</strong><br>元素|出现次数<br>—|—–<br>1|3<br>2|1<br>3|4<br>4|4<br>6|3</p>
+<blockquote>
+<p><strong>Note</strong><br>由于元素2出现次数只有1次，那么将不会出现元素数量为4的项集中，进行项集连接时可以忽略</p>
+</blockquote>
+<p><strong>Step8.由L3连接、扫描 <em>D’’’</em> 并计数产生候选集C4=L4:</strong><br>项集|支持度<br>—-|—–<br>1346|3</p>
+<p>由以上的演示可以看出：<br>1.根据新候选集中元素的出现次数决定排除一些不符合连接条件的元素，这就降低了组合的可能性，即降低循环判断的次数；<br>2.‘删除’一些不能支持频集的项目，生成新的数据库，从而逻辑地减少数据库中项目的数量。虽然有时间和I/O的开销，但是随着项目的减少，在循环次数增加的情况下，扫描次数的减少会逐渐提现出来。</p>
 </span>
       
     </div>
@@ -605,7 +744,7 @@ ID
       
         <div class="post-tags">
           
-            <a href="/tags/决策树-分类-预测-ID3-id3-熵-信息量/" rel="tag">#决策树, 分类, 预测, ID3, id3, 熵, 信息量</a>
+            <a href="/tags/关联规则-Apriori-apriori-数据挖掘/" rel="tag">#关联规则, Apriori, apriori, 数据挖掘</a>
           
         </div>
       
@@ -614,17 +753,13 @@ ID
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/09/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/03/04/entropy/" rel="next" title="熵与信息量">
+                <i class="fa fa-chevron-left"></i> 熵与信息量
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/04/entropy/" rel="prev" title="熵与信息量">
-                熵与信息量 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -651,8 +786,8 @@ ID
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/03/decision-tree/"
-           data-title="决策树" data-url="http://jianbin.info/2016/03/03/decision-tree/">
+      <div class="ds-thread" data-thread-key="2016/03/04/association-rules/"
+           data-title="关联规则" data-url="http://jianbin.info/2016/03/04/association-rules/">
       </div>
     
   </div>
@@ -759,7 +894,7 @@ ID
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6784_u9020_u51B3_u7B56_u6811"><span class="nav-number">4.</span> <span class="nav-text">构造决策树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID3_u7B97_u6CD5"><span class="nav-number">5.</span> <span class="nav-text">ID3算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u505C_u6B62_u6761_u4EF6"><span class="nav-number">6.</span> <span class="nav-text">停止条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51B3_u7B56_u6811_u7684_u526A_u679D"><span class="nav-number">7.</span> <span class="nav-text">决策树的剪枝</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apriori_u7B97_u6CD5"><span class="nav-number">4.</span> <span class="nav-text">Apriori算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apriori_u6539_u8FDB_u7B97_u6CD5"><span class="nav-number">5.</span> <span class="nav-text">Apriori改进算法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
