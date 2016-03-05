@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据挖掘, 人工智能, 大数据" />
+  <meta name="keywords" content="K-Means,clustering,数据挖掘,聚类分析," />
 
 
 
@@ -51,27 +51,21 @@
 
 
 
-<meta name="description" content="聚类分析标签 : 正常
-
-解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的">
+<meta name="description" content="解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；在因特网应用上，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="clustering">
 <meta property="og:url" content="http://jianbin.info/2016/03/05/clustering/index.html">
 <meta property="og:site_name" content="在通往数据挖掘的路上">
-<meta property="og:description" content="聚类分析标签 : 正常
-
-解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的">
+<meta property="og:description" content="解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；在因特网应用上，">
 <meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/algorithms.jpg">
 <meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/distance_measure.gif">
 <meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/formulation1.jpg">
-<meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/formulation1.jpg">
-<meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/formulation1.jpg">
-<meta property="og:updated_time" content="2016-03-05T08:37:30.189Z">
+<meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/formulation2.jpg">
+<meta property="og:image" content="http://jianbin.info/2016/03/05/clustering/formulation3.jpg">
+<meta property="og:updated_time" content="2016-03-05T09:15:53.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="clustering">
-<meta name="twitter:description" content="聚类分析标签 : 正常
-
-解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的">
+<meta name="twitter:description" content="解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；在因特网应用上，">
 
 
 
@@ -284,6 +278,21 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -309,9 +318,7 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="u805A_u7C7B_u5206_u6790"><a href="#u805A_u7C7B_u5206_u6790" class="headerlink" title="聚类分析"></a>聚类分析</h1><p>标签 : 正常</p>
-<hr>
-<h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>聚类分析被应用于很多方面。<br>在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；<br>在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；<br>在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；<br>在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；<br>在因特网应用上，聚类分析被用来在网上进行文档归类来修复信息。</p>
+        <span itemprop="articleBody"><h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>聚类分析被应用于很多方面。<br>在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；<br>在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；<br>在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；<br>在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；<br>在因特网应用上，聚类分析被用来在网上进行文档归类来修复信息。</p>
 <h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>聚类（Clustering）是将数据划分成群组的过程。研究如何在没有训练的条件下把对象化分为若干类。通过确定数据之间在预先制定的属性上的相似性来完成聚类任务，这样最相似的数据就聚集成簇（Cluster）。</p>
 <p>聚类与分类不同，聚类的类别取决于数据本身，而分类的类别是由数据分析人员预先定义好的。</p>
 <h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>下图的左边有一些点，我们用肉眼可以看出来有四个点群，但是我们怎么通过计算机程序找出这几个点群来呢？这就是聚类要解决的问题之一。通常使用基于划分的聚类方法来处理这类问题，最经典的就是k-平均（k-means）算法。</p>
@@ -338,15 +345,27 @@
 </blockquote>
 <p><strong>欧氏距离（Euclidean Distance）：</strong></p>
 <p>$$<br>    d(x_i,y<em>j)=(\sum</em>{k=1}^{p}|x<em>{ik}-x</em>{jk}|^{2})^{\frac{1}{2}}<br>$$</p>
-<img src="/2016/03/05/clustering/formulation1.jpg" alt="Euclidean Distance逼近中心的方式" title="Euclidean Distance逼近中心的方式">
+<img src="/2016/03/05/clustering/formulation2.jpg" alt="Euclidean Distance逼近中心的方式" title="Euclidean Distance逼近中心的方式">
 <p><strong>马哈顿距离（CityBlock Distance）：</strong></p>
 <p>$$<br>    d(x_i,y<em>j)=\sum</em>{k=1}^{p}|x<em>{ik}-x</em>{jk}|<br>$$</p>
-<img src="/2016/03/05/clustering/formulation1.jpg" alt="CityBlock Distance逼近中心的方式" title="CityBlock Distance逼近中心的方式">
+<img src="/2016/03/05/clustering/formulation3.jpg" alt="CityBlock Distance逼近中心的方式" title="CityBlock Distance逼近中心的方式">
 </span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/K-Means/" rel="tag">#K-Means</a>
+          
+            <a href="/tags/clustering/" rel="tag">#clustering</a>
+          
+            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
+          
+            <a href="/tags/聚类分析/" rel="tag">#聚类分析</a>
+          
+        </div>
       
 
       
@@ -445,7 +464,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -494,7 +513,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u805A_u7C7B_u5206_u6790"><span class="nav-number">1.</span> <span class="nav-text">聚类分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.0.1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">1.0.2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">1.0.3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K-Means_u7B97_u6CD5"><span class="nav-number">1.0.4.</span> <span class="nav-text">K-Means算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u8DDD_u79BB_u5EA6_u91CF"><span class="nav-number">1.0.5.</span> <span class="nav-text">距离度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F"><span class="nav-number">1.0.6.</span> <span class="nav-text">求点群中心点公式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K-Means_u7B97_u6CD5"><span class="nav-number">4.</span> <span class="nav-text">K-Means算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u8DDD_u79BB_u5EA6_u91CF"><span class="nav-number">5.</span> <span class="nav-text">距离度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F"><span class="nav-number">6.</span> <span class="nav-text">求点群中心点公式</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
