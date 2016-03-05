@@ -26,7 +26,7 @@
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!--  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"> -->
 
 
 
@@ -243,6 +243,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -267,7 +276,7 @@
               
                 
                 <a class="post-title-link" href="/2016/03/05/clustering/" itemprop="url">
-                  clustering
+                  聚类分析
                 </a>
               
             
@@ -324,42 +333,14 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>聚类分析被应用于很多方面。<br>在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；<br>在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；<br>在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；<br>在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；<br>在因特网应用上，聚类分析被用来在网上进行文档归类来修复信息。</p>
+          <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>聚类分析被应用于很多方面。<br>在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；<br>在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；<br>在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；<br>在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；<br>在因特网应用上，聚类分析被用来在网上进行文档归类来修复信息。</p>
 <h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>聚类（Clustering）是将数据划分成群组的过程。研究如何在没有训练的条件下把对象化分为若干类。通过确定数据之间在预先制定的属性上的相似性来完成聚类任务，这样最相似的数据就聚集成簇（Cluster）。</p>
 <p>聚类与分类不同，聚类的类别取决于数据本身，而分类的类别是由数据分析人员预先定义好的。</p>
-<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>下图的左边有一些点，我们用肉眼可以看出来有四个点群，但是我们怎么通过计算机程序找出这几个点群来呢？这就是聚类要解决的问题之一。通常使用基于划分的聚类方法来处理这类问题，最经典的就是k-平均（k-means）算法。</p>
-
-<h3 id="K-Means_u7B97_u6CD5"><a href="#K-Means_u7B97_u6CD5" class="headerlink" title="K-Means算法"></a><strong>K-Means算法</strong></h3><p>只要能把现实世界的物体的属性抽象成向量，就可以用K-Means算法来归类。</p>
-<p><strong>算法概要:</strong><br><img src="/2016/03/05/clustering/algorithms.jpg" alt="this is an algorithms image" title="this is an algorithms image"></p>
-<p>从上图中，我们可以看到，A，B，C，D，E是五个在图中点。而灰色的点是我们的中心点，也就是我们用来找点群的点。有两个中心点，所以K=2。</p>
-<p><strong>K-Means的算法如下：</strong><br>1)放置K（这里K=2）个点到正在聚集的点所表示的空间中。这些点代表查找点群的中心点；<br>2)每个点分配给最靠近自己的中心点，如A、B分配给上方的中心点，C、D、E分配给下方的中心点；<br>3)当所有点已经分配好后，需要重新计算并移动中心点到其点群的中心位置；<br>4)重复步骤2和3，直到种子点不再动弹，这样就完成了点的聚类。</p>
-<p><strong>优缺点</strong><br>这种基于划分的聚类算法的优点是收敛速度快，缺点是它要求类别数目K可以合理的估计，并且初始中心的选择和噪声会对聚类结果产生很大影响。</p>
-<h3 id="u8DDD_u79BB_u5EA6_u91CF"><a href="#u8DDD_u79BB_u5EA6_u91CF" class="headerlink" title="距离度量"></a><strong>距离度量</strong></h3><p>聚类算法的一个重要组成部分是点之间的距离度量。由于度量时需要将点映射到某个空间，然后根据点所在的坐标进行计算。</p>
-<p>上面的案例中，将映射到了二维空间，则点是由X/Y坐标确定的。</p>
-<p>如果X/Y坐标的物理单位是相同的，则用欧氏距离度量就可以成功地进行聚类。比如物体的长和宽都是长度单位。</p>
-<p>如果X/Y坐标的物理单位是不同的，有时使用欧氏距离会产生误导。比如物体的重量和高度的物理单位分别是重量单位和长度单位。那么刻度定标不同时可以导致不同的聚类。</p>
-<p>以下图为例：<br><img src="/2016/03/05/clustering/distance_measure.gif" alt="this is a distance measure image" title="this is a distance measure image"></p>
-<p>另外，这也不仅仅是一个图形的问题，当选择不用的数学公式计算这批数据向量中某个分量之间距离时，也会产生不同的聚类，因此需要利用领域内的知识来指导选择合适的公式。</p>
-<h3 id="u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F"><a href="#u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F" class="headerlink" title="求点群中心点公式"></a><strong>求点群中心点公式</strong></h3><p><strong>明氏距离（Minkowski Distance）：</strong></p>
-<p>$$<br>    d(x_i,y<em>j)=(\sum</em>{k=1}^{p}|x<em>{ik}-x</em>{jk}|^{q})^{\frac{1}{q}}<br>$$</p>
-<img src="/2016/03/05/clustering/formulation1.jpg" alt="Minkowski Distance逼近中心的方式" title="Minkowski Distance逼近中心的方式">
-<blockquote>
-<p><strong>Note</strong></p>
-<ul>
-<li><strong>q</strong> 可以随意取值，可以是负数，也可以是正数，或是无穷大。</li>
-</ul>
-</blockquote>
-<p><strong>欧氏距离（Euclidean Distance）：</strong></p>
-<p>$$<br>    d(x_i,y<em>j)=(\sum</em>{k=1}^{p}|x<em>{ik}-x</em>{jk}|^{2})^{\frac{1}{2}}<br>$$</p>
-<img src="/2016/03/05/clustering/formulation2.jpg" alt="Euclidean Distance逼近中心的方式" title="Euclidean Distance逼近中心的方式">
-<p><strong>马哈顿距离（CityBlock Distance）：</strong></p>
-<p>$$<br>    d(x_i,y<em>j)=\sum</em>{k=1}^{p}|x<em>{ik}-x</em>{jk}|<br>$$</p>
-<img src="/2016/03/05/clustering/formulation3.jpg" alt="CityBlock Distance逼近中心的方式" title="CityBlock Distance逼近中心的方式">
-
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/05/clustering/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -457,44 +438,22 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>打开文件themes/next/_config.yml，在大概162行将 <strong>mathjax</strong> 对应的值修改成 <strong>true</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">157</span> <span class="preprocessor"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="number">158</span> <span class="preprocessor"># Third Party Services Settings</span></span><br><span class="line"><span class="number">159</span> <span class="preprocessor"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="number">160</span> </span><br><span class="line"><span class="number">161</span> <span class="preprocessor"># MathJax Support</span></span><br><span class="line"><span class="number">162</span> mathjax: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+          <p>打开文件themes/next/_config.yml，在大概162行将 <strong>mathjax</strong> 对应的值修改成 <strong>true</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">157</span> <span class="preprocessor"># ---------------------------------</span></span><br><span class="line"><span class="number">158</span> <span class="preprocessor"># Third Party Services Settings</span></span><br><span class="line"><span class="number">159</span> <span class="preprocessor"># ---------------------------------</span></span><br><span class="line"><span class="number">160</span> </span><br><span class="line"><span class="number">161</span> <span class="preprocessor"># MathJax Support</span></span><br><span class="line"><span class="number">162</span> mathjax: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <h3 id="u5982_u4F55_u63D2_u5165_u516C_u5F0F"><a href="#u5982_u4F55_u63D2_u5165_u516C_u5F0F" class="headerlink" title="如何插入公式"></a>如何插入公式</h3><p>LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
-<p>行中公式可以用如下两种方法表示：<br>(数学公式)　或　￥数学公式￥（要把人民币符号换成美元符号）</p>
-<p>独立公式可以用如下两种方法表示：<br>[数学公式]　或　￥￥数学公式￥￥（要把人民币符号换成美元符号）</p>
-<p>例子：[J\alpha(x) = \sum{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}]<br>显示：$[J\alpha(x) = \sum{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}]$</p>
+<p>行中公式可以用如下两种方法表示：</p>
+<p>(数学公式)　或　￥数学公式￥（要把人民币符号换成美元符号）</p>
+<p>独立公式可以用如下两种方法表示：</p>
+<p>[数学公式]　或　￥￥数学公式￥￥（要把人民币符号换成美元符号）</p>
+<p>例子：J\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}</p>
+<p>显示：$J\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}$</p>
 <h3 id="u5982_u4F55_u8F93_u5165_u4E0A_u4E0B_u6807"><a href="#u5982_u4F55_u8F93_u5165_u4E0A_u4E0B_u6807" class="headerlink" title="如何输入上下标"></a>如何输入上下标</h3><p>^表示上标, _表示下标。如果上下标的内容多于一个字符，要用{}把这些内容括起来当成一个整体。上下标是可以嵌套的，也可以同时使用。<br>例子：x^{y^z}=(1+{\rm e}^x)^{-2xy^w}<br>显示：$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$</p>
 <p>另外，如果要在左右两边都有上下标，可以用\sideset命令。<br>例子：\sideset{^12}{^34}\bigotimes<br>显示：$\sideset{^12}{^34}\bigotimes$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u62EC_u53F7_u548C_u5206_u9694_u7B26"><a href="#u5982_u4F55_u8F93_u5165_u62EC_u53F7_u548C_u5206_u9694_u7B26" class="headerlink" title="如何输入括号和分隔符"></a>如何输入括号和分隔符</h3><p>()、[]和|表示自己，{}表示{}。当要显示大号的括号或分隔符时，要用\left和\right命令。<br>例子：f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)<br>显示：$f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)$</p>
-<p>有时候要用\left.或\right.进行匹配而不显示本身。<br>例子：f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)<br>显示：$f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)$</p>
-<p>有时候要用\left或\right进行匹配而不显示本身。</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u5206_u6570"><a href="#u5982_u4F55_u8F93_u5165_u5206_u6570" class="headerlink" title="如何输入分数"></a>如何输入分数</h3><p>例子：\frac{1}{3}　或　1 \over 3<br>显示：$\frac{1}{3}$ 或 $1 \over 3$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u5F00_u65B9"><a href="#u5982_u4F55_u8F93_u5165_u5F00_u65B9" class="headerlink" title="如何输入开方"></a>如何输入开方</h3><p>例子：\sqrt{2}　和　\sqrt[n]{3}<br>显示：$\sqrt{2}$ 和 $\sqrt[n]{3}$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u7701_u7565_u53F7"><a href="#u5982_u4F55_u8F93_u5165_u7701_u7565_u53F7" class="headerlink" title="如何输入省略号"></a>如何输入省略号</h3><p>数学公式中常见的省略号有两种，\ldots表示与文本底线对齐的省略号，\cdots表示与文本中线对齐的省略号。<br>例子：f(x1,x2,\ldots,xn) = x1^2 + x2^2 + \cdots + xn^2<br>显示：$f(x1,x2,\ldots,xn) = x1^2 + x2^2 + \cdots + xn^2$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u77E2_u91CF"><a href="#u5982_u4F55_u8F93_u5165_u77E2_u91CF" class="headerlink" title="如何输入矢量"></a>如何输入矢量</h3><p>例子：\vec{a} \cdot \vec{b}=0<br>显示：$\vec{a} \cdot \vec{b}=0$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u79EF_u5206"><a href="#u5982_u4F55_u8F93_u5165_u79EF_u5206" class="headerlink" title="如何输入积分"></a>如何输入积分</h3><p>例子：\int_0^1 x^2 {\rm d}x<br>显示：$\int_0^1 x^2 {\rm d}x$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u6781_u9650_u8FD0_u7B97"><a href="#u5982_u4F55_u8F93_u5165_u6781_u9650_u8FD0_u7B97" class="headerlink" title="如何输入极限运算"></a>如何输入极限运算</h3><p>例子：\lim_{n\rightarrow+\infty}{1\over{n(n+1)}}<br>显示：</p>
-<p>$$<br>\lim_{n\rightarrow+\infty}{1\over{n(n+1)}}<br>$$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u7D2F_u52A0_u3001_u7D2F_u4E58_u8FD0_u7B97"><a href="#u5982_u4F55_u8F93_u5165_u7D2F_u52A0_u3001_u7D2F_u4E58_u8FD0_u7B97" class="headerlink" title="如何输入累加、累乘运算"></a>如何输入累加、累乘运算</h3><p>例子：\sum<em>{i=0}^{n}\frac{1}{i^2} 和 \prod</em>{i=0}^{n} \frac{1}{i^2}<br>显示：</p>
-<p>$$<br>\sum_{i=0}^{n}\frac{1}{i^2}<br>$$</p>
-<p>$$<br>\prod_{i=0}^{n} \frac{1}{i^2}<br>$$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u5E0C_u814A_u5B57_u6BCD"><a href="#u5982_u4F55_u8F93_u5165_u5E0C_u814A_u5B57_u6BCD" class="headerlink" title="如何输入希腊字母"></a>如何输入希腊字母</h3><p>$\alpha$ : \alpha<br>$\beta$ : \beta<br>$\gamma$ : \gamma<br>$\Gamma$ : \Gamma<br>$\delta$ : \delta<br>$\Delta$ : \Delta<br>$\epsilon$ : \epsilon<br>$\varepsilon$ : \varepsilon<br>$\zeta$ : \zeta<br>$\eta$ : \eta<br>$\theta$ : \theta<br>$\Theta$ :　\Theta<br>$\vartheta$ : \vartheta<br>$\iota$ : \iota<br>$\kappa$ : \kappa<br>$\lambda$ : \lambda<br>$\Lambda$ :　 \Lambda<br>$\mu$ : \mu<br>$\nu$ : \nu<br>$\xi$ : \xi<br>$\Xi$ : \Xi<br>$\pi$ : \pi<br>$\Pi$ : \Pi<br>$\varpi$ : \varpi<br>$\rho$ : \rho<br>$\varrho$ : \varrho<br>$\sigma$ : \sigma<br>$\Sigma$ : \Sigma<br>$\varsigma$ : \varsigma<br>$\tau$ : \tau<br>$\upsilon$ : \upsilon<br>$\Upsilon$ : \Upsilon<br>$\phi$ : \phi<br>$\Phi$ : \Phi<br>$\varphi$ : \varphi<br>$\chi$ : \chi<br>$\psi$ : \psi<br>$\Psi$ : \Psi<br>$\omega$ : \omega<br>$\Omega$ : \Omega </p>
-<h3 id="u5982_u4F55_u8F93_u5165_u5176_u5B83_u7279_u6B8A_u5B57_u7B26"><a href="#u5982_u4F55_u8F93_u5165_u5176_u5B83_u7279_u6B8A_u5B57_u7B26" class="headerlink" title="如何输入其它特殊字符"></a>如何输入其它特殊字符</h3><p>关系运算符：<br>$\pm$ ：\pm<br>$\times$ ：\times<br>$\div$ ：\div<br>$\mid$ ：\mid<br>$\nmid$ ：\nmid<br>$\cdot$ ：\cdot<br>$\circ$ ：\circ<br>$\ast$ ：\ast<br>$\bigodot$ ：\bigodot<br>$\bigotimes$ ：\bigotimes<br>$\bigoplus$ ：\bigoplus<br>$\leq$ ：\leq<br>$\geq$ ：\geq<br>$\neq$ ：\neq<br>$\approx$ ：\approx<br>$\equiv$ ：\equiv<br>$\sum$ ：\sum<br>$\prod$ ：\prod<br>$\coprod$ ：\coprod</p>
-<p>集合运算符：<br>$\emptyset$ ：\emptyset<br>$\in$ ：\in<br>$\notin$ ：\notin<br>$\subset$ ：\subset<br>$\supset$ ：\supset<br>$\subseteq$ ：\subseteq<br>$\supseteq$ ：\supseteq<br>$\bigcap$ ：\bigcap<br>$\bigcup$ ：\bigcup<br>$\bigvee$ ：\bigvee<br>$\bigwedge$ ：\bigwedge<br>$\biguplus$ ：\biguplus<br>$\bigsqcup$ ：\bigsqcup</p>
-<p>对数运算符：<br>$\log$ ：\log<br>$\lg$ ：\lg<br>$\ln$ ：\ln</p>
-<p>三角运算符：<br>$\bot$ ：\bot<br>$\angle$ ：\angle<br>$30^\circ$ ：30^\circ<br>$\sin$ ：\sin<br>$\cos$ ：\cos<br>$\tan$ ：\tan<br>$\cot$ ：\cot<br>$\sec$ ：\sec<br>$\csc$ ：\csc</p>
-<p>微积分运算符：<br>$\prime$ ：\prime<br>$\int$ ：\int<br>$\iint$ ：\iint<br>$\iiint$ ：\iiint<br>$\iiiint$ ：\iiiint<br>$\oint$ ：\oint<br>$\lim$ ：\lim<br>$\infty$ ：\infty<br>$\nabla$ ：\nabla</p>
-<p>逻辑运算符：<br>$\because$ ：\because<br>$\therefore$ ：\therefore<br>$\forall$ ：\forall<br>$\exists$ ：\exists<br>$\not=$ ：\not=<br>$\not&gt;$ ：\not&gt;<br>$\not\subset$ ：\not\subset</p>
-<p>戴帽符号：<br>$\hat{y}$ ：\hat{y}<br>$\check{y}$ ：\check{y}<br>$\breve{y}$ ：\breve{y}</p>
-<p>连线符号：<br>$\overline{a+b+c+d}$ ：\overline{a+b+c+d}<br>$\underline{a+b+c+d}$ ：\underline{a+b+c+d}<br>$\overbrace{a+\underbrace{b+c}{1.0}+d}^{2.0}$ ：\overbrace{a+\underbrace{b+c}{1.0}+d}^{2.0}</p>
-<p>箭头符号：<br>$\uparrow$ ：\uparrow<br>$\downarrow$ ：\downarrow<br>$\Uparrow$ ：\Uparrow<br>$\Downarrow$ ：\Downarrow<br>$\rightarrow$ ：\rightarrow<br>$\leftarrow$ ：\leftarrow<br>$\Rightarrow$ ：\Rightarrow<br>$\Leftarrow$ ：\Leftarrow<br>$\longrightarrow$ ：\longrightarrow<br>$\longleftarrow$ ：\longleftarrow<br>$\Longrightarrow$ ：\Longrightarrow<br>$\Longleftarrow$ ：\Longleftarrow</p>
-<p>要输出字符: 空格 # $ % &amp; <em> { }<br>用命令: \空格 # \$ \% \&amp; </em> { }</p>
-<h3 id="u5982_u4F55_u8FDB_u884C_u5B57_u4F53_u8F6C_u6362"><a href="#u5982_u4F55_u8FDB_u884C_u5B57_u4F53_u8F6C_u6362" class="headerlink" title="如何进行字体转换"></a>如何进行字体转换</h3><p>要对公式的某一部分字符进行字体转换，可以用{\rm需转换的部分字符}命令，其中\rm可以参照下表选择合适的字体。<br>一般情况下，公式默认为意大利体。<br>\rm　　罗马体　　　　　　　\it　　意大利体<br>\bf　　黑体　　　　　　　　\cal 　花体<br>\sl　　倾斜体　　　　　　　\sf　　等线体<br>\mit 　数学斜体　　　　　　\tt　　打字机字体<br>\sc　　小体大写字母</p>
-
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/04/mathjax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -592,758 +551,14 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。</p>
+          <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。</p>
 <h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。</p>
 <p>比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设计、商场货架的布置、生产安排、具有针对性的市场营销等。</p>
-<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>某在线商店货架上有多种货物，例如，帽子、裙子、鞋子等,我们应用关联规则就是为了发现当一个人已经购买了帽子时，那他有多大可能还会买裙子呢？</p>
-<p>以某在线商店的购物系统为例，数据库中有 <strong>5</strong> 条用户客户购买记录表(T1)：</p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>帽子</th>
-<th>裙子</th>
-<th>鞋子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>2</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>3</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>4</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>5</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>通过Apriori算法进行处理，过程为（1）扫描（2）计数（3）比较（4）产生频繁项集（5）连接、剪枝，产生候选集。重复步骤（1）~（5）直到不能发现更大的频集</p>
-<p>具体操作步骤如下：<br><strong>Step1.首先扫描表T1，产生候选集C1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子</td>
-<td>3/5</td>
-</tr>
-<tr>
-<td>裙子</td>
-<td>4/5</td>
-</tr>
-<tr>
-<td>鞋子</td>
-<td>1/5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step2.如果最小支持度为2/5，比较产生频集L1:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子</td>
-<td>3/5</td>
-</tr>
-<tr>
-<td>裙子</td>
-<td>4/5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step3.由L1连接、计数产生候选集C2</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子,裙子</td>
-<td>2/5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step4.再次扫描表T1，由C2比较产生L2频集：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子,裙子</td>
-<td>2/5</td>
-</tr>
-</tbody>
-</table>
-<p>L2为得出的最终频集。<br>由此可以计算买帽子的人同时也会买裙子的置信度为：<br>$$<br>confidence(帽子\Rightarrow裙子)=P(帽子|裙子)=\frac{\frac{2}{5}}{3\over5}={\frac{2}{3}}<br>$$</p>
-<p>可以计算买裙子的人同时也会买帽子的置信度为：<br>$$<br>confidence(裙子\Rightarrow帽子)=P(裙子|帽子)=\frac{\frac{2}{5}}{\frac{4}{5}}=\frac{1}{2}<br>$$</p>
-<p>由此可以看到买帽子的人也买裙子的可能性(67%)高于买裙子的人也买帽子的可能性(50%)。帽子和裙子关联的支持度已足够高了，意味着这是一条有意义的关联规则。</p>
-<h3 id="Apriori_u7B97_u6CD5"><a href="#Apriori_u7B97_u6CD5" class="headerlink" title="Apriori算法"></a><strong>Apriori算法</strong></h3><p>在Apriori算法中，每一步创建该步的侯选集，统计每个侯选项目集的支持度，并和预定义的最小支持度比较，来确定该步的最大项目集。</p>
-<p>以数据库D1为例, 其中有四个事务记录，分别如下：</p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>I1, I3, I4</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>I2, I3, I5</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>I1, I2, I3, I5</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>I2, I5</td>
-</tr>
-</tbody>
-</table>
-<p>设定项目集的最小支持度(support)：2，开始算法：</p>
-<p><strong>Step1.第一次扫描D1，得到候选集C1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I4</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I5</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step2.比较最小支持度2得到频集L1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计算</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I5</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step3.由L1连接、扫描D1并计数得到候选集C2：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1，I2</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I1，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I1，I5</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I2，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2，I5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3，I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step4.C2比较最小支持度2得到频集L2：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计算</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2，I5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3，I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step5.连接、扫描D1并计数得到候选集C3：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1, I2, I3</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I1, I3, I5</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I2, I3, I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step6.比较最小支持度2得到频集L3:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I2, I3, I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p>由此可以得出I2，I3，I5关联的支持度为2/4=50%， 很有可能是一种潜在的规律。</p>
-<h3 id="Apriori_u6539_u8FDB_u7B97_u6CD5"><a href="#Apriori_u6539_u8FDB_u7B97_u6CD5" class="headerlink" title="Apriori改进算法"></a><strong>Apriori改进算法</strong></h3><p>Apriori算法存在明显的缺陷<br>: 1.在每一步产生侯选项目集时循环产生的组合过多，没有排除不应该参与组合的元素;<br>: 2.每次计算项集的支持度时，都对数据库D中的全部记录进行了一遍扫描比较，如果是一个大型的数据库的话，这种扫描比较会大大增加计算机系统的I/O开销。而这种代价是随着数据库的记录的增加呈现出几何级数的增加。</p>
-<p>以数据库D2为例，总共有9个事务，具体如下所示：</p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>234</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>123</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>26</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>235</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-<tr>
-<td>T9</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>设定最小支持度为<strong>3</strong>，算法思路演示如下：</p>
-<p><strong>Step1.扫描D2，得到候选集C1，由于项集的支持度都&gt;=3，因此候选集C1=频集L1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr>
-<td>2</td>
-<td>6</td>
-</tr>
-<tr>
-<td>3</td>
-<td>7</td>
-</tr>
-<tr>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr>
-<td>5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>6</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于下一步要计算项集有2个元素的情况，而T9只有1个元素，所以下次计数将不再扫描T9，设 <em>D2</em> 删除T9后为 <em>D2’</em></p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>234</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>123</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>26</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>235</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p><strong>Step2.由L1连接、扫描 <em>D2’</em> 并计数产生候选集C2:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>12</td>
-<td>2</td>
-</tr>
-<tr>
-<td>13</td>
-<td>4</td>
-</tr>
-<tr>
-<td>14</td>
-<td>3</td>
-</tr>
-<tr>
-<td>15</td>
-<td>1</td>
-</tr>
-<tr>
-<td>16</td>
-<td>3</td>
-</tr>
-<tr>
-<td>23</td>
-<td>5</td>
-</tr>
-<tr>
-<td>24</td>
-<td>3</td>
-</tr>
-<tr>
-<td>25</td>
-<td>2</td>
-</tr>
-<tr>
-<td>26</td>
-<td>2</td>
-</tr>
-<tr>
-<td>34</td>
-<td>5</td>
-</tr>
-<tr>
-<td>35</td>
-<td>3</td>
-</tr>
-<tr>
-<td>36</td>
-<td>3</td>
-</tr>
-<tr>
-<td>45</td>
-<td>2</td>
-</tr>
-<tr>
-<td>46</td>
-<td>3</td>
-</tr>
-<tr>
-<td>56</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step3.比较最小支持度3得到频集L2:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>13</td>
-<td>4</td>
-</tr>
-<tr>
-<td>14</td>
-<td>3</td>
-</tr>
-<tr>
-<td>16</td>
-<td>3</td>
-</tr>
-<tr>
-<td>23</td>
-<td>5</td>
-</tr>
-<tr>
-<td>24</td>
-<td>3</td>
-</tr>
-<tr>
-<td>34</td>
-<td>5</td>
-</tr>
-<tr>
-<td>35</td>
-<td>3</td>
-</tr>
-<tr>
-<td>36</td>
-<td>3</td>
-</tr>
-<tr>
-<td>46</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于下一步要计算项集有3个元素的情况，而T4只有2个元素，所以下次计数将不再扫描T4，设 <em>D2’</em> 删除T4后为 <em>D2’’</em></p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>234</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>123</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>235</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p><strong>Step5.计算元素1-6在频集L2中出现的次数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>元素</th>
-<th>出现次数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>5</td>
-</tr>
-<tr>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr>
-<td>5</td>
-<td>1</td>
-</tr>
-<tr>
-<td>6</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于元素5出现次数只有1次，那么将不会出现元素数量为3的项集中，进行项集连接时可以忽略</p>
-</blockquote>
-<p><strong>Step6.由L2连接、扫描 <em>D2’’</em> 计算产生候选集C3=L3:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>134</td>
-<td>3</td>
-</tr>
-<tr>
-<td>136</td>
-<td>3</td>
-</tr>
-<tr>
-<td>146</td>
-<td>3</td>
-</tr>
-<tr>
-<td>234</td>
-<td>3</td>
-</tr>
-<tr>
-<td>346</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于下一步要计算项集有4个元素的情况，而T2，T3，T6只有3个元素，所以下次计数将不再扫描T2，T3，T6，设 <em>D2’’</em> 删除T2，T3，T6后为 <em>D2’’’</em></p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p><strong>Step7.计算元素在频集L3中的出现次数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>元素</th>
-<th>出现次数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>1</td>
-</tr>
-<tr>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr>
-<td>6</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于元素2出现次数只有1次，那么将不会出现元素数量为4的项集中，进行项集连接时可以忽略</p>
-</blockquote>
-<p><strong>Step8.由L3连接、扫描 <em>D’’’</em> 并计数产生候选集C4=L4:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1346</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p>由以上的演示可以看出：<br>1.根据新候选集中元素的出现次数决定排除一些不符合连接条件的元素，这就降低了组合的可能性，即降低循环判断的次数；<br>2.‘删除’一些不能支持频集的项目，生成新的数据库，从而逻辑地减少数据库中项目的数量。虽然有时间和I/O的开销，但是随着项目的减少，在循环次数增加的情况下，扫描次数的减少会逐渐提现出来。</p>
-
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/04/association-rules/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1400,6 +615,21 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -1426,28 +656,13 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <h3 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a><strong>问题</strong></h3><p>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
-<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>熵</strong>，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。</p>
-<p>当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功”也就越大。而这里要消除不确定性所要做的事情就是<strong>信息量</strong>。</p>
-<p>所以，熵、不确定性、信息量，这三者是同一个数值。</p>
-<h3 id="u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97"><a href="#u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97" class="headerlink" title="熵和信息量的计算"></a><strong>熵和信息量的计算</strong></h3><p>以最简单的只有<strong>2</strong>种可能性为例，非此即彼，我们以这种事物的信息量为单位，叫1比特(bit)。</p>
-<p><strong>4</strong>种可能性的，用二分法，分为2组，我们要非此即彼地确定2次，才能确定其状态，所以含有2比特信息量。</p>
-<p>对于可能性数目有2的n次方的计算：<br>$$<br>N=2^n<br>$$</p>
-<p>那信息量就是n比特，计算公式将为：<br>$$<br>H=\log_2N={\log{N}\over\log2}<br>$$</p>
-<p>因此，当N＝3种可能性时，信息量计算结果为：<br>$$<br>H={\log3\over\log2}＝1.585<br>$$</p>
-<p>同理，英文有26个字母，每个字母的信息量为：<br>$$<br>H={\log26\over\log2}＝4.700<br>$$</p>
-<p>然而，汉字个数不定，算1000个时为：<br>$$<br>H={\log1000\over\log2}＝3*3.32=9.96<br>$$</p>
-<p>算作一万、十万时则分别为13.28、16.60。我们能随意增加大量一辈子也用不到的汉字，来无限地增加每个汉字的信息量？这当然不合理。</p>
-<p>那么信息量不能无条件地按符号的个数来计算，只有各符号的可能性一样，都等于1/n时才行。</p>
-<p>数字符号就满足这样的条件。事实上信息量应按符号的可能性（数学上叫概率大小）来计算，它是概率的负对数。</p>
-<p>二进制数只有<strong>2</strong>个符号：0和1，对于二进制数，每个符号的概率都等于1/2，按负对数计算为：<br>$$<br>    -\log{1\over{n}}=-(\log1-\log(n))=-(0-\log(n))=log(n)<br>$$</p>
-<p>如果符号i的概率pi不等于1/n，则:<br>$$<br>Hi=-\log(pi)<br>$$</p>
-<p>因为各个符号的概率pi不相等，对于总体来说，平均信息量就是它们的加权平均:<br>$$<br>H=-\sum{pi}*log(pi)<br>$$</p>
-
-            
-          </span>
+          <h3 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a><strong>问题</strong></h3><p>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
+<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>熵</strong>，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。<br>当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功”也就越大。而这里要消除不确定性所要做的事情就是<strong>信息量</strong>。<br>所以，熵、不确定性、信息量，这三者是同一个数值。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/04/entropy/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1545,9 +760,7 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。</p>
+          <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。</p>
 <h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。</p>
 <h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>先看看下面的数据表格(T1)：</p>
 <table>
@@ -1677,63 +890,11 @@
 </tbody>
 </table>
 <p>以上是2周时间内我们得到的天气预报记录。我们将通过该记录构建决策树，用于分析什么样的天气适合运动，以此参与运动用户量。</p>
-<h3 id="u6784_u9020_u51B3_u7B56_u6811"><a href="#u6784_u9020_u51B3_u7B56_u6811" class="headerlink" title="构造决策树"></a><strong>构造决策树</strong></h3><p>步骤：</p>
-<p>1.建立决策树：利用训练样本生成决策树模型<br> a)开始，数据都在根节点;<br> b)递归的进行数据分片</p>
-<p>2.修剪决策树：去掉一些可能是噪音或者异常的数据</p>
-<p>3.使用决策树对未知数据进行分类：按照决策树上采用的分割属性逐层往下，直到一个叶子节点</p>
-<p>在建立决策树时，希望是节点分裂的动作尽量减少，这样建立起来的树深度就比较浅，决策树就会比较小，所以必须有一种指标来衡量节点分裂的质量，即量化纯度。</p>
-<p>如何度量决策树的纯度呢？熵和信息增益被引入到决策树算法中。熵越大表示越“不纯”，越小表示越“纯”。纯度差，则称为信息增益。</p>
-<h3 id="ID3_u7B97_u6CD5"><a href="#ID3_u7B97_u6CD5" class="headerlink" title="ID3算法"></a><strong>ID3算法</strong></h3><p>ID3算法是决策分类算法中最重要的一个算法，其他后续算法都是从ID3演变而来。</p>
-<p>其基本思想是：构造决策树，决策树的每个节点对应一个非类别属性，每条边对应该属性的每个可能值。以信息熵的下降速度作为选取测试属性的标准，即所选的测试属性是从根到当前节点的路径上，尚未被考虑的具有最高增益的属性。ID3算法选用信息增益进行属性选择。</p>
-<p><strong>举例如下：</strong><br>设表T1的记录训练集S，类C1运动=“适合”，类C2运动=“不适合”，s1是S中属于类C1的记录的个数，s2是S中属于类C2的记录的个数。</p>
-<p>计算训练集在分类下的总信息量为：<br>$$<br>I(s1+s2)=I(9,5)=-{9\over14}\log_2{9\over14}-{5\over14}\log_2{5\over14}=0.940<br>$$</p>
-<p>计算天气属性的熵：<br>$$<br>E(天气)={5\over14}I(2,3)+{4\over14}I(4,0)+{5\over14}I(3,2)=0.694<br>$$</p>
-<p>天气属性的信息增益为：<br>$$<br>Gain(天气)=I(9,5)-E(天气)=0.264<br>$$</p>
-<p>采用同样的方法可得：<br>$$<br>Gain(温度)=0.029,Gain(湿度)=0.151,Gain(风况)=0.048<br>$$</p>
-<p>根据以上计算可知，按照“天气”的属性进行分裂，可以得到纯度最高的决策树。<br>分裂结果如下(T2)：</p>
-<table>
-<thead>
-<tr>
-<th>天气</th>
-<th>C1</th>
-<th>C2</th>
-<th>I(pi,ni)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>晴朗</td>
-<td>2</td>
-<td>3</td>
-<td>0.347</td>
-</tr>
-<tr>
-<td>多云</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>有雨</td>
-<td>3</td>
-<td>2</td>
-<td>0.347</td>
-</tr>
-</tbody>
-</table>
-<p>最终构造的决策树如下：<br><img src="/2016/03/03/decision-tree/decision_tree1.png" alt="This is an decision tree image" title="This is an decision tree image"></p>
-<h3 id="u505C_u6B62_u6761_u4EF6"><a href="#u505C_u6B62_u6761_u4EF6" class="headerlink" title="停止条件"></a><strong>停止条件</strong></h3><p>决策树的构建过程是一个递归的过程，所以需要确定停止条件，否则过程将不会结束。一种最直观的方式是当每个子节点只有一种类型的记录时停止，但是这样往往会使得树的节点过多，导致过拟合问题（Over-Fitting）。另一种可行的方法是当前节点中的记录数低于一个最小的阀值，那么就停止分裂，将max(P(i))对应的分类作为当前叶节点的分类。</p>
-<h3 id="u51B3_u7B56_u6811_u7684_u526A_u679D"><a href="#u51B3_u7B56_u6811_u7684_u526A_u679D" class="headerlink" title="决策树的剪枝"></a><strong>决策树的剪枝</strong></h3><p>剪枝的目的是消除决策树的Over-Fitting问题，其实质是去除决策树中的噪声和异常。</p>
-<p>剪枝方法是很丰富的，主要有两种剪枝方法：</p>
-<blockquote>
-<ul>
-<li>同步剪枝</li>
-<li>迟滞剪枝</li>
-</ul>
-</blockquote>
-
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/03/decision-tree/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -2063,23 +1224,5 @@
   
   
 
-
-<!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
 </body>
 </html>
