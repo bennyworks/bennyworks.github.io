@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="信息量,熵," />
+  <meta name="keywords" content="数据挖掘,数据挖掘概念," />
 
 
 
@@ -51,19 +51,20 @@
 
 
 
-<meta name="description" content="问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
-定义熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功">
+<meta name="description" content="数据挖掘的基本概念什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
+知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="熵与信息量">
-<meta property="og:url" content="http://jianbin.info/2016/03/04/entropy/index.html">
+<meta property="og:title" content="数据挖掘">
+<meta property="og:url" content="http://jianbin.info/2016/03/07/data-mining/index.html">
 <meta property="og:site_name" content="在通往数据挖掘的路上">
-<meta property="og:description" content="问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
-定义熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功">
-<meta property="og:updated_time" content="2016-03-05T12:45:46.469Z">
+<meta property="og:description" content="数据挖掘的基本概念什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
+知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识">
+<meta property="og:image" content="http://jianbin.info/2016/03/07/data-mining/data_mining.png">
+<meta property="og:updated_time" content="2016-03-07T14:46:17.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="熵与信息量">
-<meta name="twitter:description" content="问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
-定义熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功">
+<meta name="twitter:title" content="数据挖掘">
+<meta name="twitter:description" content="数据挖掘的基本概念什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
+知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识">
 
 
 
@@ -75,7 +76,7 @@
   };
 </script>
 
-  <title> 熵与信息量 | 在通往数据挖掘的路上 </title>
+  <title> 数据挖掘 | 在通往数据挖掘的路上 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +262,7 @@
             
             
               
-                熵与信息量
+                数据挖掘
               
             
           </h1>
@@ -270,8 +271,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-04T00:56:04+08:00" content="2016-03-04">
-              2016-03-04
+            <time itemprop="dateCreated" datetime="2016-03-07T22:36:55+08:00" content="2016-03-07">
+              2016-03-07
             </time>
           </span>
 
@@ -296,8 +297,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/04/entropy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/entropy/" itemprop="commentsCount"></span>
+                <a href="/2016/03/07/data-mining/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/data-mining/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -316,21 +317,13 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a><strong>问题</strong></h3><p>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
-<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>熵</strong>，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。<br>当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功”也就越大。而这里要消除不确定性所要做的事情就是<strong>信息量</strong>。<br>所以，熵、不确定性、信息量，这三者是同一个数值。</p>
-<a id="more"></a>
-<h3 id="u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97"><a href="#u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97" class="headerlink" title="熵和信息量的计算"></a><strong>熵和信息量的计算</strong></h3><p>以最简单的只有<strong>2</strong>种可能性为例，非此即彼，我们以这种事物的信息量为单位，叫1比特(bit)。</p>
-<p><strong>4</strong>种可能性的，用二分法，分为2组，我们要非此即彼地确定2次，才能确定其状态，所以含有2比特信息量。<br>对于可能性数目有2的n次方的计算：<br>$$<br>N=2^n<br>$$</p>
-<p>那信息量就是n比特，计算公式将为：<br>$$<br>H=\log_2N={\log{N}\over\log2}<br>$$</p>
-<p>因此，当N＝3种可能性时，信息量计算结果为：<br>$$<br>H={\log3\over\log2}＝1.585<br>$$</p>
-<p>同理，英文有26个字母，每个字母的信息量为：<br>$$<br>H={\log26\over\log2}＝4.700<br>$$</p>
-<p>然而，汉字个数不定，算1000个时为：<br>$$<br>H={\log1000\over\log2}＝3*3.32=9.96<br>$$</p>
-<p>算作一万、十万时则分别为13.28、16.60。我们能随意增加大量一辈子也用不到的汉字，来无限地增加每个汉字的信息量？这当然不合理。</p>
-<p>那么信息量不能无条件地按符号的个数来计算，只有各符号的可能性一样，都等于1/n时才行。</p>
-<p>数字符号就满足这样的条件。事实上信息量应按符号的可能性（数学上叫概率大小）来计算，它是概率的负对数。</p>
-<p>二进制数只有<strong>2</strong>个符号：0和1，对于二进制数，每个符号的概率都等于1/2，按负对数计算为：<br>$$<br>    -\log{1\over{n}}=-(\log1-\log(n))=-(0-\log(n))=log(n)<br>$$</p>
-<p>如果符号i的概率pi不等于1/n，则:<br>$$<br>Hi=-\log(pi)<br>$$</p>
-<p>因为各个符号的概率pi不相等，对于总体来说，平均信息量就是它们的加权平均:<br>$$<br>H=-\sum{pi}*log(pi)<br>$$</p>
+        <span itemprop="articleBody"><h1 id="u6570_u636E_u6316_u6398_u7684_u57FA_u672C_u6982_u5FF5"><a href="#u6570_u636E_u6316_u6398_u7684_u57FA_u672C_u6982_u5FF5" class="headerlink" title="数据挖掘的基本概念"></a>数据挖掘的基本概念</h1><h3 id="u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><a href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F" class="headerlink" title="什么是数据挖掘？"></a>什么是数据挖掘？</h3><p>数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。</p>
+<p>知识发现的过程包括以下几个步骤：<br>  1) 数据清理： 除噪声和删除不一致数据；<br>  2) 数据集成： 多种数据源的组合；<br>  3) 数据选择： 取和分析与任务相关的数据；<br>  4) 数据变换： 数据变换和统一成适合挖掘的形式；<br>  5) 数据挖掘： 使用智能方法提取数据格式；<br>  6) 模式评估： 识别代表知识的有趣模式；<br>  7) 知识表示： 使用可视化和知识表示技术，向用户提供挖掘的知识。</p>
+<h3 id="u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><a href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5" class="headerlink" title="数据挖掘的分析模型及算法"></a>数据挖掘的分析模型及算法</h3><h4 id="u5206_u6790_u6A21_u578B"><a href="#u5206_u6790_u6A21_u578B" class="headerlink" title="分析模型"></a>分析模型</h4><p>数据挖掘是一个交叉学科领域，吸纳了许多学科的技术，包括统计学、机器学习、数据库和数据仓库、信息检索、可视化技术等。</p>
+<p>在数据挖掘中，没有哪个方法可以解决所有问题，不同的实际问题，必须结合不同的领域知识，采用不同的数据挖掘方法，有的问题必须结合多种数据挖掘方法进行解决。在实际应用中，具体使用哪种方法主要取决于问题的类型以及数据的类型和规模。</p>
+<p>数据挖掘的方法一般分为预测型和描述型。预测型的方法一般有分类、预测、回归分析、时间序列分析四种，而描述型则分为聚类分析、关联分析、序列匹配三种。</p>
+<img src="/2016/03/07/data-mining/data_mining.png" alt="this is the data mining knowledge system image" title="this is the data mining knowledge system image">
+<h4 id="u6316_u6398_u7B97_u6CD5"><a href="#u6316_u6398_u7B97_u6CD5" class="headerlink" title="挖掘算法"></a>挖掘算法</h4><p>数据挖掘常见的算法主要有<a href="/2016/03/03/decision-tree/" title="决策树">决策树</a>、贝叶斯网络、遗传算法、神经网络(ANN<br>)、K邻近算法(KNN)、<a href="/2016/03/04/association-rules/" title="关联规则">关联规则</a>、回归分析、判别分析、<a href="/2016/03/05/clustering/" title="聚类分析">聚类分析</a>、主要成分分析及支持向量机等。</p>
 </span>
       
     </div>
@@ -339,9 +332,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/信息量/" rel="tag">#信息量</a>
+            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
           
-            <a href="/tags/熵/" rel="tag">#熵</a>
+            <a href="/tags/数据挖掘概念/" rel="tag">#数据挖掘概念</a>
           
         </div>
       
@@ -350,17 +343,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/03/decision-tree/" rel="next" title="决策树">
-                <i class="fa fa-chevron-left"></i> 决策树
+              <a href="/2016/03/05/clustering/" rel="next" title="聚类分析">
+                <i class="fa fa-chevron-left"></i> 聚类分析
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/04/association-rules/" rel="prev" title="关联规则">
-                关联规则 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,8 +376,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/04/entropy/"
-           data-title="熵与信息量" data-url="http://jianbin.info/2016/03/04/entropy/">
+      <div class="ds-thread" data-thread-key="2016/03/07/data-mining/"
+           data-title="数据挖掘" data-url="http://jianbin.info/2016/03/07/data-mining/">
       </div>
     
   </div>
@@ -495,7 +484,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B9A_u4E49"><span class="nav-number">2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97"><span class="nav-number">3.</span> <span class="nav-text">熵和信息量的计算</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u6570_u636E_u6316_u6398_u7684_u57FA_u672C_u6982_u5FF5"><span class="nav-number">1.</span> <span class="nav-text">数据挖掘的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><span class="nav-number">1.0.1.</span> <span class="nav-text">什么是数据挖掘？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><span class="nav-number">1.0.2.</span> <span class="nav-text">数据挖掘的分析模型及算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5206_u6790_u6A21_u578B"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">分析模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6316_u6398_u7B97_u6CD5"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">挖掘算法</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
