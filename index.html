@@ -327,11 +327,9 @@
           <span itemprop="articleBody">
             
               <p>python提供了多种数据类型来存放数据项集合。此外，用户还可以通过添加模块创建出更多容器类型。下面介绍机器学习中常用的几种容器。</p>
-<p>###列表(List)</p>
-<p>列表是python中最常用的数据类型，用方括号[]来创建空列表，括号内的数据项用逗号分隔，且不需要具有相同的类型。</p>
+<h3 id="u5217_u8868_28List_29"><a href="#u5217_u8868_28List_29" class="headerlink" title="列表(List)"></a>列表(List)</h3><p>列表是python中最常用的数据类型，用方括号[]来创建空列表，括号内的数据项用逗号分隔，且不需要具有相同的类型。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=[]</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=[<span class="string">'Benny'</span>,<span class="string">'July'</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names.append(<span class="string">'Shelly'</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names.append(<span class="number">8</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; [<span class="string">'Benny'</span>, <span class="string">'July'</span>, <span class="string">'Shelly'</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
-<p>####内置函数和方法</p>
-<table>
+<h4 id="u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5"><a href="#u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5" class="headerlink" title="内置函数和方法"></a>内置函数和方法</h4><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -407,9 +405,34 @@
 </tr>
 </tbody>
 </table>
-<p>###字典(Dictionary)<br>字典是一种存放无序键值对(key/value)的数据类型，用大括号{}来创建空字典，键的类型可以是数字或者字符串。</p>
+<h3 id="u5B57_u5178_28Dictionary_29"><a href="#u5B57_u5178_28Dictionary_29" class="headerlink" title="字典(Dictionary)"></a>字典(Dictionary)</h3><p>字典是一种存放无序键值对(key/value)的数据类型，用大括号{}来创建空字典，键的类型可以是数字或者字符串。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=&#123;&#125;</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=&#123;<span class="string">'name1'</span><span class="symbol">:<span class="string">'Benny'</span></span>,<span class="string">'name2'</span><span class="symbol">:<span class="string">'July'</span></span>&#125;</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names[<span class="number">1</span>]=<span class="string">'Shelly'</span></span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; &#123;<span class="number">1</span><span class="symbol">:</span> <span class="string">'Shelly'</span>, <span class="string">'name2'</span><span class="symbol">:</span> <span class="string">'Shelly'</span>, <span class="string">'name1'</span><span class="symbol">:</span> <span class="string">'Benny'</span>&#125;</span><br></pre></td></tr></table></figure>
-<p>####内置函数和方法<br>函数|说明<br>—|—-<br>cmp(dict1, dict2)|比较两个字典元素。<br>len(dict)|计算字典元素个数，即键的总数。<br>str(dict)|输出字典可打印的字符串表示。<br>type(variable)|返回输入的变量类型，如果变量是字典就返回字典类型。</p>
+<h4 id="u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5-1"><a href="#u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5-1" class="headerlink" title="内置函数和方法"></a>内置函数和方法</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmp(dict1, dict2)</td>
+<td>比较两个字典元素。</td>
+</tr>
+<tr>
+<td>len(dict)</td>
+<td>计算字典元素个数，即键的总数。</td>
+</tr>
+<tr>
+<td>str(dict)</td>
+<td>输出字典可打印的字符串表示。</td>
+</tr>
+<tr>
+<td>type(variable)</td>
+<td>返回输入的变量类型，如果变量是字典就返回字典类型。</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -460,7 +483,7 @@
 </tr>
 </tbody>
 </table>
-<p>###集合(Set)<br>这里的集合与数学中集合的概念类似，是指由无序不重复的元素组成的合集。创建空合集时必须用Set()，创建非空合集时可以用大括号{}。</p>
+<h3 id="u96C6_u5408_28Set_29"><a href="#u96C6_u5408_28Set_29" class="headerlink" title="集合(Set)"></a>集合(Set)</h3><p>这里的集合与数学中集合的概念类似，是指由无序不重复的元素组成的合集。创建空合集时必须用Set()，创建非空合集时可以用大括号{}。</p>
 <p>另外，集合支持一些书序运算，例如并集、交集和差集，分别用符号“|”、“&amp;”和“-”来表示。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names1=&#123;<span class="string">'Benny'</span>, <span class="string">'July'</span>, <span class="string">'Common'</span>&#125;</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names1</span><br><span class="line">set([<span class="string">'July'</span>, <span class="string">'Common'</span>, <span class="string">'Benny'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names2=set([<span class="string">'Shelly'</span>, <span class="string">'Common'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names2</span><br><span class="line">set([<span class="string">'Shelly'</span>, <span class="string">'Common'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names1|names2</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'Shelly'</span>, <span class="string">'July'</span>, <span class="string">'Common'</span>, <span class="string">'Benny'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names1&amp;names2</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'Common'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names1-names2</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'July'</span>, <span class="string">'Benny'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names2-names1</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'Shelly'</span>])</span><br></pre></td></tr></table></figure>
 
