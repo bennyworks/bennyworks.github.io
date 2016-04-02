@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Apriori,apriori,关联规则,数据挖掘," />
+  <meta name="keywords" content="numpy,python,矩阵," />
 
 
 
@@ -51,22 +51,25 @@
 
 
 
-<meta name="description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
-原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
-比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
+<meta name="description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
+numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
+数组处理使用数组时需要从numpy中导入array模块
+一维数组12345678910111213&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关联规则">
-<meta property="og:url" content="http://jianbin.info/2016/03/04/association-rules/index.html">
+<meta property="og:title" content="quick_guide_to_numpy">
+<meta property="og:url" content="http://jianbin.info/2016/04/02/quick-guide-to-numpy/index.html">
 <meta property="og:site_name" content="在通往数据挖掘的路上">
-<meta property="og:description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
-原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
-比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
-<meta property="og:updated_time" content="2016-03-05T12:43:36.329Z">
+<meta property="og:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
+numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
+数组处理使用数组时需要从numpy中导入array模块
+一维数组12345678910111213&amp;gt">
+<meta property="og:updated_time" content="2016-04-02T13:44:15.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关联规则">
-<meta name="twitter:description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
-原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
-比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
+<meta name="twitter:title" content="quick_guide_to_numpy">
+<meta name="twitter:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
+numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
+数组处理使用数组时需要从numpy中导入array模块
+一维数组12345678910111213&amp;gt">
 
 
 
@@ -78,7 +81,7 @@
   };
 </script>
 
-  <title> 关联规则 | 在通往数据挖掘的路上 </title>
+  <title> quick_guide_to_numpy | 在通往数据挖掘的路上 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +267,7 @@
             
             
               
-                关联规则
+                quick_guide_to_numpy
               
             
           </h1>
@@ -273,8 +276,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-04T18:08:35+08:00" content="2016-03-04">
-              2016-03-04
+            <time itemprop="dateCreated" datetime="2016-04-02T19:49:23+08:00" content="2016-04-02">
+              2016-04-02
             </time>
           </span>
 
@@ -283,8 +286,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
-                    <span itemprop="name">数据挖掘</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -299,8 +302,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/04/association-rules/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/association-rules/" itemprop="commentsCount"></span>
+                <a href="/2016/04/02/quick-guide-to-numpy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/quick-guide-to-numpy/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -319,754 +322,15 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。</p>
-<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。</p>
-<p>比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设计、商场货架的布置、生产安排、具有针对性的市场营销等。</p>
-<a id="more"></a>
-<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>某在线商店货架上有多种货物，例如，帽子、裙子、鞋子等,我们应用关联规则就是为了发现当一个人已经购买了帽子时，那他有多大可能还会买裙子呢？</p>
-<p>以某在线商店的购物系统为例，数据库中有 <strong>5</strong> 条用户客户购买记录表(T1)：</p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>帽子</th>
-<th>裙子</th>
-<th>鞋子</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>2</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>3</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>4</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>5</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>通过Apriori算法进行处理，过程为（1）扫描（2）计数（3）比较（4）产生频繁项集（5）连接、剪枝，产生候选集。重复步骤（1）~（5）直到不能发现更大的频集</p>
-<p>具体操作步骤如下：<br><strong>Step1.首先扫描表T1，产生候选集C1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子</td>
-<td>3/5</td>
-</tr>
-<tr>
-<td>裙子</td>
-<td>4/5</td>
-</tr>
-<tr>
-<td>鞋子</td>
-<td>1/5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step2.如果最小支持度为2/5，比较产生频集L1:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子</td>
-<td>3/5</td>
-</tr>
-<tr>
-<td>裙子</td>
-<td>4/5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step3.由L1连接、计数产生候选集C2</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子,裙子</td>
-<td>2/5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step4.再次扫描表T1，由C2比较产生L2频集：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项目集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>帽子,裙子</td>
-<td>2/5</td>
-</tr>
-</tbody>
-</table>
-<p>L2为得出的最终频集。<br>由此可以计算买帽子的人同时也会买裙子的置信度为：<br>$$<br>confidence(帽子\Rightarrow裙子)=P(帽子|裙子)=\frac{\frac{2}{5}}{3\over5}={\frac{2}{3}}<br>$$</p>
-<p>可以计算买裙子的人同时也会买帽子的置信度为：<br>$$<br>confidence(裙子\Rightarrow帽子)=P(裙子|帽子)=\frac{\frac{2}{5}}{\frac{4}{5}}=\frac{1}{2}<br>$$</p>
-<p>由此可以看到买帽子的人也买裙子的可能性(67%)高于买裙子的人也买帽子的可能性(50%)。帽子和裙子关联的支持度已足够高了，意味着这是一条有意义的关联规则。</p>
-<h3 id="Apriori_u7B97_u6CD5"><a href="#Apriori_u7B97_u6CD5" class="headerlink" title="Apriori算法"></a><strong>Apriori算法</strong></h3><p>在Apriori算法中，每一步创建该步的侯选集，统计每个侯选项目集的支持度，并和预定义的最小支持度比较，来确定该步的最大项目集。</p>
-<p>以数据库D1为例, 其中有四个事务记录，分别如下：</p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>I1, I3, I4</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>I2, I3, I5</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>I1, I2, I3, I5</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>I2, I5</td>
-</tr>
-</tbody>
-</table>
-<p>设定项目集的最小支持度(support)：2，开始算法：</p>
-<p><strong>Step1.第一次扫描D1，得到候选集C1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I4</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I5</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step2.比较最小支持度2得到频集L1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计算</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I5</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step3.由L1连接、扫描D1并计数得到候选集C2：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1，I2</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I1，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I1，I5</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I2，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2，I5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3，I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step4.C2比较最小支持度2得到频集L2：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计算</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2，I3</td>
-<td>2</td>
-</tr>
-<tr>
-<td>I2，I5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>I3，I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step5.连接、扫描D1并计数得到候选集C3：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I1, I2, I3</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I1, I3, I5</td>
-<td>1</td>
-</tr>
-<tr>
-<td>I2, I3, I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step6.比较最小支持度2得到频集L3:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度计数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>I2, I3, I5</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p>由此可以得出I2，I3，I5关联的支持度为2/4=50%， 很有可能是一种潜在的规律。</p>
-<h3 id="Apriori_u6539_u8FDB_u7B97_u6CD5"><a href="#Apriori_u6539_u8FDB_u7B97_u6CD5" class="headerlink" title="Apriori改进算法"></a><strong>Apriori改进算法</strong></h3><p>Apriori算法存在明显的缺陷<br>: 1.在每一步产生侯选项目集时循环产生的组合过多，没有排除不应该参与组合的元素;<br>: 2.每次计算项集的支持度时，都对数据库D中的全部记录进行了一遍扫描比较，如果是一个大型的数据库的话，这种扫描比较会大大增加计算机系统的I/O开销。而这种代价是随着数据库的记录的增加呈现出几何级数的增加。</p>
-<p>以数据库D2为例，总共有9个事务，具体如下所示：</p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>234</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>123</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>26</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>235</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-<tr>
-<td>T9</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>设定最小支持度为<strong>3</strong>，算法思路演示如下：</p>
-<p><strong>Step1.扫描D2，得到候选集C1，由于项集的支持度都&gt;=3，因此候选集C1=频集L1：</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr>
-<td>2</td>
-<td>6</td>
-</tr>
-<tr>
-<td>3</td>
-<td>7</td>
-</tr>
-<tr>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr>
-<td>5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>6</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于下一步要计算项集有2个元素的情况，而T9只有1个元素，所以下次计数将不再扫描T9，设 <em>D2</em> 删除T9后为 <em>D2’</em></p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>234</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>123</td>
-</tr>
-<tr>
-<td>T4</td>
-<td>26</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>235</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p><strong>Step2.由L1连接、扫描 <em>D2’</em> 并计数产生候选集C2:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>12</td>
-<td>2</td>
-</tr>
-<tr>
-<td>13</td>
-<td>4</td>
-</tr>
-<tr>
-<td>14</td>
-<td>3</td>
-</tr>
-<tr>
-<td>15</td>
-<td>1</td>
-</tr>
-<tr>
-<td>16</td>
-<td>3</td>
-</tr>
-<tr>
-<td>23</td>
-<td>5</td>
-</tr>
-<tr>
-<td>24</td>
-<td>3</td>
-</tr>
-<tr>
-<td>25</td>
-<td>2</td>
-</tr>
-<tr>
-<td>26</td>
-<td>2</td>
-</tr>
-<tr>
-<td>34</td>
-<td>5</td>
-</tr>
-<tr>
-<td>35</td>
-<td>3</td>
-</tr>
-<tr>
-<td>36</td>
-<td>3</td>
-</tr>
-<tr>
-<td>45</td>
-<td>2</td>
-</tr>
-<tr>
-<td>46</td>
-<td>3</td>
-</tr>
-<tr>
-<td>56</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step3.比较最小支持度3得到频集L2:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>13</td>
-<td>4</td>
-</tr>
-<tr>
-<td>14</td>
-<td>3</td>
-</tr>
-<tr>
-<td>16</td>
-<td>3</td>
-</tr>
-<tr>
-<td>23</td>
-<td>5</td>
-</tr>
-<tr>
-<td>24</td>
-<td>3</td>
-</tr>
-<tr>
-<td>34</td>
-<td>5</td>
-</tr>
-<tr>
-<td>35</td>
-<td>3</td>
-</tr>
-<tr>
-<td>36</td>
-<td>3</td>
-</tr>
-<tr>
-<td>46</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于下一步要计算项集有3个元素的情况，而T4只有2个元素，所以下次计数将不再扫描T4，设 <em>D2’</em> 删除T4后为 <em>D2’’</em></p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T2</td>
-<td>234</td>
-</tr>
-<tr>
-<td>T3</td>
-<td>123</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T6</td>
-<td>235</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p><strong>Step5.计算元素1-6在频集L2中出现的次数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>元素</th>
-<th>出现次数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>5</td>
-</tr>
-<tr>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr>
-<td>5</td>
-<td>1</td>
-</tr>
-<tr>
-<td>6</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于元素5出现次数只有1次，那么将不会出现元素数量为3的项集中，进行项集连接时可以忽略</p>
-</blockquote>
-<p><strong>Step6.由L2连接、扫描 <em>D2’’</em> 计算产生候选集C3=L3:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>134</td>
-<td>3</td>
-</tr>
-<tr>
-<td>136</td>
-<td>3</td>
-</tr>
-<tr>
-<td>146</td>
-<td>3</td>
-</tr>
-<tr>
-<td>234</td>
-<td>3</td>
-</tr>
-<tr>
-<td>346</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于下一步要计算项集有4个元素的情况，而T2，T3，T6只有3个元素，所以下次计数将不再扫描T2，T3，T6，设 <em>D2’’</em> 删除T2，T3，T6后为 <em>D2’’’</em></p>
-<table>
-<thead>
-<tr>
-<th>项目ID</th>
-<th>项集</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>T1</td>
-<td>1346</td>
-</tr>
-<tr>
-<td>T5</td>
-<td>2345</td>
-</tr>
-<tr>
-<td>T7</td>
-<td>12346</td>
-</tr>
-<tr>
-<td>T8</td>
-<td>13456</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-<p><strong>Step7.计算元素在频集L3中的出现次数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>元素</th>
-<th>出现次数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>1</td>
-</tr>
-<tr>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr>
-<td>6</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note</strong><br>由于元素2出现次数只有1次，那么将不会出现元素数量为4的项集中，进行项集连接时可以忽略</p>
-</blockquote>
-<p><strong>Step8.由L3连接、扫描 <em>D’’’</em> 并计数产生候选集C4=L4:</strong></p>
-<table>
-<thead>
-<tr>
-<th>项集</th>
-<th>支持度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1346</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p>由以上的演示可以看出：<br>1.根据新候选集中元素的出现次数决定排除一些不符合连接条件的元素，这就降低了组合的可能性，即降低循环判断的次数；<br>2.‘删除’一些不能支持频集的项目，生成新的数据库，从而逻辑地减少数据库中项目的数量。虽然有时间和I/O的开销，但是随着项目的减少，在循环次数增加的情况下，扫描次数的减少会逐渐提现出来。</p>
+        <span itemprop="articleBody"><h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><p>numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。</p>
+<p>numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。</p>
+<h3 id="u6570_u7EC4_u5904_u7406"><a href="#u6570_u7EC4_u5904_u7406" class="headerlink" title="数组处理"></a>数组处理</h3><p>使用数组时需要从numpy中导入array模块</p>
+<h4 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import <span class="built_in">array</span></span><br><span class="line">&gt;&gt;&gt; ages1=<span class="built_in">array</span>([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span><br><span class="line">&gt;&gt;&gt; ages2=<span class="built_in">array</span>([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages1+ages2 <span class="preprocessor"># 元素对应元素相加</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">45</span>, <span class="number">44</span>, <span class="number">17</span>])</span><br><span class="line">&gt;&gt;&gt; ages1*<span class="number">2</span>     <span class="preprocessor"># 元素乘以常量<span class="number">2</span></span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">30</span>, <span class="number">30</span>, <span class="number">30</span>])</span><br><span class="line">&gt;&gt;&gt; ages1**<span class="number">2</span>    <span class="preprocessor"># 元素平方</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">225</span>, <span class="number">225</span>, <span class="number">225</span>])</span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">1</span>]    <span class="preprocessor"># 访问元素</span></span><br><span class="line"><span class="number">29</span></span><br><span class="line">&gt;&gt;&gt; ages1*ages2 <span class="preprocessor"># 数组对应元素相乘</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="u591A_u7EF4_u6570_u7EC4"><a href="#u591A_u7EF4_u6570_u7EC4" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ages=([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">0</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="u77E9_u9635_u5904_u7406"><a href="#u77E9_u9635_u5904_u7406" class="headerlink" title="矩阵处理"></a>矩阵处理</h3><p>使用矩阵时需要从numpy中导入matrix或者mat模块<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import mat,matrix</span><br><span class="line">&gt;&gt;&gt; ages1=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages1</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">matrix</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">0</span>,<span class="number">2</span>]      #访问矩阵中的单个元素</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; pyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  #python列表转换成numpy矩阵</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">mat</span><span class="params">(pyList)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2<span class="class">.T</span>         #转置矩阵</span><br><span class="line">matrix([[<span class="number">30</span>],</span><br><span class="line">        [<span class="number">29</span>],</span><br><span class="line">        [ <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages1*ages2<span class="class">.T</span>   #矩阵相乘 m*n矩阵乘以n*p矩阵等于m*p矩阵</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">915</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">sort</span><span class="params">()</span></span>    #该方法是原地排序，需要保留原数据的话要做好备份</span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[ <span class="number">2</span>, <span class="number">29</span>, <span class="number">30</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span> #获取矩阵元素由小到大的排序序号</span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">argsort</span><span class="params">()</span></span> </span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">mean</span><span class="params">()</span></span>    #计算矩阵的均值</span><br><span class="line"><span class="number">20.333333333333332</span></span><br></pre></td></tr></table></figure></p>
+<p>####矩阵元素相乘<br>把两个矩阵的对应元素相乘，需要从numpy中导入multiply模块</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import multiply</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">multiply</span><span class="params">(ages1, ages2)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>]])</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="u901A_u8FC7numpy_u4E2D_u7684shape_u65B9_u6CD5_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><a href="#u901A_u8FC7numpy_u4E2D_u7684shape_u65B9_u6CD5_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570" class="headerlink" title="通过numpy中的shape方法来查看矩阵或者数组的维数"></a>通过numpy中的shape方法来查看矩阵或者数组的维数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import shape</span><br><span class="line">&gt;&gt;&gt; ages=mat([[<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; shape(ages)</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)          <span class="preprocessor">#<span class="number">2</span>行<span class="number">3</span>列的矩阵</span></span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,:]   <span class="preprocessor">#取出第<span class="number">1</span>行元素，从第<span class="number">0</span>行算起</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,<span class="number">0</span>:<span class="number">2</span>] <span class="preprocessor">#取出第<span class="number">1</span>行<span class="number">0</span>列和<span class="number">1</span>列的元素</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>]])</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -1075,13 +339,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Apriori/" rel="tag">#Apriori</a>
+            <a href="/tags/numpy/" rel="tag">#numpy</a>
           
-            <a href="/tags/apriori/" rel="tag">#apriori</a>
+            <a href="/tags/python/" rel="tag">#python</a>
           
-            <a href="/tags/关联规则/" rel="tag">#关联规则</a>
-          
-            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
+            <a href="/tags/矩阵/" rel="tag">#矩阵</a>
           
         </div>
       
@@ -1090,17 +352,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/04/entropy/" rel="next" title="熵与信息量">
-                <i class="fa fa-chevron-left"></i> 熵与信息量
+              <a href="/2016/04/02/py-data-structure/" rel="next" title="python常用于机器学习的数据类型">
+                <i class="fa fa-chevron-left"></i> python常用于机器学习的数据类型
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/04/mathjax/" rel="prev" title="hexo在Next主题下输入数学公式">
-                hexo在Next主题下输入数学公式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1127,8 +385,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/04/association-rules/"
-           data-title="关联规则" data-url="http://jianbin.info/2016/03/04/association-rules/">
+      <div class="ds-thread" data-thread-key="2016/04/02/quick-guide-to-numpy/"
+           data-title="quick_guide_to_numpy" data-url="http://jianbin.info/2016/04/02/quick-guide-to-numpy/">
       </div>
     
   </div>
@@ -1235,7 +493,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apriori_u7B97_u6CD5"><span class="nav-number">4.</span> <span class="nav-text">Apriori算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apriori_u6539_u8FDB_u7B97_u6CD5"><span class="nav-number">5.</span> <span class="nav-text">Apriori改进算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u7EC4_u5904_u7406"><span class="nav-number">2.</span> <span class="nav-text">数组处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E00_u7EF4_u6570_u7EC4"><span class="nav-number">2.1.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u591A_u7EF4_u6570_u7EC4"><span class="nav-number">2.2.</span> <span class="nav-text">多维数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5904_u7406"><span class="nav-number">3.</span> <span class="nav-text">矩阵处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u901A_u8FC7numpy_u4E2D_u7684shape_u65B9_u6CD5_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><span class="nav-number">4.</span> <span class="nav-text">通过numpy中的shape方法来查看矩阵或者数组的维数</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

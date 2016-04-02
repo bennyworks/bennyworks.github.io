@@ -266,6 +266,117 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/02/quick-guide-to-numpy/" itemprop="url">
+                  quick_guide_to_numpy
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-04-02T19:49:23+08:00" content="2016-04-02">
+              2016-04-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/02/quick-guide-to-numpy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/quick-guide-to-numpy/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><p>numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。</p>
+<p>numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。</p>
+<h3 id="u6570_u7EC4_u5904_u7406"><a href="#u6570_u7EC4_u5904_u7406" class="headerlink" title="数组处理"></a>数组处理</h3><p>使用数组时需要从numpy中导入array模块</p>
+<h4 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import <span class="built_in">array</span></span><br><span class="line">&gt;&gt;&gt; ages1=<span class="built_in">array</span>([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span><br><span class="line">&gt;&gt;&gt; ages2=<span class="built_in">array</span>([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages1+ages2 <span class="preprocessor"># 元素对应元素相加</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">45</span>, <span class="number">44</span>, <span class="number">17</span>])</span><br><span class="line">&gt;&gt;&gt; ages1*<span class="number">2</span>     <span class="preprocessor"># 元素乘以常量<span class="number">2</span></span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">30</span>, <span class="number">30</span>, <span class="number">30</span>])</span><br><span class="line">&gt;&gt;&gt; ages1**<span class="number">2</span>    <span class="preprocessor"># 元素平方</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">225</span>, <span class="number">225</span>, <span class="number">225</span>])</span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">1</span>]    <span class="preprocessor"># 访问元素</span></span><br><span class="line"><span class="number">29</span></span><br><span class="line">&gt;&gt;&gt; ages1*ages2 <span class="preprocessor"># 数组对应元素相乘</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="u591A_u7EF4_u6570_u7EC4"><a href="#u591A_u7EF4_u6570_u7EC4" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ages=([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">0</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="u77E9_u9635_u5904_u7406"><a href="#u77E9_u9635_u5904_u7406" class="headerlink" title="矩阵处理"></a>矩阵处理</h3><p>使用矩阵时需要从numpy中导入matrix或者mat模块<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import mat,matrix</span><br><span class="line">&gt;&gt;&gt; ages1=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages1</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">matrix</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">0</span>,<span class="number">2</span>]      #访问矩阵中的单个元素</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; pyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  #python列表转换成numpy矩阵</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">mat</span><span class="params">(pyList)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2<span class="class">.T</span>         #转置矩阵</span><br><span class="line">matrix([[<span class="number">30</span>],</span><br><span class="line">        [<span class="number">29</span>],</span><br><span class="line">        [ <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages1*ages2<span class="class">.T</span>   #矩阵相乘 m*n矩阵乘以n*p矩阵等于m*p矩阵</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">915</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">sort</span><span class="params">()</span></span>    #该方法是原地排序，需要保留原数据的话要做好备份</span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[ <span class="number">2</span>, <span class="number">29</span>, <span class="number">30</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span> #获取矩阵元素由小到大的排序序号</span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">argsort</span><span class="params">()</span></span> </span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">mean</span><span class="params">()</span></span>    #计算矩阵的均值</span><br><span class="line"><span class="number">20.333333333333332</span></span><br></pre></td></tr></table></figure></p>
+<p>####矩阵元素相乘<br>把两个矩阵的对应元素相乘，需要从numpy中导入multiply模块</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import multiply</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">multiply</span><span class="params">(ages1, ages2)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>]])</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="u901A_u8FC7numpy_u4E2D_u7684shape_u65B9_u6CD5_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><a href="#u901A_u8FC7numpy_u4E2D_u7684shape_u65B9_u6CD5_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570" class="headerlink" title="通过numpy中的shape方法来查看矩阵或者数组的维数"></a>通过numpy中的shape方法来查看矩阵或者数组的维数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import shape</span><br><span class="line">&gt;&gt;&gt; ages=mat([[<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; shape(ages)</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)          <span class="preprocessor">#<span class="number">2</span>行<span class="number">3</span>列的矩阵</span></span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,:]   <span class="preprocessor">#取出第<span class="number">1</span>行元素，从第<span class="number">0</span>行算起</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,<span class="number">0</span>:<span class="number">2</span>] <span class="preprocessor">#取出第<span class="number">1</span>行<span class="number">0</span>列和<span class="number">1</span>列的元素</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>]])</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/02/py-data-structure/" itemprop="url">
                   python常用于机器学习的数据类型
                 </a>
@@ -1484,106 +1595,14 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/09/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-09T20:22:30+08:00" content="2016-01-09">
-              2016-01-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/09/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
         </div>
@@ -1622,7 +1641,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1636,7 +1655,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
