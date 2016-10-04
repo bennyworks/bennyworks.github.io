@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="numpy,python,矩阵," />
+  <meta name="keywords" content="IDE,python,vim,编辑器," />
 
 
 
@@ -51,25 +51,43 @@
 
 
 
-<meta name="description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
-numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
-数组处理使用数组时需要从numpy中导入array函数
-一维数组12345678910111213&amp;gt">
+<meta name="description" content="安装vim网上很多教程，自行搜索，不再说明。
+安装git这里使用到的vim插件都是从git上下载，所以先确保你本地已经安装了git客户端。使用git的好处是安装和更新都很方便。
+vim配置和插件以下配置和插件都是在Linux当前用户根目录下处理，此处不讨论全局配置的问题
+
+
+~/.vim 为插件目录
+~/.vimrc 为配置目录
+
+注：~/.vim目录不存在则自行创建(mkdir -p ~/.vi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python的numpy模块快速入门">
-<meta property="og:url" content="http://jianbin.info/2016/04/02/quick-guide-to-numpy/index.html">
+<meta property="og:title" content="linux下用vim打造python编辑器">
+<meta property="og:url" content="http://jianbin.info/2016/10/04/vim-python/index.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
-numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
-数组处理使用数组时需要从numpy中导入array函数
-一维数组12345678910111213&amp;gt">
-<meta property="og:updated_time" content="2016-04-02T13:52:22.618Z">
+<meta property="og:description" content="安装vim网上很多教程，自行搜索，不再说明。
+安装git这里使用到的vim插件都是从git上下载，所以先确保你本地已经安装了git客户端。使用git的好处是安装和更新都很方便。
+vim配置和插件以下配置和插件都是在Linux当前用户根目录下处理，此处不讨论全局配置的问题
+
+
+~/.vim 为插件目录
+~/.vimrc 为配置目录
+
+注：~/.vim目录不存在则自行创建(mkdir -p ~/.vi">
+<meta property="og:image" content="http://jianbin.info/2016/10/04/vim-python/nerdtree.png">
+<meta property="og:image" content="http://jianbin.info/2016/10/04/vim-python/taglist.png">
+<meta property="og:image" content="http://jianbin.info/2016/10/04/vim-python/expl.png">
+<meta property="og:updated_time" content="2016-10-04T15:41:15.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python的numpy模块快速入门">
-<meta name="twitter:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
-numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
-数组处理使用数组时需要从numpy中导入array函数
-一维数组12345678910111213&amp;gt">
+<meta name="twitter:title" content="linux下用vim打造python编辑器">
+<meta name="twitter:description" content="安装vim网上很多教程，自行搜索，不再说明。
+安装git这里使用到的vim插件都是从git上下载，所以先确保你本地已经安装了git客户端。使用git的好处是安装和更新都很方便。
+vim配置和插件以下配置和插件都是在Linux当前用户根目录下处理，此处不讨论全局配置的问题
+
+
+~/.vim 为插件目录
+~/.vimrc 为配置目录
+
+注：~/.vim目录不存在则自行创建(mkdir -p ~/.vi">
 
 
 
@@ -81,7 +99,7 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
   };
 </script>
 
-  <title> python的numpy模块快速入门 | 数据挖掘杂谈 </title>
+  <title> linux下用vim打造python编辑器 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +265,7 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
             
             
               
-                python的numpy模块快速入门
+                linux下用vim打造python编辑器
               
             
           </h1>
@@ -256,8 +274,8 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-04-02T19:49:23+08:00" content="2016-04-02">
-              2016-04-02
+            <time itemprop="dateCreated" datetime="2016-10-04T23:39:29+08:00" content="2016-10-04">
+              2016-10-04
             </time>
           </span>
 
@@ -282,8 +300,8 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/02/quick-guide-to-numpy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/quick-guide-to-numpy/" itemprop="commentsCount"></span>
+                <a href="/2016/10/04/vim-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/vim-python/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -302,15 +320,41 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
       
 
       
-        <span itemprop="articleBody"><h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><p>numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。</p>
-<p>numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。</p>
-<h3 id="u6570_u7EC4_u5904_u7406"><a href="#u6570_u7EC4_u5904_u7406" class="headerlink" title="数组处理"></a>数组处理</h3><p>使用数组时需要从numpy中导入array函数</p>
-<h4 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import <span class="built_in">array</span></span><br><span class="line">&gt;&gt;&gt; ages1=<span class="built_in">array</span>([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span><br><span class="line">&gt;&gt;&gt; ages2=<span class="built_in">array</span>([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages1+ages2 <span class="preprocessor"># 元素对应元素相加</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">45</span>, <span class="number">44</span>, <span class="number">17</span>])</span><br><span class="line">&gt;&gt;&gt; ages1*<span class="number">2</span>     <span class="preprocessor"># 元素乘以常量<span class="number">2</span></span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">30</span>, <span class="number">30</span>, <span class="number">30</span>])</span><br><span class="line">&gt;&gt;&gt; ages1**<span class="number">2</span>    <span class="preprocessor"># 元素平方</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">225</span>, <span class="number">225</span>, <span class="number">225</span>])</span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">1</span>]    <span class="preprocessor"># 访问元素</span></span><br><span class="line"><span class="number">29</span></span><br><span class="line">&gt;&gt;&gt; ages1*ages2 <span class="preprocessor"># 数组对应元素相乘</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>])</span><br></pre></td></tr></table></figure>
-<h4 id="u591A_u7EF4_u6570_u7EC4"><a href="#u591A_u7EF4_u6570_u7EC4" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ages=([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">0</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-<h3 id="u77E9_u9635_u5904_u7406"><a href="#u77E9_u9635_u5904_u7406" class="headerlink" title="矩阵处理"></a>矩阵处理</h3><p>使用矩阵时需要从numpy中导入matrix或者mat函数<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import mat,matrix</span><br><span class="line">&gt;&gt;&gt; ages1=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages1</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">matrix</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">0</span>,<span class="number">2</span>]      #访问矩阵中的单个元素</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; pyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  #python列表转换成numpy矩阵</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">mat</span><span class="params">(pyList)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2<span class="class">.T</span>         #转置矩阵</span><br><span class="line">matrix([[<span class="number">30</span>],</span><br><span class="line">        [<span class="number">29</span>],</span><br><span class="line">        [ <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages1*ages2<span class="class">.T</span>   #矩阵相乘 m*n矩阵乘以n*p矩阵等于m*p矩阵</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">915</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">sort</span><span class="params">()</span></span>    #该方法是原地排序，需要保留原数据的话要做好备份</span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[ <span class="number">2</span>, <span class="number">29</span>, <span class="number">30</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span> #获取矩阵元素由小到大的排序序号</span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">argsort</span><span class="params">()</span></span> </span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">mean</span><span class="params">()</span></span>    #计算矩阵的均值</span><br><span class="line"><span class="number">20.333333333333332</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="u77E9_u9635_u5143_u7D20_u76F8_u4E58"><a href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58" class="headerlink" title="矩阵元素相乘"></a>矩阵元素相乘</h3><p>把两个矩阵的对应元素相乘，需要从numpy中导入multiply函数</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import multiply</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">multiply</span><span class="params">(ages1, ages2)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>]])</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><a href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570" class="headerlink" title="通过numpy中的shape函数来查看矩阵或者数组的维数"></a>通过numpy中的shape函数来查看矩阵或者数组的维数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import shape</span><br><span class="line">&gt;&gt;&gt; ages=mat([[<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; shape(ages)</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)          <span class="preprocessor">#<span class="number">2</span>行<span class="number">3</span>列的矩阵</span></span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,:]   <span class="preprocessor">#取出第<span class="number">1</span>行元素，从第<span class="number">0</span>行算起</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,<span class="number">0</span>:<span class="number">2</span>] <span class="preprocessor">#取出第<span class="number">1</span>行<span class="number">0</span>列和<span class="number">1</span>列的元素</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>]])</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h3 id="u5B89_u88C5vim"><a href="#u5B89_u88C5vim" class="headerlink" title="安装vim"></a>安装vim</h3><p>网上很多教程，自行搜索，不再说明。</p>
+<h3 id="u5B89_u88C5git"><a href="#u5B89_u88C5git" class="headerlink" title="安装git"></a>安装git</h3><p>这里使用到的vim插件都是从git上下载，所以先确保你本地已经安装了git客户端。使用git的好处是安装和更新都很方便。</p>
+<h3 id="vim_u914D_u7F6E_u548C_u63D2_u4EF6"><a href="#vim_u914D_u7F6E_u548C_u63D2_u4EF6" class="headerlink" title="vim配置和插件"></a>vim配置和插件</h3><p>以下配置和插件都是在Linux当前用户根目录下处理，此处不讨论全局配置的问题</p>
+<blockquote>
+<ul>
+<li>~/.vim 为插件目录</li>
+<li>~/.vimrc 为配置目录</li>
+</ul>
+<p><strong>注</strong>：~/.vim目录不存在则自行创建(mkdir -p ~/.vim)</p>
+</blockquote>
+<h4 id="u9ED8_u8BA4vim_u63D2_u4EF6_u7BA1_u7406"><a href="#u9ED8_u8BA4vim_u63D2_u4EF6_u7BA1_u7406" class="headerlink" title="默认vim插件管理"></a>默认vim插件管理</h4><p>安装vim后，默认的插件管理目录设置如下：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~/.<span class="keyword">vim</span>/autoload</span><br><span class="line">~/.<span class="keyword">vim</span>/plugin</span><br><span class="line">~/.<span class="keyword">vim</span>/doc</span><br><span class="line">~/.<span class="keyword">vim</span>/<span class="keyword">syntax</span></span><br></pre></td></tr></table></figure>
+<p>各类插件横七竖八的散落在那一个个 autoload，plugin，syntax，doc 等目录里，很多插件也会创建一堆私有目录，使用~/.vim越来越大，难以管理维护。</p>
+<h3 id="u5B89_u88C5pathogen"><a href="#u5B89_u88C5pathogen" class="headerlink" title="安装pathogen"></a>安装pathogen</h3><p>pathogen是vim的插件管理工具，让每个插件占有一个单独的目录，解决插件文件分散凌乱的问题。使用pathogen后的~/.vim目录如下：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.vim/autoload</span></span><br><span class="line">~<span class="regexp">/.vim/bundle</span></span><br></pre></td></tr></table></figure>
+<h4 id="u4E0B_u8F7Dpathogen_u63D2_u4EF6"><a href="#u4E0B_u8F7Dpathogen_u63D2_u4EF6" class="headerlink" title="下载pathogen插件"></a>下载pathogen插件</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/tpope/<span class="keyword">vim</span>-pathogen.git</span><br><span class="line"><span class="keyword">cd</span> <span class="keyword">vim</span>-pathogen/</span><br><span class="line">mv autoload ~/.<span class="keyword">vim</span></span><br></pre></td></tr></table></figure>
+<h4 id="u4FEE_u6539_u914D_u7F6E_u6587_u4EF6"><a href="#u4FEE_u6539_u914D_u7F6E_u6587_u4EF6" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>在~/.vimrc文件开头添加：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">" 关闭侦测文件类型</span><br><span class="line"></span><span class="keyword">filetype</span> off </span><br><span class="line"><span class="string">" 使用pathogen检测插件</span><br><span class="line"></span><span class="built_in">call</span> pathogen#infect()</span><br><span class="line"><span class="string">" 生成说明文档</span><br><span class="line"></span><span class="built_in">call</span> pathogen#helptags()</span><br></pre></td></tr></table></figure></p>
+<p>在~/.vimrc文件末尾添加：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">" Tab键的宽度</span><br><span class="line"></span><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"><span class="string">" 统一缩进为4</span><br><span class="line"></span><span class="keyword">set</span> softtabstop=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span></span><br><span class="line"><span class="string">" 用空格代替制表符</span><br><span class="line"></span><span class="keyword">set</span> expandtab</span><br><span class="line"><span class="string">" 显示行号</span><br><span class="line"></span><span class="keyword">set</span> <span class="keyword">nu</span></span><br><span class="line"><span class="string">" 自动缩进</span><br><span class="line"></span><span class="keyword">set</span> autoindent</span><br></pre></td></tr></table></figure></p>
+<p>这样，就完成pathogen工具的安装，后面其他工具的安装就非常简单了。</p>
+<h3 id="nerdtree_u63D2_u4EF6"><a href="#nerdtree_u63D2_u4EF6" class="headerlink" title="nerdtree插件"></a>nerdtree插件</h3><p>nerdtree提供树形浏览文件系统的界面.</p>
+<img src="/2016/10/04/vim-python/nerdtree.png" alt="nerdtree.png" title="">
+<h4 id="u5B89_u88C5_u65B9_u6CD5"><a href="#u5B89_u88C5_u65B9_u6CD5" class="headerlink" title="安装方法"></a>安装方法</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~/.<span class="keyword">vim</span>/bundle</span><br><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/scrooloose/nerdtree.git</span><br></pre></td></tr></table></figure>
+<h4 id="vimrc_u914D_u7F6E"><a href="#vimrc_u914D_u7F6E" class="headerlink" title="vimrc配置"></a>vimrc配置</h4><p>打开~/.vimrc，在文件末尾添加：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap &lt;<span class="constant">F3&gt;</span> <span class="symbol">:NERDTree&lt;CR&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这样就可以使用键 F4 打开浏览当前目录的树形文件界面了。</p>
+<h3 id="python-mode_u63D2_u4EF6"><a href="#python-mode_u63D2_u4EF6" class="headerlink" title="python-mode插件"></a>python-mode插件</h3><p>python-mode 是一个Vim插件能够让你在vim中使用 pylint, rope, pydoc, pyflakes, pep8, mccabe 库。提供的功能包括：python的代码寻找错误，重构和其它实用的功能。</p>
+<p>这个插件能够让在vim轻松创建python代码。并不需要在你的系统中安装pylint, rope 或其它任何python使用的库。</p>
+<h4 id="u5B89_u88C5_u65B9_u6CD5-1"><a href="#u5B89_u88C5_u65B9_u6CD5-1" class="headerlink" title="安装方法"></a>安装方法</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~/.<span class="keyword">vim</span>/bundle</span><br><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/klen/<span class="keyword">python</span>-<span class="built_in">mode</span>.git</span><br></pre></td></tr></table></figure>
+<h3 id="taglist_u63D2_u4EF6"><a href="#taglist_u63D2_u4EF6" class="headerlink" title="taglist插件"></a>taglist插件</h3><p>taglist插件用来显示程序中结构体、联合体、函数、宏等。</p>
+<img src="/2016/10/04/vim-python/taglist.png" alt="taglist.png" title="">
+<h4 id="u5B89_u88C5_u65B9_u6CD5-2"><a href="#u5B89_u88C5_u65B9_u6CD5-2" class="headerlink" title="安装方法"></a>安装方法</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~/.<span class="keyword">vim</span>/bundle</span><br><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/<span class="keyword">vim</span>-scripts/<span class="built_in">taglist</span>.<span class="keyword">vim</span>.git</span><br></pre></td></tr></table></figure>
+<h4 id="vimrc_u914D_u7F6E-1"><a href="#vimrc_u914D_u7F6E-1" class="headerlink" title="vimrc配置"></a>vimrc配置</h4><p>打开~/.vimrc，在文件末尾添加：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap &lt;<span class="constant">F4&gt;</span> <span class="symbol">:Tlist&lt;CR&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这样vim打开文件后，就可以使用键 F4 打开标签列表窗口。</p>
+<h3 id="minibufexpl_u63D2_u4EF6"><a href="#minibufexpl_u63D2_u4EF6" class="headerlink" title="minibufexpl插件"></a>minibufexpl插件</h3><p>minibufexpl插件用来提供buffer管理,这样就可以在vim中打开多个文件，同时编辑。</p>
+<img src="/2016/10/04/vim-python/expl.png" alt="expl.png" title="">
+<h4 id="u5B89_u88C5_u65B9_u6CD5-3"><a href="#u5B89_u88C5_u65B9_u6CD5-3" class="headerlink" title="安装方法"></a>安装方法</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~/.<span class="keyword">vim</span>/bundle</span><br><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/<span class="keyword">vim</span>-scripts/minibufexpl.<span class="keyword">vim</span>.git</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -319,11 +363,13 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
       
         <div class="post-tags">
           
-            <a href="/tags/numpy/" rel="tag">#numpy</a>
+            <a href="/tags/IDE/" rel="tag">#IDE</a>
           
             <a href="/tags/python/" rel="tag">#python</a>
           
-            <a href="/tags/矩阵/" rel="tag">#矩阵</a>
+            <a href="/tags/vim/" rel="tag">#vim</a>
+          
+            <a href="/tags/编辑器/" rel="tag">#编辑器</a>
           
         </div>
       
@@ -332,17 +378,13 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/02/py-data-structure/" rel="next" title="python常用于机器学习的数据类型">
-                <i class="fa fa-chevron-left"></i> python常用于机器学习的数据类型
+              <a href="/2016/10/03/sourceinstallpython3/" rel="next" title="python3 源码安装">
+                <i class="fa fa-chevron-left"></i> python3 源码安装
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/03/sourceinstallpython3/" rel="prev" title="python3 源码安装">
-                python3 源码安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -369,8 +411,8 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/02/quick-guide-to-numpy/"
-           data-title="python的numpy模块快速入门" data-url="http://jianbin.info/2016/04/02/quick-guide-to-numpy/">
+      <div class="ds-thread" data-thread-key="2016/10/04/vim-python/"
+           data-title="linux下用vim打造python编辑器" data-url="http://jianbin.info/2016/10/04/vim-python/">
       </div>
     
   </div>
@@ -477,7 +519,7 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u7EC4_u5904_u7406"><span class="nav-number">2.</span> <span class="nav-text">数组处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E00_u7EF4_u6570_u7EC4"><span class="nav-number">2.1.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u591A_u7EF4_u6570_u7EC4"><span class="nav-number">2.2.</span> <span class="nav-text">多维数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5904_u7406"><span class="nav-number">3.</span> <span class="nav-text">矩阵处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58"><span class="nav-number">4.</span> <span class="nav-text">矩阵元素相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><span class="nav-number">5.</span> <span class="nav-text">通过numpy中的shape函数来查看矩阵或者数组的维数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5vim"><span class="nav-number">1.</span> <span class="nav-text">安装vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5git"><span class="nav-number">2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim_u914D_u7F6E_u548C_u63D2_u4EF6"><span class="nav-number">3.</span> <span class="nav-text">vim配置和插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9ED8_u8BA4vim_u63D2_u4EF6_u7BA1_u7406"><span class="nav-number">3.1.</span> <span class="nav-text">默认vim插件管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5pathogen"><span class="nav-number">4.</span> <span class="nav-text">安装pathogen</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E0B_u8F7Dpathogen_u63D2_u4EF6"><span class="nav-number">4.1.</span> <span class="nav-text">下载pathogen插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4FEE_u6539_u914D_u7F6E_u6587_u4EF6"><span class="nav-number">4.2.</span> <span class="nav-text">修改配置文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nerdtree_u63D2_u4EF6"><span class="nav-number">5.</span> <span class="nav-text">nerdtree插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B89_u88C5_u65B9_u6CD5"><span class="nav-number">5.1.</span> <span class="nav-text">安装方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vimrc_u914D_u7F6E"><span class="nav-number">5.2.</span> <span class="nav-text">vimrc配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-mode_u63D2_u4EF6"><span class="nav-number">6.</span> <span class="nav-text">python-mode插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B89_u88C5_u65B9_u6CD5-1"><span class="nav-number">6.1.</span> <span class="nav-text">安装方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#taglist_u63D2_u4EF6"><span class="nav-number">7.</span> <span class="nav-text">taglist插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B89_u88C5_u65B9_u6CD5-2"><span class="nav-number">7.1.</span> <span class="nav-text">安装方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vimrc_u914D_u7F6E-1"><span class="nav-number">7.2.</span> <span class="nav-text">vimrc配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minibufexpl_u63D2_u4EF6"><span class="nav-number">8.</span> <span class="nav-text">minibufexpl插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B89_u88C5_u65B9_u6CD5-3"><span class="nav-number">8.1.</span> <span class="nav-text">安装方法</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -246,6 +246,238 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/03/decision-tree/" itemprop="url">
+                  决策树
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-03T14:09:09+08:00" content="2016-03-03">
+              2016-03-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/03/decision-tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/decision-tree/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。</p>
+<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。</p>
+<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>先看看下面的数据表格(T1)：</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>天气</th>
+<th>温度</th>
+<th>湿度</th>
+<th>风况</th>
+<th>运动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>晴</td>
+<td>热</td>
+<td>高</td>
+<td>无</td>
+<td>不适合</td>
+</tr>
+<tr>
+<td>2</td>
+<td>晴</td>
+<td>热</td>
+<td>高</td>
+<td>有</td>
+<td>不适合</td>
+</tr>
+<tr>
+<td>3</td>
+<td>多云</td>
+<td>热</td>
+<td>高</td>
+<td>无</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>4</td>
+<td>有雨</td>
+<td>适中</td>
+<td>高</td>
+<td>无</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>5</td>
+<td>有雨</td>
+<td>凉</td>
+<td>适中</td>
+<td>无</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>6</td>
+<td>有雨</td>
+<td>凉</td>
+<td>适中</td>
+<td>有</td>
+<td>不适合</td>
+</tr>
+<tr>
+<td>7</td>
+<td>多云</td>
+<td>凉</td>
+<td>适中</td>
+<td>有</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>8</td>
+<td>晴</td>
+<td>适中</td>
+<td>高</td>
+<td>无</td>
+<td>不适合</td>
+</tr>
+<tr>
+<td>9</td>
+<td>晴</td>
+<td>凉</td>
+<td>适中</td>
+<td>无</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>10</td>
+<td>有雨</td>
+<td>适中</td>
+<td>适中</td>
+<td>无</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>11</td>
+<td>晴</td>
+<td>适中</td>
+<td>适中</td>
+<td>有</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>12</td>
+<td>多云</td>
+<td>适中</td>
+<td>高</td>
+<td>有</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>13</td>
+<td>多云</td>
+<td>热</td>
+<td>适中</td>
+<td>无</td>
+<td>适合</td>
+</tr>
+<tr>
+<td>14</td>
+<td>有雨</td>
+<td>适中</td>
+<td>高</td>
+<td>有</td>
+<td>不适合</td>
+</tr>
+</tbody>
+</table>
+<p>以上是2周时间内我们得到的天气预报记录。我们将通过该记录构建决策树，用于分析什么样的天气适合运动，以此参与运动用户量。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/03/decision-tree/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/01/data-mining/" itemprop="url">
                   数据挖掘概述
                 </a>
@@ -375,7 +607,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -389,7 +621,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
