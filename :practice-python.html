@@ -36,7 +36,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="numpy,python,矩阵," />
+  <meta name="keywords" content="python,入门练习," />
 
 
 
@@ -52,25 +52,22 @@
 
 
 
-<meta name="description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
-numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
-数组处理使用数组时需要从numpy中导入array函数
-一维数组12345678910111213&amp;gt">
+<meta name="description" content="一门编程语言的入门最起码需要掌握增删改查功能的开发，我们以“通讯录管理”为开发需求，练习python开发。
+联系代码如下：
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python的numpy模块快速入门">
-<meta property="og:url" content="http://www.jianbin.info/2016/04/02/quick-guide-to-numpy/index.html">
+<meta property="og:title" content="python入门练习">
+<meta property="og:url" content="http://www.jianbin.info/:practice-python.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
-numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
-数组处理使用数组时需要从numpy中导入array函数
-一维数组12345678910111213&amp;gt">
-<meta property="og:updated_time" content="2016-04-02T13:52:22.618Z">
+<meta property="og:description" content="一门编程语言的入门最起码需要掌握增删改查功能的开发，我们以“通讯录管理”为开发需求，练习python开发。
+联系代码如下：
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737">
+<meta property="og:updated_time" content="2016-04-02T10:37:43.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python的numpy模块快速入门">
-<meta name="twitter:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
-numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
-数组处理使用数组时需要从numpy中导入array函数
-一维数组12345678910111213&amp;gt">
+<meta name="twitter:title" content="python入门练习">
+<meta name="twitter:description" content="一门编程语言的入门最起码需要掌握增删改查功能的开发，我们以“通讯录管理”为开发需求，练习python开发。
+联系代码如下：
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737">
 
 
 
@@ -82,7 +79,7 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
   };
 </script>
 
-  <title> python的numpy模块快速入门 | 数据挖掘杂谈 </title>
+  <title> python入门练习 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -248,7 +245,7 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
             
             
               
-                python的numpy模块快速入门
+                python入门练习
               
             
           </h1>
@@ -257,8 +254,8 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-04-02T19:49:23+08:00" content="2016-04-02">
-              2016-04-02
+            <time itemprop="dateCreated" datetime="2016-03-09T09:55:01+08:00" content="2016-03-09">
+              2016-03-09
             </time>
           </span>
 
@@ -283,8 +280,8 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/02/quick-guide-to-numpy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/quick-guide-to-numpy/" itemprop="commentsCount"></span>
+                <a href="/:practice-python.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key=":practice-python.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -303,15 +300,9 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
       
 
       
-        <span itemprop="articleBody"><h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><p>numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。</p>
-<p>numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。</p>
-<h3 id="u6570_u7EC4_u5904_u7406"><a href="#u6570_u7EC4_u5904_u7406" class="headerlink" title="数组处理"></a>数组处理</h3><p>使用数组时需要从numpy中导入array函数</p>
-<h4 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import <span class="built_in">array</span></span><br><span class="line">&gt;&gt;&gt; ages1=<span class="built_in">array</span>([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span><br><span class="line">&gt;&gt;&gt; ages2=<span class="built_in">array</span>([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages1+ages2 <span class="preprocessor"># 元素对应元素相加</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">45</span>, <span class="number">44</span>, <span class="number">17</span>])</span><br><span class="line">&gt;&gt;&gt; ages1*<span class="number">2</span>     <span class="preprocessor"># 元素乘以常量<span class="number">2</span></span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">30</span>, <span class="number">30</span>, <span class="number">30</span>])</span><br><span class="line">&gt;&gt;&gt; ages1**<span class="number">2</span>    <span class="preprocessor"># 元素平方</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">225</span>, <span class="number">225</span>, <span class="number">225</span>])</span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">1</span>]    <span class="preprocessor"># 访问元素</span></span><br><span class="line"><span class="number">29</span></span><br><span class="line">&gt;&gt;&gt; ages1*ages2 <span class="preprocessor"># 数组对应元素相乘</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>])</span><br></pre></td></tr></table></figure>
-<h4 id="u591A_u7EF4_u6570_u7EC4"><a href="#u591A_u7EF4_u6570_u7EC4" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ages=([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">0</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-<h3 id="u77E9_u9635_u5904_u7406"><a href="#u77E9_u9635_u5904_u7406" class="headerlink" title="矩阵处理"></a>矩阵处理</h3><p>使用矩阵时需要从numpy中导入matrix或者mat函数<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import mat,matrix</span><br><span class="line">&gt;&gt;&gt; ages1=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages1</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">matrix</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">0</span>,<span class="number">2</span>]      #访问矩阵中的单个元素</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; pyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  #python列表转换成numpy矩阵</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">mat</span><span class="params">(pyList)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2<span class="class">.T</span>         #转置矩阵</span><br><span class="line">matrix([[<span class="number">30</span>],</span><br><span class="line">        [<span class="number">29</span>],</span><br><span class="line">        [ <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages1*ages2<span class="class">.T</span>   #矩阵相乘 m*n矩阵乘以n*p矩阵等于m*p矩阵</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">915</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">sort</span><span class="params">()</span></span>    #该方法是原地排序，需要保留原数据的话要做好备份</span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[ <span class="number">2</span>, <span class="number">29</span>, <span class="number">30</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span> #获取矩阵元素由小到大的排序序号</span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">argsort</span><span class="params">()</span></span> </span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">mean</span><span class="params">()</span></span>    #计算矩阵的均值</span><br><span class="line"><span class="number">20.333333333333332</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="u77E9_u9635_u5143_u7D20_u76F8_u4E58"><a href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58" class="headerlink" title="矩阵元素相乘"></a>矩阵元素相乘</h3><p>把两个矩阵的对应元素相乘，需要从numpy中导入multiply函数</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import multiply</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">multiply</span><span class="params">(ages1, ages2)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>]])</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><a href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570" class="headerlink" title="通过numpy中的shape函数来查看矩阵或者数组的维数"></a>通过numpy中的shape函数来查看矩阵或者数组的维数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import shape</span><br><span class="line">&gt;&gt;&gt; ages=mat([[<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; shape(ages)</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)          <span class="preprocessor">#<span class="number">2</span>行<span class="number">3</span>列的矩阵</span></span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,:]   <span class="preprocessor">#取出第<span class="number">1</span>行元素，从第<span class="number">0</span>行算起</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,<span class="number">0</span>:<span class="number">2</span>] <span class="preprocessor">#取出第<span class="number">1</span>行<span class="number">0</span>列和<span class="number">1</span>列的元素</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>]])</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>一门编程语言的入门最起码需要掌握增删改查功能的开发，我们以“通讯录管理”为开发需求，练习python开发。</p>
+<p>联系代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cPickle	<span class="comment"># cPickle模块包含用于持久对象的功能</span></span><br><span class="line"><span class="keyword">import</span> os		<span class="comment"># os模块包含普遍的操作系统功能</span></span><br><span class="line"><span class="keyword">import</span> sys		<span class="comment"># sys模块包含系统对应的功能</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Contact</span>:</span>  <span class="comment"># 定义类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, phone, mail)</span>:</span>  <span class="comment"># 构造函数</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.phone = phone</span><br><span class="line">        self.mail = mail</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Update</span><span class="params">(self, name, phone, mail)</span>:</span>    <span class="comment"># 定义方法</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.phone = phone</span><br><span class="line">        self.mail = mail</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">display</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"name:%s, phone:%s, mail:%s"</span> % (self.name, self.phone, self.mail)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始操作</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建文件用于保存通讯录数据</span></span><br><span class="line">data = os.getcwd() + os.sep + <span class="string">"contacts.data"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"-----------------------------------------------------------------------"</span></span><br><span class="line">    <span class="comment"># 从标准输入获取字符串</span></span><br><span class="line">    operation = raw_input(<span class="string">"input your operation(add/delete/modify/search/all/exit):"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> operation == <span class="string">"exit"</span>:</span><br><span class="line">       sys.exit()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(data):</span><br><span class="line">        <span class="keyword">if</span> os.path.getsize(data) == <span class="number">0</span>:</span><br><span class="line">            contacts = &#123;&#125;</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            f = file(data)</span><br><span class="line">            contacts = cPickle.load(f)</span><br><span class="line">            f.close()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        contacts = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> operation == <span class="string">"add"</span>:</span><br><span class="line">        flag = <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            name = raw_input(<span class="string">"input name(exit to back choose operation):"</span>)</span><br><span class="line">            <span class="keyword">if</span> name == <span class="string">"exit"</span>:</span><br><span class="line">                flag = <span class="keyword">True</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"the name already exists, please input another or input 'exit' to back choose operation"</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                phone = raw_input(<span class="string">"input phone:"</span>)</span><br><span class="line">                mail = raw_input(<span class="string">"input mail:"</span>)</span><br><span class="line">                c = Contact(name, phone, mail)</span><br><span class="line">                contacts[name] = c</span><br><span class="line">                f = file(data, <span class="string">"w"</span>)</span><br><span class="line">                cPickle.dump(contacts, f)</span><br><span class="line">                f.close()</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"add successfully."</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"delete"</span>:</span><br><span class="line">        name = raw_input(<span class="string">"input the name that you want to delete:"</span>)</span><br><span class="line">        <span class="keyword">if</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">            <span class="keyword">del</span> contacts[name]</span><br><span class="line">            f = file(data, <span class="string">"w"</span>)</span><br><span class="line">            cPickle.dump(contacts, f)</span><br><span class="line">            f.close()</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"delete successfully."</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"there is no person named %s"</span> % name</span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"modify"</span>:</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            name = raw_input(<span class="string">"input the name which to update or exit to back choose operation:"</span>)</span><br><span class="line">            <span class="keyword">if</span> name == <span class="string">"exit"</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"there is no person named %s"</span> % name</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                phone = raw_input(<span class="string">"input phone:"</span>)</span><br><span class="line">                mail = raw_input(<span class="string">"input mail:"</span>)</span><br><span class="line">                contacts[name].Update(name, phone, mail)</span><br><span class="line">                f = file(data, <span class="string">"w"</span>)</span><br><span class="line">                cPickle.dump(contacts, f)</span><br><span class="line">                f.close()</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"modify successfully."</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"search"</span>:</span><br><span class="line">        name = raw_input(<span class="string">"input the name which you want to search:"</span>)</span><br><span class="line">        <span class="keyword">if</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">            contacts[name].display()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"there is no person named %s"</span> % name</span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"all"</span>:</span><br><span class="line">        <span class="keyword">for</span> name, contact <span class="keyword">in</span> contacts.items():</span><br><span class="line">            contact.display()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"unknown operation"</span></span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -320,11 +311,9 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
       
         <div class="post-tags">
           
-            <a href="/tags/numpy/" rel="tag">#numpy</a>
-          
             <a href="/tags/python/" rel="tag">#python</a>
           
-            <a href="/tags/矩阵/" rel="tag">#矩阵</a>
+            <a href="/tags/入门练习/" rel="tag">#入门练习</a>
           
         </div>
       
@@ -333,16 +322,16 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/02/py-data-structure/" rel="next" title="python常用于机器学习的数据类型">
-                <i class="fa fa-chevron-left"></i> python常用于机器学习的数据类型
+              <a href="/:repository.html" rel="next" title="知识库">
+                <i class="fa fa-chevron-left"></i> 知识库
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/03/sourceinstallpython3/" rel="prev" title="python3 源码安装">
-                python3 源码安装 <i class="fa fa-chevron-right"></i>
+              <a href="/:py-data-structure.html" rel="prev" title="python常用于机器学习的数据类型">
+                python常用于机器学习的数据类型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -370,8 +359,8 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/02/quick-guide-to-numpy/"
-           data-title="python的numpy模块快速入门" data-url="http://www.jianbin.info/2016/04/02/quick-guide-to-numpy/">
+      <div class="ds-thread" data-thread-key=":practice-python.html"
+           data-title="python入门练习" data-url="http://www.jianbin.info/:practice-python.html">
       </div>
     
   </div>
@@ -478,7 +467,7 @@ numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u7EC4_u5904_u7406"><span class="nav-number">2.</span> <span class="nav-text">数组处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E00_u7EF4_u6570_u7EC4"><span class="nav-number">2.1.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u591A_u7EF4_u6570_u7EC4"><span class="nav-number">2.2.</span> <span class="nav-text">多维数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5904_u7406"><span class="nav-number">3.</span> <span class="nav-text">矩阵处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58"><span class="nav-number">4.</span> <span class="nav-text">矩阵元素相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><span class="nav-number">5.</span> <span class="nav-text">通过numpy中的shape函数来查看矩阵或者数组的维数</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

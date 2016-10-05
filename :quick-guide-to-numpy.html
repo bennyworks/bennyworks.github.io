@@ -36,7 +36,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="实验数据,数据挖掘,数据生成器,领域知识," />
+  <meta name="keywords" content="numpy,python,矩阵," />
 
 
 
@@ -52,28 +52,25 @@
 
 
 
-<meta name="description" content="中文文本分类语料库文本分类语料库来源于Sohu新闻网站保存的大量经过编辑手工整理与分类的新闻语料与对应的分类信息。其分类体系包括几十个分类节点，网页规模约为十万篇文档。
-语料库统计的意义：提供一个较大规模的标准中文文本分类测试平台。
-应用案例：中文文本分类，主题跟踪与检测等。
-语料库下载地址 : http://www.sogou.com/labs/dl/c.html
-加州大学欧文分校机器学习知识库">
+<meta name="description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
+numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
+数组处理使用数组时需要从numpy中导入array函数
+一维数组12345678910111213&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="知识库">
-<meta property="og:url" content="http://www.jianbin.info/2016/03/07/repository/index.html">
+<meta property="og:title" content="python的numpy模块快速入门">
+<meta property="og:url" content="http://www.jianbin.info/:quick-guide-to-numpy.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="中文文本分类语料库文本分类语料库来源于Sohu新闻网站保存的大量经过编辑手工整理与分类的新闻语料与对应的分类信息。其分类体系包括几十个分类节点，网页规模约为十万篇文档。
-语料库统计的意义：提供一个较大规模的标准中文文本分类测试平台。
-应用案例：中文文本分类，主题跟踪与检测等。
-语料库下载地址 : http://www.sogou.com/labs/dl/c.html
-加州大学欧文分校机器学习知识库">
-<meta property="og:updated_time" content="2016-03-07T15:25:25.479Z">
+<meta property="og:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
+numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
+数组处理使用数组时需要从numpy中导入array函数
+一维数组12345678910111213&amp;gt">
+<meta property="og:updated_time" content="2016-04-02T13:52:22.618Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="知识库">
-<meta name="twitter:description" content="中文文本分类语料库文本分类语料库来源于Sohu新闻网站保存的大量经过编辑手工整理与分类的新闻语料与对应的分类信息。其分类体系包括几十个分类节点，网页规模约为十万篇文档。
-语料库统计的意义：提供一个较大规模的标准中文文本分类测试平台。
-应用案例：中文文本分类，主题跟踪与检测等。
-语料库下载地址 : http://www.sogou.com/labs/dl/c.html
-加州大学欧文分校机器学习知识库">
+<meta name="twitter:title" content="python的numpy模块快速入门">
+<meta name="twitter:description" content="简介numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。
+numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。
+数组处理使用数组时需要从numpy中导入array函数
+一维数组12345678910111213&amp;gt">
 
 
 
@@ -85,7 +82,7 @@
   };
 </script>
 
-  <title> 知识库 | 数据挖掘杂谈 </title>
+  <title> python的numpy模块快速入门 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +248,7 @@
             
             
               
-                知识库
+                python的numpy模块快速入门
               
             
           </h1>
@@ -260,8 +257,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-07T23:20:13+08:00" content="2016-03-07">
-              2016-03-07
+            <time itemprop="dateCreated" datetime="2016-04-02T19:49:23+08:00" content="2016-04-02">
+              2016-04-02
             </time>
           </span>
 
@@ -270,8 +267,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
-                    <span itemprop="name">数据挖掘</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -286,8 +283,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/07/repository/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/repository/" itemprop="commentsCount"></span>
+                <a href="/:quick-guide-to-numpy.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key=":quick-guide-to-numpy.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,13 +303,15 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u4E2D_u6587_u6587_u672C_u5206_u7C7B_u8BED_u6599_u5E93"><a href="#u4E2D_u6587_u6587_u672C_u5206_u7C7B_u8BED_u6599_u5E93" class="headerlink" title="中文文本分类语料库"></a>中文文本分类语料库</h3><p>文本分类语料库来源于Sohu新闻网站保存的大量经过编辑手工整理与分类的新闻语料与对应的分类信息。其分类体系包括几十个分类节点，网页规模约为十万篇文档。</p>
-<p>语料库统计的意义：提供一个较大规模的标准中文文本分类测试平台。</p>
-<p>应用案例：中文文本分类，主题跟踪与检测等。</p>
-<p>语料库下载地址 : <a href="http://www.sogou.com/labs/dl/c.html" target="_blank" rel="external">http://www.sogou.com/labs/dl/c.html</a></p>
-<h3 id="u52A0_u5DDE_u5927_u5B66_u6B27_u6587_u5206_u6821_u673A_u5668_u5B66_u4E60_u77E5_u8BC6_u5E93"><a href="#u52A0_u5DDE_u5927_u5B66_u6B27_u6587_u5206_u6821_u673A_u5668_u5B66_u4E60_u77E5_u8BC6_u5E93" class="headerlink" title="加州大学欧文分校机器学习知识库"></a>加州大学欧文分校机器学习知识库</h3><p>UCI机器学习知识库为机器学习社区收集了各种类型的数据库、领域理论和数据生成器，用于进行机器学习算法的实证分析。</p>
-<p>作为机器学习与智能系统的中心，该知识库目前保存了348套数据集用于机器学习。我们可以在该知识库网站的搜索界面查看所有数据集。如果你想在期刊上引用到知识库的数据集，请先阅读其引文政策。另外你可以咨询其捐赠政策，向该知识库捐赠一组数据。</p>
-<p>知识库数据集下载地址 : <a href="http://archive.ics.uci.edu/ml/index.html" target="_blank" rel="external">http://archive.ics.uci.edu/ml/index.html</a></p>
+        <span itemprop="articleBody"><h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><p>numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。</p>
+<p>numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。</p>
+<h3 id="u6570_u7EC4_u5904_u7406"><a href="#u6570_u7EC4_u5904_u7406" class="headerlink" title="数组处理"></a>数组处理</h3><p>使用数组时需要从numpy中导入array函数</p>
+<h4 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import <span class="built_in">array</span></span><br><span class="line">&gt;&gt;&gt; ages1=<span class="built_in">array</span>([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span><br><span class="line">&gt;&gt;&gt; ages2=<span class="built_in">array</span>([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages1+ages2 <span class="preprocessor"># 元素对应元素相加</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">45</span>, <span class="number">44</span>, <span class="number">17</span>])</span><br><span class="line">&gt;&gt;&gt; ages1*<span class="number">2</span>     <span class="preprocessor"># 元素乘以常量<span class="number">2</span></span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">30</span>, <span class="number">30</span>, <span class="number">30</span>])</span><br><span class="line">&gt;&gt;&gt; ages1**<span class="number">2</span>    <span class="preprocessor"># 元素平方</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">225</span>, <span class="number">225</span>, <span class="number">225</span>])</span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">1</span>]    <span class="preprocessor"># 访问元素</span></span><br><span class="line"><span class="number">29</span></span><br><span class="line">&gt;&gt;&gt; ages1*ages2 <span class="preprocessor"># 数组对应元素相乘</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="u591A_u7EF4_u6570_u7EC4"><a href="#u591A_u7EF4_u6570_u7EC4" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ages=([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">0</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="u77E9_u9635_u5904_u7406"><a href="#u77E9_u9635_u5904_u7406" class="headerlink" title="矩阵处理"></a>矩阵处理</h3><p>使用矩阵时需要从numpy中导入matrix或者mat函数<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import mat,matrix</span><br><span class="line">&gt;&gt;&gt; ages1=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages1</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">matrix</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">0</span>,<span class="number">2</span>]      #访问矩阵中的单个元素</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; pyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  #python列表转换成numpy矩阵</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">mat</span><span class="params">(pyList)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2<span class="class">.T</span>         #转置矩阵</span><br><span class="line">matrix([[<span class="number">30</span>],</span><br><span class="line">        [<span class="number">29</span>],</span><br><span class="line">        [ <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages1*ages2<span class="class">.T</span>   #矩阵相乘 m*n矩阵乘以n*p矩阵等于m*p矩阵</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">915</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">sort</span><span class="params">()</span></span>    #该方法是原地排序，需要保留原数据的话要做好备份</span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[ <span class="number">2</span>, <span class="number">29</span>, <span class="number">30</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span> #获取矩阵元素由小到大的排序序号</span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">argsort</span><span class="params">()</span></span> </span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">mean</span><span class="params">()</span></span>    #计算矩阵的均值</span><br><span class="line"><span class="number">20.333333333333332</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u77E9_u9635_u5143_u7D20_u76F8_u4E58"><a href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58" class="headerlink" title="矩阵元素相乘"></a>矩阵元素相乘</h3><p>把两个矩阵的对应元素相乘，需要从numpy中导入multiply函数</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import multiply</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">multiply</span><span class="params">(ages1, ages2)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>]])</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><a href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570" class="headerlink" title="通过numpy中的shape函数来查看矩阵或者数组的维数"></a>通过numpy中的shape函数来查看矩阵或者数组的维数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import shape</span><br><span class="line">&gt;&gt;&gt; ages=mat([[<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; shape(ages)</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)          <span class="preprocessor">#<span class="number">2</span>行<span class="number">3</span>列的矩阵</span></span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,:]   <span class="preprocessor">#取出第<span class="number">1</span>行元素，从第<span class="number">0</span>行算起</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,<span class="number">0</span>:<span class="number">2</span>] <span class="preprocessor">#取出第<span class="number">1</span>行<span class="number">0</span>列和<span class="number">1</span>列的元素</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>]])</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -321,13 +320,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/实验数据/" rel="tag">#实验数据</a>
+            <a href="/tags/numpy/" rel="tag">#numpy</a>
           
-            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
+            <a href="/tags/python/" rel="tag">#python</a>
           
-            <a href="/tags/数据生成器/" rel="tag">#数据生成器</a>
-          
-            <a href="/tags/领域知识/" rel="tag">#领域知识</a>
+            <a href="/tags/矩阵/" rel="tag">#矩阵</a>
           
         </div>
       
@@ -336,16 +333,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/05/clustering/" rel="next" title="聚类分析">
-                <i class="fa fa-chevron-left"></i> 聚类分析
+              <a href="/:py-data-structure.html" rel="next" title="python常用于机器学习的数据类型">
+                <i class="fa fa-chevron-left"></i> python常用于机器学习的数据类型
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/09/practice-python/" rel="prev" title="python入门练习">
-                python入门练习 <i class="fa fa-chevron-right"></i>
+              <a href="/:sourceinstallpython3.html" rel="prev" title="python3 源码安装">
+                python3 源码安装 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -373,8 +370,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/07/repository/"
-           data-title="知识库" data-url="http://www.jianbin.info/2016/03/07/repository/">
+      <div class="ds-thread" data-thread-key=":quick-guide-to-numpy.html"
+           data-title="python的numpy模块快速入门" data-url="http://www.jianbin.info/:quick-guide-to-numpy.html">
       </div>
     
   </div>
@@ -481,7 +478,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E2D_u6587_u6587_u672C_u5206_u7C7B_u8BED_u6599_u5E93"><span class="nav-number">1.</span> <span class="nav-text">中文文本分类语料库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u52A0_u5DDE_u5927_u5B66_u6B27_u6587_u5206_u6821_u673A_u5668_u5B66_u4E60_u77E5_u8BC6_u5E93"><span class="nav-number">2.</span> <span class="nav-text">加州大学欧文分校机器学习知识库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u7EC4_u5904_u7406"><span class="nav-number">2.</span> <span class="nav-text">数组处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E00_u7EF4_u6570_u7EC4"><span class="nav-number">2.1.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u591A_u7EF4_u6570_u7EC4"><span class="nav-number">2.2.</span> <span class="nav-text">多维数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5904_u7406"><span class="nav-number">3.</span> <span class="nav-text">矩阵处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58"><span class="nav-number">4.</span> <span class="nav-text">矩阵元素相乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><span class="nav-number">5.</span> <span class="nav-text">通过numpy中的shape函数来查看矩阵或者数组的维数</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -88,7 +88,7 @@ ID
 多">
 <meta property="og:type" content="article">
 <meta property="og:title" content="决策树">
-<meta property="og:url" content="http://www.jianbin.info/2016/03/03/decision-tree/index.html">
+<meta property="og:url" content="http://www.jianbin.info/:decision-tree.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
 <meta property="og:description" content="解决问题影响项目的因素往往有很多个，怎么确定哪些比较重要，哪些比较次要，哪些优先级高，哪些优先级低呢？决策树为我们提供了方法。
 原理决策树是一个有向无环图，根结点代表所有数据，把复杂的数据表示转换成相对简单的直观的结构，可用于分类和预测。
@@ -124,7 +124,7 @@ ID
 
 3
 多">
-<meta property="og:image" content="http://www.jianbin.info/2016/03/03/decision-tree/decision_tree1.png">
+<meta property="og:image" content="http://www.jianbin.info/decision_tree1.png">
 <meta property="og:updated_time" content="2016-03-05T12:43:57.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
@@ -374,8 +374,8 @@ ID
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/03/decision-tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/decision-tree/" itemprop="commentsCount"></span>
+                <a href="/:decision-tree.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key=":decision-tree.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -569,7 +569,7 @@ ID
 </tr>
 </tbody>
 </table>
-<p>最终构造的决策树如下：<br><img src="/2016/03/03/decision-tree/decision_tree1.png" alt="This is an decision tree image" title="This is an decision tree image"></p>
+<p>最终构造的决策树如下：<br><img src="/decision_tree1.png" alt="This is an decision tree image" title="This is an decision tree image"></p>
 <h3 id="u505C_u6B62_u6761_u4EF6"><a href="#u505C_u6B62_u6761_u4EF6" class="headerlink" title="停止条件"></a><strong>停止条件</strong></h3><p>决策树的构建过程是一个递归的过程，所以需要确定停止条件，否则过程将不会结束。一种最直观的方式是当每个子节点只有一种类型的记录时停止，但是这样往往会使得树的节点过多，导致过拟合问题（Over-Fitting）。另一种可行的方法是当前节点中的记录数低于一个最小的阀值，那么就停止分裂，将max(P(i))对应的分类作为当前叶节点的分类。</p>
 <h3 id="u51B3_u7B56_u6811_u7684_u526A_u679D"><a href="#u51B3_u7B56_u6811_u7684_u526A_u679D" class="headerlink" title="决策树的剪枝"></a><strong>决策树的剪枝</strong></h3><p>剪枝的目的是消除决策树的Over-Fitting问题，其实质是去除决策树中的噪声和异常。</p>
 <p>剪枝方法是很丰富的，主要有两种剪枝方法：</p>
@@ -610,7 +610,7 @@ ID
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/01/data-mining/" rel="next" title="数据挖掘概述">
+              <a href="/:data-mining.html" rel="next" title="数据挖掘概述">
                 <i class="fa fa-chevron-left"></i> 数据挖掘概述
               </a>
             
@@ -618,7 +618,7 @@ ID
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/04/entropy/" rel="prev" title="熵与信息量">
+              <a href="/:entropy.html" rel="prev" title="熵与信息量">
                 熵与信息量 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -647,8 +647,8 @@ ID
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/03/decision-tree/"
-           data-title="决策树" data-url="http://www.jianbin.info/2016/03/03/decision-tree/">
+      <div class="ds-thread" data-thread-key=":decision-tree.html"
+           data-title="决策树" data-url="http://www.jianbin.info/:decision-tree.html">
       </div>
     
   </div>

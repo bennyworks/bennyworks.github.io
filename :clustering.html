@@ -36,7 +36,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据挖掘,数据挖掘知识体系," />
+  <meta name="keywords" content="K-Means,clustering,数据挖掘,聚类分析," />
 
 
 
@@ -52,20 +52,21 @@
 
 
 
-<meta name="description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
+<meta name="description" content="解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；在因特网应用上，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据挖掘概述">
-<meta property="og:url" content="http://www.jianbin.info/2016/01/01/data-mining/index.html">
+<meta property="og:title" content="聚类分析">
+<meta property="og:url" content="http://www.jianbin.info/:clustering.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
-<meta property="og:image" content="http://www.jianbin.info/2016/01/01/data-mining/data_mining.png">
-<meta property="og:updated_time" content="2016-08-07T03:36:59.907Z">
+<meta property="og:description" content="解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；在因特网应用上，">
+<meta property="og:image" content="http://www.jianbin.info/algorithms.jpg">
+<meta property="og:image" content="http://www.jianbin.info/distance_measure.gif">
+<meta property="og:image" content="http://www.jianbin.info/formulation1.jpg">
+<meta property="og:image" content="http://www.jianbin.info/formulation2.jpg">
+<meta property="og:image" content="http://www.jianbin.info/formulation3.jpg">
+<meta property="og:updated_time" content="2016-03-05T12:42:14.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据挖掘概述">
-<meta name="twitter:description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
+<meta name="twitter:title" content="聚类分析">
+<meta name="twitter:description" content="解决问题聚类分析被应用于很多方面。在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；在因特网应用上，">
 
 
 
@@ -77,7 +78,7 @@
   };
 </script>
 
-  <title> 数据挖掘概述 | 数据挖掘杂谈 </title>
+  <title> 聚类分析 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -243,7 +244,7 @@
             
             
               
-                数据挖掘概述
+                聚类分析
               
             
           </h1>
@@ -252,8 +253,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-01T00:00:00+08:00" content="2016-01-01">
-              2016-01-01
+            <time itemprop="dateCreated" datetime="2016-03-05T14:35:12+08:00" content="2016-03-05">
+              2016-03-05
             </time>
           </span>
 
@@ -278,8 +279,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/01/data-mining/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/01/data-mining/" itemprop="commentsCount"></span>
+                <a href="/:clustering.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key=":clustering.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -298,14 +299,38 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><a href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F" class="headerlink" title="什么是数据挖掘？"></a>什么是数据挖掘？</h3><p>数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。</p>
-<p>知识发现的过程包括以下几个步骤：<br>  1) 数据清理： 除噪声和删除不一致数据；<br>  2) 数据集成： 多种数据源的组合；<br>  3) 数据选择： 取和分析与任务相关的数据；<br>  4) 数据变换： 数据变换和统一成适合挖掘的形式；<br>  5) 数据挖掘： 使用智能方法提取数据格式；<br>  6) 模式评估： 识别代表知识的有趣模式；<br>  7) 知识表示： 使用可视化和知识表示技术，向用户提供挖掘的知识。</p>
+        <span itemprop="articleBody"><h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>聚类分析被应用于很多方面。<br>在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；<br>在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；<br>在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；<br>在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；<br>在因特网应用上，聚类分析被用来在网上进行文档归类来修复信息。</p>
+<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>聚类（Clustering）是将数据划分成群组的过程。研究如何在没有训练的条件下把对象化分为若干类。通过确定数据之间在预先制定的属性上的相似性来完成聚类任务，这样最相似的数据就聚集成簇（Cluster）。</p>
+<p>聚类与分类不同，聚类的类别取决于数据本身，而分类的类别是由数据分析人员预先定义好的。</p>
 <a id="more"></a>
-<h3 id="u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><a href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5" class="headerlink" title="数据挖掘的分析模型及算法"></a>数据挖掘的分析模型及算法</h3><h4 id="u5206_u6790_u6A21_u578B"><a href="#u5206_u6790_u6A21_u578B" class="headerlink" title="分析模型"></a>分析模型</h4><p>数据挖掘是一个交叉学科领域，吸纳了许多学科的技术，包括统计学、机器学习、数据库和数据仓库、信息检索、可视化技术等。</p>
-<p>在数据挖掘中，没有哪个方法可以解决所有问题，不同的实际问题，必须结合不同的领域知识，采用不同的数据挖掘方法，有的问题必须结合多种数据挖掘方法进行解决。在实际应用中，具体使用哪种方法主要取决于问题的类型以及数据的类型和规模。</p>
-<p>数据挖掘的方法一般分为预测型和描述型。预测型的方法一般有分类、预测、回归分析、时间序列分析四种，而描述型则分为聚类分析、关联分析、序列匹配三种。</p>
-<img src="/2016/01/01/data-mining/data_mining.png" alt="数据挖掘知识体系" title="数据挖掘知识体系">
-<h4 id="u6316_u6398_u7B97_u6CD5"><a href="#u6316_u6398_u7B97_u6CD5" class="headerlink" title="挖掘算法"></a>挖掘算法</h4><p>数据挖掘常见的算法主要有<a href="/2016/03/03/decision-tree/" title="决策树">决策树</a>、贝叶斯网络、遗传算法、神经网络(ANN<br>)、K邻近算法(KNN)、<a href="/2016/03/04/association-rules/" title="关联规则">关联规则</a>、回归分析、判别分析、<a href="/2016/03/05/clustering/" title="聚类分析">聚类分析</a>、主要成分分析及支持向量机等。</p>
+<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>下图的左边有一些点，我们用肉眼可以看出来有四个点群，但是我们怎么通过计算机程序找出这几个点群来呢？这就是聚类要解决的问题之一。通常使用基于划分的聚类方法来处理这类问题，最经典的就是k-平均（k-means）算法。</p>
+
+<h3 id="K-Means_u7B97_u6CD5"><a href="#K-Means_u7B97_u6CD5" class="headerlink" title="K-Means算法"></a><strong>K-Means算法</strong></h3><p>只要能把现实世界的物体的属性抽象成向量，就可以用K-Means算法来归类。</p>
+<p><strong>算法概要:</strong><br><img src="/algorithms.jpg" alt="this is an algorithms image" title="this is an algorithms image"></p>
+<p>从上图中，我们可以看到，A，B，C，D，E是五个在图中点。而灰色的点是我们的中心点，也就是我们用来找点群的点。有两个中心点，所以K=2。</p>
+<p><strong>K-Means的算法如下：</strong><br>1)放置K（这里K=2）个点到正在聚集的点所表示的空间中。这些点代表查找点群的中心点；<br>2)每个点分配给最靠近自己的中心点，如A、B分配给上方的中心点，C、D、E分配给下方的中心点；<br>3)当所有点已经分配好后，需要重新计算并移动中心点到其点群的中心位置；<br>4)重复步骤2和3，直到种子点不再动弹，这样就完成了点的聚类。</p>
+<p><strong>优缺点</strong><br>这种基于划分的聚类算法的优点是收敛速度快，缺点是它要求类别数目K可以合理的估计，并且初始中心的选择和噪声会对聚类结果产生很大影响。</p>
+<h3 id="u8DDD_u79BB_u5EA6_u91CF"><a href="#u8DDD_u79BB_u5EA6_u91CF" class="headerlink" title="距离度量"></a><strong>距离度量</strong></h3><p>聚类算法的一个重要组成部分是点之间的距离度量。由于度量时需要将点映射到某个空间，然后根据点所在的坐标进行计算。</p>
+<p>上面的案例中，将映射到了二维空间，则点是由X/Y坐标确定的。</p>
+<p>如果X/Y坐标的物理单位是相同的，则用欧氏距离度量就可以成功地进行聚类。比如物体的长和宽都是长度单位。</p>
+<p>如果X/Y坐标的物理单位是不同的，有时使用欧氏距离会产生误导。比如物体的重量和高度的物理单位分别是重量单位和长度单位。那么刻度定标不同时可以导致不同的聚类。</p>
+<p>以下图为例：<br><img src="/distance_measure.gif" alt="this is a distance measure image" title="this is a distance measure image"></p>
+<p>另外，这也不仅仅是一个图形的问题，当选择不用的数学公式计算这批数据向量中某个分量之间距离时，也会产生不同的聚类，因此需要利用领域内的知识来指导选择合适的公式。</p>
+<h3 id="u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F"><a href="#u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F" class="headerlink" title="求点群中心点公式"></a><strong>求点群中心点公式</strong></h3><p>明氏距离（Minkowski Distance）：</p>
+<p>$$<br>d(x_{i},y_{j})=(\sum_{k=1}^{p}|x_{ik}-x_{jk}|^{q})^{\frac{1}{q}}<br>$$</p>
+<img src="/formulation1.jpg" alt="Minkowski Distance逼近中心的方式" title="Minkowski Distance逼近中心的方式">
+<blockquote>
+<p><strong>Note</strong></p>
+<ul>
+<li><strong>q</strong> 可以随意取值，可以是负数，也可以是正数，或是无穷大。</li>
+</ul>
+</blockquote>
+<p><strong>欧氏距离（Euclidean Distance）：</strong></p>
+<p>$$<br>d(x_i,y_j)=(\sum_{k=1}^{p}|x_{ik}-x_{jk}|^{2})^{\frac{1}{2}}<br>$$</p>
+<img src="/formulation2.jpg" alt="Euclidean Distance逼近中心的方式" title="Euclidean Distance逼近中心的方式">
+<p><strong>马哈顿距离（CityBlock Distance）：</strong></p>
+<p>$$<br>d(x_i,y_j)=\sum_{k=1}^{p}|x_{ik}-x_{jk}|<br>$$</p>
+<img src="/formulation3.jpg" alt="CityBlock Distance逼近中心的方式" title="CityBlock Distance逼近中心的方式">
 </span>
       
     </div>
@@ -314,9 +339,13 @@
       
         <div class="post-tags">
           
+            <a href="/tags/K-Means/" rel="tag">#K-Means</a>
+          
+            <a href="/tags/clustering/" rel="tag">#clustering</a>
+          
             <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
           
-            <a href="/tags/数据挖掘知识体系/" rel="tag">#数据挖掘知识体系</a>
+            <a href="/tags/聚类分析/" rel="tag">#聚类分析</a>
           
         </div>
       
@@ -325,12 +354,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/:mathjax.html" rel="next" title="hexo在Next主题下输入数学公式">
+                <i class="fa fa-chevron-left"></i> hexo在Next主题下输入数学公式
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/03/decision-tree/" rel="prev" title="决策树">
-                决策树 <i class="fa fa-chevron-right"></i>
+              <a href="/:repository.html" rel="prev" title="知识库">
+                知识库 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -358,8 +391,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/01/data-mining/"
-           data-title="数据挖掘概述" data-url="http://www.jianbin.info/2016/01/01/data-mining/">
+      <div class="ds-thread" data-thread-key=":clustering.html"
+           data-title="聚类分析" data-url="http://www.jianbin.info/:clustering.html">
       </div>
     
   </div>
@@ -466,7 +499,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><span class="nav-number">1.</span> <span class="nav-text">什么是数据挖掘？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><span class="nav-number">2.</span> <span class="nav-text">数据挖掘的分析模型及算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5206_u6790_u6A21_u578B"><span class="nav-number">2.1.</span> <span class="nav-text">分析模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6316_u6398_u7B97_u6CD5"><span class="nav-number">2.2.</span> <span class="nav-text">挖掘算法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K-Means_u7B97_u6CD5"><span class="nav-number">4.</span> <span class="nav-text">K-Means算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u8DDD_u79BB_u5EA6_u91CF"><span class="nav-number">5.</span> <span class="nav-text">距离度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6C42_u70B9_u7FA4_u4E2D_u5FC3_u70B9_u516C_u5F0F"><span class="nav-number">6.</span> <span class="nav-text">求点群中心点公式</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

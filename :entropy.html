@@ -36,7 +36,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="numpy,pip,python3," />
+  <meta name="keywords" content="信息量,熵," />
 
 
 
@@ -52,28 +52,19 @@
 
 
 
-<meta name="description" content="下载python3.4.1123wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgztar zxfv Python-3.4.1.tgzcd Python-3.4.1
-安装python3.4.1123./configure --prefix=/usr/local makemake install
-
-
-–prefix=/usr/lo">
+<meta name="description" content="问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
+定义熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python3 源码安装">
-<meta property="og:url" content="http://www.jianbin.info/2016/10/03/sourceinstallpython3/index.html">
+<meta property="og:title" content="熵与信息量">
+<meta property="og:url" content="http://www.jianbin.info/:entropy.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="下载python3.4.1123wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgztar zxfv Python-3.4.1.tgzcd Python-3.4.1
-安装python3.4.1123./configure --prefix=/usr/local makemake install
-
-
-–prefix=/usr/lo">
-<meta property="og:updated_time" content="2016-10-03T04:58:27.540Z">
+<meta property="og:description" content="问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
+定义熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功">
+<meta property="og:updated_time" content="2016-03-05T12:45:46.469Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python3 源码安装">
-<meta name="twitter:description" content="下载python3.4.1123wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgztar zxfv Python-3.4.1.tgzcd Python-3.4.1
-安装python3.4.1123./configure --prefix=/usr/local makemake install
-
-
-–prefix=/usr/lo">
+<meta name="twitter:title" content="熵与信息量">
+<meta name="twitter:description" content="问题在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？
+定义熵，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功">
 
 
 
@@ -85,7 +76,7 @@
   };
 </script>
 
-  <title> python3 源码安装 | 数据挖掘杂谈 </title>
+  <title> 熵与信息量 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +242,7 @@
             
             
               
-                python3 源码安装
+                熵与信息量
               
             
           </h1>
@@ -260,8 +251,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-10-03T00:00:00+08:00" content="2016-10-03">
-              2016-10-03
+            <time itemprop="dateCreated" datetime="2016-03-04T00:56:04+08:00" content="2016-03-04">
+              2016-03-04
             </time>
           </span>
 
@@ -270,8 +261,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
                   </a>
                 </span>
 
@@ -286,8 +277,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/03/sourceinstallpython3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/03/sourceinstallpython3/" itemprop="commentsCount"></span>
+                <a href="/:entropy.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key=":entropy.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,27 +297,21 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u4E0B_u8F7Dpython3-4-1"><a href="#u4E0B_u8F7Dpython3-4-1" class="headerlink" title="下载python3.4.1"></a>下载python3.4.1</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="comment">//www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span></span><br><span class="line">tar zxfv Python-<span class="number">3.4</span><span class="number">.1</span>.tgz</span><br><span class="line">cd Python-<span class="number">3.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
-<h3 id="u5B89_u88C5python3-4-1"><a href="#u5B89_u88C5python3-4-1" class="headerlink" title="安装python3.4.1"></a>安装python3.4.1</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local </span><br><span class="line"><span class="built_in">make</span></span><br><span class="line"><span class="built_in">make</span> install</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>–prefix=/usr/local     安装目录</li>
-<li>–enable-shared         动态加载库</li>
-</ul>
-</blockquote>
-<h3 id="u6267_u884Cpython3-4"><a href="#u6267_u884Cpython3-4" class="headerlink" title="执行python3.4"></a>执行python3.4</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3<span class="number">.4</span></span><br></pre></td></tr></table></figure>
-<h4 id="u62A5_u9519"><a href="#u62A5_u9519" class="headerlink" title="报错"></a>报错</h4><blockquote>
-<p>python: error while loading shared libraries: libpython3.4m.so.1.0: cannot open shared object file: No such file or directory</p>
-</blockquote>
-<p>这个错误是由于缺少了动态库libpython3.4m.so.1.0，需要从编译好的源码目录Python-3.4.1下拷贝到/usr/lib</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp libpython3.<span class="number">4</span>m.so.<span class="number">1.0</span> /usr/<span class="class"><span class="keyword">lib</span>/</span></span><br></pre></td></tr></table></figure>
-<h4 id="u6B63_u5E38"><a href="#u6B63_u5E38" class="headerlink" title="正常"></a>正常</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python <span class="number">3.4</span><span class="number">.1</span> (<span class="keyword">default</span>, Oct  <span class="number">3</span> <span class="number">2016</span>, <span class="number">11</span>:<span class="number">24</span>:<span class="number">16</span>) </span><br><span class="line">[GCC <span class="number">4.6</span><span class="number">.3</span>] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="u547D_u4EE4_u884C_u6267_u884Cpython_u4EE3_u66FFpython3-4"><a href="#u547D_u4EE4_u884C_u6267_u884Cpython_u4EE3_u66FFpython3-4" class="headerlink" title="命令行执行python代替python3.4"></a>命令行执行python代替python3.4</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>python3.<span class="number">4</span> <span class="regexp">/usr/</span>bin<span class="regexp">/python</span></span><br></pre></td></tr></table></figure>
-<h3 id="u5B89_u88C5python_u5305_u7BA1_u7406_u5DE5_u5177pip"><a href="#u5B89_u88C5python_u5305_u7BA1_u7406_u5DE5_u5177pip" class="headerlink" title="安装python包管理工具pip"></a>安装python包管理工具pip</h3><p>浏览器打开<a href="http://pypi.python.org/pypi/pip#downloads" target="_blank" rel="external">http://pypi.python.org/pypi/pip#downloads</a><br>下载最新的PIP安装文件</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">wget https:<span class="comment">//pypi.python.org/packages/e7/a8/7556133689add8d1a54c0b14aeff0acb03c64707ce100ecd53934da1aa13/pip-8.1.2.tar.gz</span></span><br><span class="line">tar zxfv pip-<span class="number">8.1</span>.<span class="number">2</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line">cd pip-<span class="number">8.1</span>.<span class="number">2</span></span><br><span class="line">python setup<span class="class">.py</span> install</span><br></pre></td></tr></table></figure>
-<h4 id="pip_u5B89_u88C5python_u6A21_u5757"><a href="#pip_u5B89_u88C5python_u6A21_u5757" class="headerlink" title="pip安装python模块"></a>pip安装python模块</h4><p>pip install package</p>
-<p>例：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip <span class="keyword">install</span> numpy</span><br><span class="line">pip <span class="keyword">install</span> texttable</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h3 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a><strong>问题</strong></h3><p>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
+<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>熵</strong>，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。<br>当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功”也就越大。而这里要消除不确定性所要做的事情就是<strong>信息量</strong>。<br>所以，熵、不确定性、信息量，这三者是同一个数值。</p>
+<a id="more"></a>
+<h3 id="u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97"><a href="#u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97" class="headerlink" title="熵和信息量的计算"></a><strong>熵和信息量的计算</strong></h3><p>以最简单的只有<strong>2</strong>种可能性为例，非此即彼，我们以这种事物的信息量为单位，叫1比特(bit)。</p>
+<p><strong>4</strong>种可能性的，用二分法，分为2组，我们要非此即彼地确定2次，才能确定其状态，所以含有2比特信息量。<br>对于可能性数目有2的n次方的计算：<br>$$<br>N=2^n<br>$$</p>
+<p>那信息量就是n比特，计算公式将为：<br>$$<br>H=\log_2N={\log{N}\over\log2}<br>$$</p>
+<p>因此，当N＝3种可能性时，信息量计算结果为：<br>$$<br>H={\log3\over\log2}＝1.585<br>$$</p>
+<p>同理，英文有26个字母，每个字母的信息量为：<br>$$<br>H={\log26\over\log2}＝4.700<br>$$</p>
+<p>然而，汉字个数不定，算1000个时为：<br>$$<br>H={\log1000\over\log2}＝3*3.32=9.96<br>$$</p>
+<p>算作一万、十万时则分别为13.28、16.60。我们能随意增加大量一辈子也用不到的汉字，来无限地增加每个汉字的信息量？这当然不合理。</p>
+<p>那么信息量不能无条件地按符号的个数来计算，只有各符号的可能性一样，都等于1/n时才行。</p>
+<p>数字符号就满足这样的条件。事实上信息量应按符号的可能性（数学上叫概率大小）来计算，它是概率的负对数。</p>
+<p>二进制数只有<strong>2</strong>个符号：0和1，对于二进制数，每个符号的概率都等于1/2，按负对数计算为：<br>$$<br>    -\log{1\over{n}}=-(\log1-\log(n))=-(0-\log(n))=log(n)<br>$$</p>
+<p>如果符号i的概率pi不等于1/n，则:<br>$$<br>Hi=-\log(pi)<br>$$</p>
+<p>因为各个符号的概率pi不相等，对于总体来说，平均信息量就是它们的加权平均:<br>$$<br>H=-\sum{pi}*log(pi)<br>$$</p>
 </span>
       
     </div>
@@ -335,11 +320,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/numpy/" rel="tag">#numpy</a>
+            <a href="/tags/信息量/" rel="tag">#信息量</a>
           
-            <a href="/tags/pip/" rel="tag">#pip</a>
-          
-            <a href="/tags/python3/" rel="tag">#python3</a>
+            <a href="/tags/熵/" rel="tag">#熵</a>
           
         </div>
       
@@ -348,16 +331,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/02/quick-guide-to-numpy/" rel="next" title="python的numpy模块快速入门">
-                <i class="fa fa-chevron-left"></i> python的numpy模块快速入门
+              <a href="/:decision-tree.html" rel="next" title="决策树">
+                <i class="fa fa-chevron-left"></i> 决策树
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/04/vim-python/" rel="prev" title="linux下用vim打造python编辑器">
-                linux下用vim打造python编辑器 <i class="fa fa-chevron-right"></i>
+              <a href="/:association-rules.html" rel="prev" title="关联规则">
+                关联规则 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -385,8 +368,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/03/sourceinstallpython3/"
-           data-title="python3 源码安装" data-url="http://www.jianbin.info/2016/10/03/sourceinstallpython3/">
+      <div class="ds-thread" data-thread-key=":entropy.html"
+           data-title="熵与信息量" data-url="http://www.jianbin.info/:entropy.html">
       </div>
     
   </div>
@@ -493,7 +476,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E0B_u8F7Dpython3-4-1"><span class="nav-number">1.</span> <span class="nav-text">下载python3.4.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5python3-4-1"><span class="nav-number">2.</span> <span class="nav-text">安装python3.4.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6267_u884Cpython3-4"><span class="nav-number">3.</span> <span class="nav-text">执行python3.4</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u62A5_u9519"><span class="nav-number">3.1.</span> <span class="nav-text">报错</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6B63_u5E38"><span class="nav-number">3.2.</span> <span class="nav-text">正常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u547D_u4EE4_u884C_u6267_u884Cpython_u4EE3_u66FFpython3-4"><span class="nav-number">3.3.</span> <span class="nav-text">命令行执行python代替python3.4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5python_u5305_u7BA1_u7406_u5DE5_u5177pip"><span class="nav-number">4.</span> <span class="nav-text">安装python包管理工具pip</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pip_u5B89_u88C5python_u6A21_u5757"><span class="nav-number">4.1.</span> <span class="nav-text">pip安装python模块</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B9A_u4E49"><span class="nav-number">2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u71B5_u548C_u4FE1_u606F_u91CF_u7684_u8BA1_u7B97"><span class="nav-number">3.</span> <span class="nav-text">熵和信息量的计算</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
