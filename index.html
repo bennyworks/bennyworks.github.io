@@ -54,7 +54,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="数据挖掘杂谈">
-<meta property="og:url" content="http://jianbin.info/index.html">
+<meta property="og:url" content="http://www.jianbin.info/index.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -392,6 +392,1143 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/03/sourceinstallpython3/" itemprop="url">
+                  python3 源码安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-10-03T00:00:00+08:00" content="2016-10-03">
+              2016-10-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/03/sourceinstallpython3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/03/sourceinstallpython3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="u4E0B_u8F7Dpython3-4-1"><a href="#u4E0B_u8F7Dpython3-4-1" class="headerlink" title="下载python3.4.1"></a>下载python3.4.1</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="comment">//www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz</span></span><br><span class="line">tar zxfv Python-<span class="number">3.4</span><span class="number">.1</span>.tgz</span><br><span class="line">cd Python-<span class="number">3.4</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<h3 id="u5B89_u88C5python3-4-1"><a href="#u5B89_u88C5python3-4-1" class="headerlink" title="安装python3.4.1"></a>安装python3.4.1</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local </span><br><span class="line"><span class="built_in">make</span></span><br><span class="line"><span class="built_in">make</span> install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>–prefix=/usr/local     安装目录</li>
+<li>–enable-shared         动态加载库</li>
+</ul>
+</blockquote>
+<h3 id="u6267_u884Cpython3-4"><a href="#u6267_u884Cpython3-4" class="headerlink" title="执行python3.4"></a>执行python3.4</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3<span class="number">.4</span></span><br></pre></td></tr></table></figure>
+<h4 id="u62A5_u9519"><a href="#u62A5_u9519" class="headerlink" title="报错"></a>报错</h4><blockquote>
+<p>python: error while loading shared libraries: libpython3.4m.so.1.0: cannot open shared object file: No such file or directory</p>
+</blockquote>
+<p>这个错误是由于缺少了动态库libpython3.4m.so.1.0，需要从编译好的源码目录Python-3.4.1下拷贝到/usr/lib</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp libpython3.<span class="number">4</span>m.so.<span class="number">1.0</span> /usr/<span class="class"><span class="keyword">lib</span>/</span></span><br></pre></td></tr></table></figure>
+<h4 id="u6B63_u5E38"><a href="#u6B63_u5E38" class="headerlink" title="正常"></a>正常</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python <span class="number">3.4</span><span class="number">.1</span> (<span class="keyword">default</span>, Oct  <span class="number">3</span> <span class="number">2016</span>, <span class="number">11</span>:<span class="number">24</span>:<span class="number">16</span>) </span><br><span class="line">[GCC <span class="number">4.6</span><span class="number">.3</span>] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="u547D_u4EE4_u884C_u6267_u884Cpython_u4EE3_u66FFpython3-4"><a href="#u547D_u4EE4_u884C_u6267_u884Cpython_u4EE3_u66FFpython3-4" class="headerlink" title="命令行执行python代替python3.4"></a>命令行执行python代替python3.4</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>python3.<span class="number">4</span> <span class="regexp">/usr/</span>bin<span class="regexp">/python</span></span><br></pre></td></tr></table></figure>
+<h3 id="u5B89_u88C5python_u5305_u7BA1_u7406_u5DE5_u5177pip"><a href="#u5B89_u88C5python_u5305_u7BA1_u7406_u5DE5_u5177pip" class="headerlink" title="安装python包管理工具pip"></a>安装python包管理工具pip</h3><p>浏览器打开<a href="http://pypi.python.org/pypi/pip#downloads" target="_blank" rel="external">http://pypi.python.org/pypi/pip#downloads</a><br>下载最新的PIP安装文件</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">wget https:<span class="comment">//pypi.python.org/packages/e7/a8/7556133689add8d1a54c0b14aeff0acb03c64707ce100ecd53934da1aa13/pip-8.1.2.tar.gz</span></span><br><span class="line">tar zxfv pip-<span class="number">8.1</span>.<span class="number">2</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line">cd pip-<span class="number">8.1</span>.<span class="number">2</span></span><br><span class="line">python setup<span class="class">.py</span> install</span><br></pre></td></tr></table></figure>
+<h4 id="pip_u5B89_u88C5python_u6A21_u5757"><a href="#pip_u5B89_u88C5python_u6A21_u5757" class="headerlink" title="pip安装python模块"></a>pip安装python模块</h4><p>pip install package</p>
+<p>例：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pip <span class="keyword">install</span> numpy</span><br><span class="line">pip <span class="keyword">install</span> texttable</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/02/quick-guide-to-numpy/" itemprop="url">
+                  python的numpy模块快速入门
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-04-02T19:49:23+08:00" content="2016-04-02">
+              2016-04-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/02/quick-guide-to-numpy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/quick-guide-to-numpy/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h3><p>numpy是python的矩阵类型，提供了大量矩阵处理函数，它的内部运算是通过C语言而不是python实现的，所以运算和执行起来更容易、更迅速。</p>
+<p>numpy包含两种基本的数据类型：数组和矩阵。通常对于数组或者矩阵中元素的处理需要通过for等循环语句解决，使用numpy的话可以省去这些处理。</p>
+<h3 id="u6570_u7EC4_u5904_u7406"><a href="#u6570_u7EC4_u5904_u7406" class="headerlink" title="数组处理"></a>数组处理</h3><p>使用数组时需要从numpy中导入array函数</p>
+<h4 id="u4E00_u7EF4_u6570_u7EC4"><a href="#u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="一维数组"></a>一维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import <span class="built_in">array</span></span><br><span class="line">&gt;&gt;&gt; ages1=<span class="built_in">array</span>([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span><br><span class="line">&gt;&gt;&gt; ages2=<span class="built_in">array</span>([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages1+ages2 <span class="preprocessor"># 元素对应元素相加</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">45</span>, <span class="number">44</span>, <span class="number">17</span>])</span><br><span class="line">&gt;&gt;&gt; ages1*<span class="number">2</span>     <span class="preprocessor"># 元素乘以常量<span class="number">2</span></span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">30</span>, <span class="number">30</span>, <span class="number">30</span>])</span><br><span class="line">&gt;&gt;&gt; ages1**<span class="number">2</span>    <span class="preprocessor"># 元素平方</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">225</span>, <span class="number">225</span>, <span class="number">225</span>])</span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">1</span>]    <span class="preprocessor"># 访问元素</span></span><br><span class="line"><span class="number">29</span></span><br><span class="line">&gt;&gt;&gt; ages1*ages2 <span class="preprocessor"># 数组对应元素相乘</span></span><br><span class="line"><span class="built_in">array</span>([<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>])</span><br></pre></td></tr></table></figure>
+<h4 id="u591A_u7EF4_u6570_u7EC4"><a href="#u591A_u7EF4_u6570_u7EC4" class="headerlink" title="多维数组"></a>多维数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ages=([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">0</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="u77E9_u9635_u5904_u7406"><a href="#u77E9_u9635_u5904_u7406" class="headerlink" title="矩阵处理"></a>矩阵处理</h3><p>使用矩阵时需要从numpy中导入matrix或者mat函数<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import mat,matrix</span><br><span class="line">&gt;&gt;&gt; ages1=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages1</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">15</span>, <span class="number">15</span>, <span class="number">15</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">matrix</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2[<span class="number">0</span>,<span class="number">2</span>]      #访问矩阵中的单个元素</span><br><span class="line"><span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; pyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  #python列表转换成numpy矩阵</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">mat</span><span class="params">(pyList)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2<span class="class">.T</span>         #转置矩阵</span><br><span class="line">matrix([[<span class="number">30</span>],</span><br><span class="line">        [<span class="number">29</span>],</span><br><span class="line">        [ <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages1*ages2<span class="class">.T</span>   #矩阵相乘 m*n矩阵乘以n*p矩阵等于m*p矩阵</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">915</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">sort</span><span class="params">()</span></span>    #该方法是原地排序，需要保留原数据的话要做好备份</span><br><span class="line">&gt;&gt;&gt; ages2</span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[ <span class="number">2</span>, <span class="number">29</span>, <span class="number">30</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2=<span class="function"><span class="title">mat</span><span class="params">([<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>])</span></span> #获取矩阵元素由小到大的排序序号</span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">argsort</span><span class="params">()</span></span> </span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>]])</span></span></span><br><span class="line">&gt;&gt;&gt; ages2.<span class="function"><span class="title">mean</span><span class="params">()</span></span>    #计算矩阵的均值</span><br><span class="line"><span class="number">20.333333333333332</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u77E9_u9635_u5143_u7D20_u76F8_u4E58"><a href="#u77E9_u9635_u5143_u7D20_u76F8_u4E58" class="headerlink" title="矩阵元素相乘"></a>矩阵元素相乘</h3><p>把两个矩阵的对应元素相乘，需要从numpy中导入multiply函数</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import multiply</span><br><span class="line">&gt;&gt;&gt; <span class="function"><span class="title">multiply</span><span class="params">(ages1, ages2)</span></span></span><br><span class="line"><span class="function"><span class="title">matrix</span><span class="params">([[<span class="number">450</span>, <span class="number">435</span>,  <span class="number">30</span>]])</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570"><a href="#u901A_u8FC7numpy_u4E2D_u7684shape_u51FD_u6570_u6765_u67E5_u770B_u77E9_u9635_u6216_u8005_u6570_u7EC4_u7684_u7EF4_u6570" class="headerlink" title="通过numpy中的shape函数来查看矩阵或者数组的维数"></a>通过numpy中的shape函数来查看矩阵或者数组的维数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from numpy import shape</span><br><span class="line">&gt;&gt;&gt; ages=mat([[<span class="number">15</span>,<span class="number">15</span>,<span class="number">15</span>],[<span class="number">30</span>,<span class="number">29</span>,<span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; shape(ages)</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)          <span class="preprocessor">#<span class="number">2</span>行<span class="number">3</span>列的矩阵</span></span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,:]   <span class="preprocessor">#取出第<span class="number">1</span>行元素，从第<span class="number">0</span>行算起</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>,  <span class="number">2</span>]])</span><br><span class="line">&gt;&gt;&gt; ages[<span class="number">1</span>,<span class="number">0</span>:<span class="number">2</span>] <span class="preprocessor">#取出第<span class="number">1</span>行<span class="number">0</span>列和<span class="number">1</span>列的元素</span></span><br><span class="line">matrix([[<span class="number">30</span>, <span class="number">29</span>]])</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/02/py-data-structure/" itemprop="url">
+                  python常用于机器学习的数据类型
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-04-02T17:13:13+08:00" content="2016-04-02">
+              2016-04-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/02/py-data-structure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/py-data-structure/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>python提供了多种数据类型来存放数据项集合。此外，用户还可以通过添加模块创建出更多容器类型。下面介绍机器学习中常用的几种容器。</p>
+<h3 id="u5217_u8868_28List_29"><a href="#u5217_u8868_28List_29" class="headerlink" title="列表(List)"></a>列表(List)</h3><p>列表是python中最常用的数据类型，用方括号[]来创建空列表，括号内的数据项用逗号分隔，且不需要具有相同的类型。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=[]</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=[<span class="string">'Benny'</span>,<span class="string">'July'</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names.append(<span class="string">'Shelly'</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names.append(<span class="number">8</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; [<span class="string">'Benny'</span>, <span class="string">'July'</span>, <span class="string">'Shelly'</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5"><a href="#u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5" class="headerlink" title="内置函数和方法"></a>内置函数和方法</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmp(list1, list2)</td>
+<td>比较两个列表的元素</td>
+</tr>
+<tr>
+<td>len(list)</td>
+<td>列表元素个数</td>
+</tr>
+<tr>
+<td>max(list)</td>
+<td>返回列表元素最大值</td>
+</tr>
+<tr>
+<td>min(list)</td>
+<td>返回列表元素最小值</td>
+</tr>
+<tr>
+<td>list(seq)</td>
+<td>将元组转换为列表</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list.append(obj)</td>
+<td>在列表末尾添加新的对象</td>
+</tr>
+<tr>
+<td>list.count(obj)</td>
+<td>统计某个元素在列表中出现的次数</td>
+</tr>
+<tr>
+<td>list.extend(seq)</td>
+<td>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</td>
+</tr>
+<tr>
+<td>list.index(obj)</td>
+<td>从列表中找出某个值第一个匹配项的索引位置</td>
+</tr>
+<tr>
+<td>list.insert(index, obj)</td>
+<td>将对象插入列表</td>
+</tr>
+<tr>
+<td>list.pop(obj=list[-1])</td>
+<td>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</td>
+</tr>
+<tr>
+<td>list.remove(obj)</td>
+<td>移除列表中某个值的第一个匹配项</td>
+</tr>
+<tr>
+<td>list.reverse()</td>
+<td>反向列表中元素</td>
+</tr>
+<tr>
+<td>list.sort([func])</td>
+<td>对原列表进行排序</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u5B57_u5178_28Dictionary_29"><a href="#u5B57_u5178_28Dictionary_29" class="headerlink" title="字典(Dictionary)"></a>字典(Dictionary)</h3><p>字典是一种存放无序键值对(key/value)的数据类型，用大括号{}来创建空字典，键的类型可以是数字或者字符串。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=&#123;&#125;</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=&#123;<span class="string">'name1'</span><span class="symbol">:<span class="string">'Benny'</span></span>,<span class="string">'name2'</span><span class="symbol">:<span class="string">'July'</span></span>&#125;</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names[<span class="number">1</span>]=<span class="string">'Shelly'</span></span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; &#123;<span class="number">1</span><span class="symbol">:</span> <span class="string">'Shelly'</span>, <span class="string">'name2'</span><span class="symbol">:</span> <span class="string">'Shelly'</span>, <span class="string">'name1'</span><span class="symbol">:</span> <span class="string">'Benny'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5-1"><a href="#u5185_u7F6E_u51FD_u6570_u548C_u65B9_u6CD5-1" class="headerlink" title="内置函数和方法"></a>内置函数和方法</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmp(dict1, dict2)</td>
+<td>比较两个字典元素。</td>
+</tr>
+<tr>
+<td>len(dict)</td>
+<td>计算字典元素个数，即键的总数。</td>
+</tr>
+<tr>
+<td>str(dict)</td>
+<td>输出字典可打印的字符串表示。</td>
+</tr>
+<tr>
+<td>type(variable)</td>
+<td>返回输入的变量类型，如果变量是字典就返回字典类型。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dict.clear()</td>
+<td>删除字典内所有元素</td>
+</tr>
+<tr>
+<td>dict.copy()</td>
+<td>返回一个字典的浅复制</td>
+</tr>
+<tr>
+<td>dict.fromkeys()</td>
+<td>创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</td>
+</tr>
+<tr>
+<td>dict.get(key, default=None)</td>
+<td>返回指定键的值，如果值不在字典中返回default值</td>
+</tr>
+<tr>
+<td>dict.has_key(key)</td>
+<td>如果键在字典dict里返回true，否则返回false</td>
+</tr>
+<tr>
+<td>dict.items()</td>
+<td>以列表返回可遍历的(键, 值) 元组数组</td>
+</tr>
+<tr>
+<td>dict.keys()</td>
+<td>以列表返回一个字典所有的键</td>
+</tr>
+<tr>
+<td>dict.setdefault(key, default=None)</td>
+<td>和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default</td>
+</tr>
+<tr>
+<td>dict.update(dict2)</td>
+<td>把字典dict2的键/值对更新到dict里</td>
+</tr>
+<tr>
+<td>dict.values()</td>
+<td>以列表返回字典中的所有值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u96C6_u5408_28Set_29"><a href="#u96C6_u5408_28Set_29" class="headerlink" title="集合(Set)"></a>集合(Set)</h3><p>这里的集合与数学中集合的概念类似，是指由无序不重复的元素组成的合集。创建空合集时必须用Set()，创建非空合集时可以用大括号{}。</p>
+<p>另外，集合支持一些书序运算，例如并集、交集和差集，分别用符号“|”、“&amp;”和“-”来表示。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names1=&#123;<span class="string">'Benny'</span>, <span class="string">'July'</span>, <span class="string">'Common'</span>&#125;</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names1</span><br><span class="line">set([<span class="string">'July'</span>, <span class="string">'Common'</span>, <span class="string">'Benny'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names2=set([<span class="string">'Shelly'</span>, <span class="string">'Common'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names2</span><br><span class="line">set([<span class="string">'Shelly'</span>, <span class="string">'Common'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names1|names2</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'Shelly'</span>, <span class="string">'July'</span>, <span class="string">'Common'</span>, <span class="string">'Benny'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names1&amp;names2</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'Common'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names1-names2</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'July'</span>, <span class="string">'Benny'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names=names2-names1</span><br><span class="line"><span class="prompt">&gt;&gt;</span>&gt; names</span><br><span class="line">set([<span class="string">'Shelly'</span>])</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/09/practice-python/" itemprop="url">
+                  python入门练习
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-09T09:55:01+08:00" content="2016-03-09">
+              2016-03-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/09/practice-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/practice-python/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>一门编程语言的入门最起码需要掌握增删改查功能的开发，我们以“通讯录管理”为开发需求，练习python开发。</p>
+<p>联系代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cPickle	<span class="comment"># cPickle模块包含用于持久对象的功能</span></span><br><span class="line"><span class="keyword">import</span> os		<span class="comment"># os模块包含普遍的操作系统功能</span></span><br><span class="line"><span class="keyword">import</span> sys		<span class="comment"># sys模块包含系统对应的功能</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Contact</span>:</span>  <span class="comment"># 定义类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, phone, mail)</span>:</span>  <span class="comment"># 构造函数</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.phone = phone</span><br><span class="line">        self.mail = mail</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Update</span><span class="params">(self, name, phone, mail)</span>:</span>    <span class="comment"># 定义方法</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.phone = phone</span><br><span class="line">        self.mail = mail</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">display</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"name:%s, phone:%s, mail:%s"</span> % (self.name, self.phone, self.mail)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始操作</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建文件用于保存通讯录数据</span></span><br><span class="line">data = os.getcwd() + os.sep + <span class="string">"contacts.data"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"-----------------------------------------------------------------------"</span></span><br><span class="line">    <span class="comment"># 从标准输入获取字符串</span></span><br><span class="line">    operation = raw_input(<span class="string">"input your operation(add/delete/modify/search/all/exit):"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> operation == <span class="string">"exit"</span>:</span><br><span class="line">       sys.exit()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(data):</span><br><span class="line">        <span class="keyword">if</span> os.path.getsize(data) == <span class="number">0</span>:</span><br><span class="line">            contacts = &#123;&#125;</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            f = file(data)</span><br><span class="line">            contacts = cPickle.load(f)</span><br><span class="line">            f.close()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        contacts = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> operation == <span class="string">"add"</span>:</span><br><span class="line">        flag = <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            name = raw_input(<span class="string">"input name(exit to back choose operation):"</span>)</span><br><span class="line">            <span class="keyword">if</span> name == <span class="string">"exit"</span>:</span><br><span class="line">                flag = <span class="keyword">True</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"the name already exists, please input another or input 'exit' to back choose operation"</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                phone = raw_input(<span class="string">"input phone:"</span>)</span><br><span class="line">                mail = raw_input(<span class="string">"input mail:"</span>)</span><br><span class="line">                c = Contact(name, phone, mail)</span><br><span class="line">                contacts[name] = c</span><br><span class="line">                f = file(data, <span class="string">"w"</span>)</span><br><span class="line">                cPickle.dump(contacts, f)</span><br><span class="line">                f.close()</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"add successfully."</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"delete"</span>:</span><br><span class="line">        name = raw_input(<span class="string">"input the name that you want to delete:"</span>)</span><br><span class="line">        <span class="keyword">if</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">            <span class="keyword">del</span> contacts[name]</span><br><span class="line">            f = file(data, <span class="string">"w"</span>)</span><br><span class="line">            cPickle.dump(contacts, f)</span><br><span class="line">            f.close()</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"delete successfully."</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"there is no person named %s"</span> % name</span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"modify"</span>:</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            name = raw_input(<span class="string">"input the name which to update or exit to back choose operation:"</span>)</span><br><span class="line">            <span class="keyword">if</span> name == <span class="string">"exit"</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"there is no person named %s"</span> % name</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                phone = raw_input(<span class="string">"input phone:"</span>)</span><br><span class="line">                mail = raw_input(<span class="string">"input mail:"</span>)</span><br><span class="line">                contacts[name].Update(name, phone, mail)</span><br><span class="line">                f = file(data, <span class="string">"w"</span>)</span><br><span class="line">                cPickle.dump(contacts, f)</span><br><span class="line">                f.close()</span><br><span class="line">                <span class="keyword">print</span> <span class="string">"modify successfully."</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"search"</span>:</span><br><span class="line">        name = raw_input(<span class="string">"input the name which you want to search:"</span>)</span><br><span class="line">        <span class="keyword">if</span> name <span class="keyword">in</span> contacts:</span><br><span class="line">            contacts[name].display()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">print</span> <span class="string">"there is no person named %s"</span> % name</span><br><span class="line">    <span class="keyword">elif</span> operation == <span class="string">"all"</span>:</span><br><span class="line">        <span class="keyword">for</span> name, contact <span class="keyword">in</span> contacts.items():</span><br><span class="line">            contact.display()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"unknown operation"</span></span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/07/repository/" itemprop="url">
+                  知识库
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-07T23:20:13+08:00" content="2016-03-07">
+              2016-03-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/07/repository/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/repository/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h3 id="u4E2D_u6587_u6587_u672C_u5206_u7C7B_u8BED_u6599_u5E93"><a href="#u4E2D_u6587_u6587_u672C_u5206_u7C7B_u8BED_u6599_u5E93" class="headerlink" title="中文文本分类语料库"></a>中文文本分类语料库</h3><p>文本分类语料库来源于Sohu新闻网站保存的大量经过编辑手工整理与分类的新闻语料与对应的分类信息。其分类体系包括几十个分类节点，网页规模约为十万篇文档。</p>
+<p>语料库统计的意义：提供一个较大规模的标准中文文本分类测试平台。</p>
+<p>应用案例：中文文本分类，主题跟踪与检测等。</p>
+<p>语料库下载地址 : <a href="http://www.sogou.com/labs/dl/c.html" target="_blank" rel="external">http://www.sogou.com/labs/dl/c.html</a></p>
+<h3 id="u52A0_u5DDE_u5927_u5B66_u6B27_u6587_u5206_u6821_u673A_u5668_u5B66_u4E60_u77E5_u8BC6_u5E93"><a href="#u52A0_u5DDE_u5927_u5B66_u6B27_u6587_u5206_u6821_u673A_u5668_u5B66_u4E60_u77E5_u8BC6_u5E93" class="headerlink" title="加州大学欧文分校机器学习知识库"></a>加州大学欧文分校机器学习知识库</h3><p>UCI机器学习知识库为机器学习社区收集了各种类型的数据库、领域理论和数据生成器，用于进行机器学习算法的实证分析。</p>
+<p>作为机器学习与智能系统的中心，该知识库目前保存了348套数据集用于机器学习。我们可以在该知识库网站的搜索界面查看所有数据集。如果你想在期刊上引用到知识库的数据集，请先阅读其引文政策。另外你可以咨询其捐赠政策，向该知识库捐赠一组数据。</p>
+<p>知识库数据集下载地址 : <a href="http://archive.ics.uci.edu/ml/index.html" target="_blank" rel="external">http://archive.ics.uci.edu/ml/index.html</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/05/clustering/" itemprop="url">
+                  聚类分析
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-05T14:35:12+08:00" content="2016-03-05">
+              2016-03-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/05/clustering/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/05/clustering/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>聚类分析被应用于很多方面。<br>在商业上，聚类分析被用来发现不同的客户群，并且通过购买模式刻画不同的客户群的特征；<br>在生物上，聚类分析被用来动植物分类和对基因进行分类，获取对种群固有结构的认识；<br>在地理上，聚类能够帮助在地球中被观察的数据库商趋于的相似性；<br>在保险行业上，聚类分析通过一个高的平均消费来鉴定汽车保险单持有者的分组，同时根据住宅类型，价值，地理位置来鉴定一个城市的房产分组；<br>在因特网应用上，聚类分析被用来在网上进行文档归类来修复信息。</p>
+<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>聚类（Clustering）是将数据划分成群组的过程。研究如何在没有训练的条件下把对象化分为若干类。通过确定数据之间在预先制定的属性上的相似性来完成聚类任务，这样最相似的数据就聚集成簇（Cluster）。</p>
+<p>聚类与分类不同，聚类的类别取决于数据本身，而分类的类别是由数据分析人员预先定义好的。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/05/clustering/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/mathjax/" itemprop="url">
+                  hexo在Next主题下输入数学公式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-04T19:38:21+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">markdown</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/04/mathjax/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/mathjax/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>打开文件themes/next/_config.yml，在大概162行将 <strong>mathjax</strong> 对应的值修改成 <strong>true</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">157</span> <span class="preprocessor"># ---------------------------------</span></span><br><span class="line"><span class="number">158</span> <span class="preprocessor"># Third Party Services Settings</span></span><br><span class="line"><span class="number">159</span> <span class="preprocessor"># ---------------------------------</span></span><br><span class="line"><span class="number">160</span> </span><br><span class="line"><span class="number">161</span> <span class="preprocessor"># MathJax Support</span></span><br><span class="line"><span class="number">162</span> mathjax: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="u5982_u4F55_u63D2_u5165_u516C_u5F0F"><a href="#u5982_u4F55_u63D2_u5165_u516C_u5F0F" class="headerlink" title="如何插入公式"></a>如何插入公式</h3><p>LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
+<p>行中公式可以用如下两种方法表示：</p>
+<p>(数学公式)　或　￥数学公式￥（要把人民币符号换成美元符号）</p>
+<p>独立公式可以用如下两种方法表示：</p>
+<p>[数学公式]　或　￥￥数学公式￥￥（要把人民币符号换成美元符号）</p>
+<p>例子：J\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}</p>
+<p>显示：$J\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}$</p>
+<h3 id="u5982_u4F55_u8F93_u5165_u4E0A_u4E0B_u6807"><a href="#u5982_u4F55_u8F93_u5165_u4E0A_u4E0B_u6807" class="headerlink" title="如何输入上下标"></a>如何输入上下标</h3><p>^表示上标, _表示下标。如果上下标的内容多于一个字符，要用{}把这些内容括起来当成一个整体。上下标是可以嵌套的，也可以同时使用。<br>例子：x^{y^z}=(1+{\rm e}^x)^{-2xy^w}<br>显示：$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$</p>
+<p>另外，如果要在左右两边都有上下标，可以用\sideset命令。<br>例子：\sideset{^12}{^34}\bigotimes<br>显示：$\sideset{^12}{^34}\bigotimes$</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/04/mathjax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/association-rules/" itemprop="url">
+                  关联规则
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-04T18:08:35+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/04/association-rules/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/association-rules/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。</p>
+<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。</p>
+<p>比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设计、商场货架的布置、生产安排、具有针对性的市场营销等。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/04/association-rules/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/entropy/" itemprop="url">
+                  熵与信息量
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-04T00:56:04+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/04/entropy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/entropy/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a><strong>问题</strong></h3><p>在构造决策树时，常常使用熵计算信息增益，以此来度量决策树的纯度。那么熵是指什么？信息量是指什么？他们之间有什么样的关系呢？</p>
+<h3 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>熵</strong>，是物理名字，在信息论里则叫信息量。从控制论的角度来看，应叫不确定性。因此，熵只是刻画系统或者变量不确定性的一个量，并不是刻画系统信息量的一个量。<br>当我们不知道某事物具体状态，却知道它有几种可能性时，显然，可能性种类愈多，不确定性愈大，要消除这种不确定性所需要做的“功”也就越大。而这里要消除不确定性所要做的事情就是<strong>信息量</strong>。<br>所以，熵、不确定性、信息量，这三者是同一个数值。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/04/entropy/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
 
   </section>
 
@@ -483,7 +1620,7 @@
             <p class="site-author-name">Links</p>
             
               <span class="links-of-author-item">
-                <a href="http://home.weili.cmpower.cn/" target="_blank">卓微力</a>
+                <a href="http://home.weili.cmpower.cn/" target="_blank" rel="external nofollow">卓微力</a>
               </span>
             
           
@@ -513,7 +1650,7 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
