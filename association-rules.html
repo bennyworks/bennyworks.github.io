@@ -36,7 +36,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据挖掘,数据挖掘知识体系," />
+  <meta name="keywords" content="Apriori,apriori,关联规则,数据挖掘," />
 
 
 
@@ -52,20 +52,22 @@
 
 
 
-<meta name="description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
+<meta name="description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
+原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
+比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据挖掘概述">
-<meta property="og:url" content="http://www.jianbin.info/:data-mining.html">
+<meta property="og:title" content="关联规则">
+<meta property="og:url" content="http://www.jianbin.info/association-rules.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
-<meta property="og:image" content="http://www.jianbin.info/data_mining.png">
-<meta property="og:updated_time" content="2016-08-07T03:36:59.907Z">
+<meta property="og:description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
+原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
+比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
+<meta property="og:updated_time" content="2016-03-05T12:43:36.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据挖掘概述">
-<meta name="twitter:description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
+<meta name="twitter:title" content="关联规则">
+<meta name="twitter:description" content="解决问题关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。
+原理关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。
+比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设">
 
 
 
@@ -77,7 +79,7 @@
   };
 </script>
 
-  <title> 数据挖掘概述 | 数据挖掘杂谈 </title>
+  <title> 关联规则 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -243,7 +245,7 @@
             
             
               
-                数据挖掘概述
+                关联规则
               
             
           </h1>
@@ -252,8 +254,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-01T00:00:00+08:00" content="2016-01-01">
-              2016-01-01
+            <time itemprop="dateCreated" datetime="2016-03-04T18:08:35+08:00" content="2016-03-04">
+              2016-03-04
             </time>
           </span>
 
@@ -278,8 +280,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/:data-mining.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key=":data-mining.html" itemprop="commentsCount"></span>
+                <a href="/association-rules.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="association-rules.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -298,14 +300,754 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><a href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F" class="headerlink" title="什么是数据挖掘？"></a>什么是数据挖掘？</h3><p>数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。</p>
-<p>知识发现的过程包括以下几个步骤：<br>  1) 数据清理： 除噪声和删除不一致数据；<br>  2) 数据集成： 多种数据源的组合；<br>  3) 数据选择： 取和分析与任务相关的数据；<br>  4) 数据变换： 数据变换和统一成适合挖掘的形式；<br>  5) 数据挖掘： 使用智能方法提取数据格式；<br>  6) 模式评估： 识别代表知识的有趣模式；<br>  7) 知识表示： 使用可视化和知识表示技术，向用户提供挖掘的知识。</p>
+        <span itemprop="articleBody"><h3 id="u89E3_u51B3_u95EE_u9898"><a href="#u89E3_u51B3_u95EE_u9898" class="headerlink" title="解决问题"></a><strong>解决问题</strong></h3><p>关联规则通常用来解决在零售业中，辨别这些交易项目之间是否存在某种关系，挖掘出对用户有价值的规律。在美国，与尿布一起购买最多的是啤酒这一规律的发现就是最好的案例。</p>
+<h3 id="u539F_u7406"><a href="#u539F_u7406" class="headerlink" title="原理"></a><strong>原理</strong></h3><p>关联规则是表示数据库中一组对象之间的某种关联关系的规则，挖掘的主要对象是交易(Transaction)数据库。</p>
+<p>比如，可以表示“购买了商品A和B的顾客中有80％的人又购买了商品C和D”。这种关联规则提供的信息可以用作商品目录设计、商场货架的布置、生产安排、具有针对性的市场营销等。</p>
 <a id="more"></a>
-<h3 id="u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><a href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5" class="headerlink" title="数据挖掘的分析模型及算法"></a>数据挖掘的分析模型及算法</h3><h4 id="u5206_u6790_u6A21_u578B"><a href="#u5206_u6790_u6A21_u578B" class="headerlink" title="分析模型"></a>分析模型</h4><p>数据挖掘是一个交叉学科领域，吸纳了许多学科的技术，包括统计学、机器学习、数据库和数据仓库、信息检索、可视化技术等。</p>
-<p>在数据挖掘中，没有哪个方法可以解决所有问题，不同的实际问题，必须结合不同的领域知识，采用不同的数据挖掘方法，有的问题必须结合多种数据挖掘方法进行解决。在实际应用中，具体使用哪种方法主要取决于问题的类型以及数据的类型和规模。</p>
-<p>数据挖掘的方法一般分为预测型和描述型。预测型的方法一般有分类、预测、回归分析、时间序列分析四种，而描述型则分为聚类分析、关联分析、序列匹配三种。</p>
-<img src="/data_mining.png" alt="数据挖掘知识体系" title="数据挖掘知识体系">
-<h4 id="u6316_u6398_u7B97_u6CD5"><a href="#u6316_u6398_u7B97_u6CD5" class="headerlink" title="挖掘算法"></a>挖掘算法</h4><p>数据挖掘常见的算法主要有<a href="/:decision-tree.html" title="决策树">决策树</a>、贝叶斯网络、遗传算法、神经网络(ANN<br>)、K邻近算法(KNN)、<a href="/:association-rules.html" title="关联规则">关联规则</a>、回归分析、判别分析、<a href="/:clustering.html" title="聚类分析">聚类分析</a>、主要成分分析及支持向量机等。</p>
+<h3 id="u7ECF_u5178_u6848_u4F8B"><a href="#u7ECF_u5178_u6848_u4F8B" class="headerlink" title="经典案例"></a><strong>经典案例</strong></h3><p>某在线商店货架上有多种货物，例如，帽子、裙子、鞋子等,我们应用关联规则就是为了发现当一个人已经购买了帽子时，那他有多大可能还会买裙子呢？</p>
+<p>以某在线商店的购物系统为例，数据库中有 <strong>5</strong> 条用户客户购买记录表(T1)：</p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>帽子</th>
+<th>裙子</th>
+<th>鞋子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>通过Apriori算法进行处理，过程为（1）扫描（2）计数（3）比较（4）产生频繁项集（5）连接、剪枝，产生候选集。重复步骤（1）~（5）直到不能发现更大的频集</p>
+<p>具体操作步骤如下：<br><strong>Step1.首先扫描表T1，产生候选集C1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子</td>
+<td>3/5</td>
+</tr>
+<tr>
+<td>裙子</td>
+<td>4/5</td>
+</tr>
+<tr>
+<td>鞋子</td>
+<td>1/5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step2.如果最小支持度为2/5，比较产生频集L1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子</td>
+<td>3/5</td>
+</tr>
+<tr>
+<td>裙子</td>
+<td>4/5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step3.由L1连接、计数产生候选集C2</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子,裙子</td>
+<td>2/5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step4.再次扫描表T1，由C2比较产生L2频集：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帽子,裙子</td>
+<td>2/5</td>
+</tr>
+</tbody>
+</table>
+<p>L2为得出的最终频集。<br>由此可以计算买帽子的人同时也会买裙子的置信度为：<br>$$<br>confidence(帽子\Rightarrow裙子)=P(帽子|裙子)=\frac{\frac{2}{5}}{3\over5}={\frac{2}{3}}<br>$$</p>
+<p>可以计算买裙子的人同时也会买帽子的置信度为：<br>$$<br>confidence(裙子\Rightarrow帽子)=P(裙子|帽子)=\frac{\frac{2}{5}}{\frac{4}{5}}=\frac{1}{2}<br>$$</p>
+<p>由此可以看到买帽子的人也买裙子的可能性(67%)高于买裙子的人也买帽子的可能性(50%)。帽子和裙子关联的支持度已足够高了，意味着这是一条有意义的关联规则。</p>
+<h3 id="Apriori_u7B97_u6CD5"><a href="#Apriori_u7B97_u6CD5" class="headerlink" title="Apriori算法"></a><strong>Apriori算法</strong></h3><p>在Apriori算法中，每一步创建该步的侯选集，统计每个侯选项目集的支持度，并和预定义的最小支持度比较，来确定该步的最大项目集。</p>
+<p>以数据库D1为例, 其中有四个事务记录，分别如下：</p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>I1, I3, I4</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>I2, I3, I5</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>I1, I2, I3, I5</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>I2, I5</td>
+</tr>
+</tbody>
+</table>
+<p>设定项目集的最小支持度(support)：2，开始算法：</p>
+<p><strong>Step1.第一次扫描D1，得到候选集C1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>I3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>I4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>I5</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step2.比较最小支持度2得到频集L1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>I3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>I5</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step3.由L1连接、扫描D1并计数得到候选集C2：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1，I2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>I1，I3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I1，I5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>I2，I3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I2，I5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>I3，I5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step4.C2比较最小支持度2得到频集L2：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1，I3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I2，I3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I2，I5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>I3，I5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step5.连接、扫描D1并计数得到候选集C3：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1, I2, I3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>I1, I3, I5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>I2, I3, I5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step6.比较最小支持度2得到频集L3:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度计数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I2, I3, I5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>由此可以得出I2，I3，I5关联的支持度为2/4=50%， 很有可能是一种潜在的规律。</p>
+<h3 id="Apriori_u6539_u8FDB_u7B97_u6CD5"><a href="#Apriori_u6539_u8FDB_u7B97_u6CD5" class="headerlink" title="Apriori改进算法"></a><strong>Apriori改进算法</strong></h3><p>Apriori算法存在明显的缺陷<br>: 1.在每一步产生侯选项目集时循环产生的组合过多，没有排除不应该参与组合的元素;<br>: 2.每次计算项集的支持度时，都对数据库D中的全部记录进行了一遍扫描比较，如果是一个大型的数据库的话，这种扫描比较会大大增加计算机系统的I/O开销。而这种代价是随着数据库的记录的增加呈现出几何级数的增加。</p>
+<p>以数据库D2为例，总共有9个事务，具体如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>1346</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>234</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>123</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>26</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>2345</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>235</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>12346</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>13456</td>
+</tr>
+<tr>
+<td>T9</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>设定最小支持度为<strong>3</strong>，算法思路演示如下：</p>
+<p><strong>Step1.扫描D2，得到候选集C1，由于项集的支持度都&gt;=3，因此候选集C1=频集L1：</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong><br>由于下一步要计算项集有2个元素的情况，而T9只有1个元素，所以下次计数将不再扫描T9，设 <em>D2</em> 删除T9后为 <em>D2’</em></p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>1346</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>234</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>123</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>26</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>2345</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>235</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>12346</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>13456</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>Step2.由L1连接、扫描 <em>D2’</em> 并计数产生候选集C2:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>2</td>
+</tr>
+<tr>
+<td>13</td>
+<td>4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>3</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1</td>
+</tr>
+<tr>
+<td>16</td>
+<td>3</td>
+</tr>
+<tr>
+<td>23</td>
+<td>5</td>
+</tr>
+<tr>
+<td>24</td>
+<td>3</td>
+</tr>
+<tr>
+<td>25</td>
+<td>2</td>
+</tr>
+<tr>
+<td>26</td>
+<td>2</td>
+</tr>
+<tr>
+<td>34</td>
+<td>5</td>
+</tr>
+<tr>
+<td>35</td>
+<td>3</td>
+</tr>
+<tr>
+<td>36</td>
+<td>3</td>
+</tr>
+<tr>
+<td>45</td>
+<td>2</td>
+</tr>
+<tr>
+<td>46</td>
+<td>3</td>
+</tr>
+<tr>
+<td>56</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step3.比较最小支持度3得到频集L2:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13</td>
+<td>4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>3</td>
+</tr>
+<tr>
+<td>16</td>
+<td>3</td>
+</tr>
+<tr>
+<td>23</td>
+<td>5</td>
+</tr>
+<tr>
+<td>24</td>
+<td>3</td>
+</tr>
+<tr>
+<td>34</td>
+<td>5</td>
+</tr>
+<tr>
+<td>35</td>
+<td>3</td>
+</tr>
+<tr>
+<td>36</td>
+<td>3</td>
+</tr>
+<tr>
+<td>46</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong><br>由于下一步要计算项集有3个元素的情况，而T4只有2个元素，所以下次计数将不再扫描T4，设 <em>D2’</em> 删除T4后为 <em>D2’’</em></p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>1346</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>234</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>123</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>2345</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>235</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>12346</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>13456</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>Step5.计算元素1-6在频集L2中出现的次数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>出现次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong><br>由于元素5出现次数只有1次，那么将不会出现元素数量为3的项集中，进行项集连接时可以忽略</p>
+</blockquote>
+<p><strong>Step6.由L2连接、扫描 <em>D2’’</em> 计算产生候选集C3=L3:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>134</td>
+<td>3</td>
+</tr>
+<tr>
+<td>136</td>
+<td>3</td>
+</tr>
+<tr>
+<td>146</td>
+<td>3</td>
+</tr>
+<tr>
+<td>234</td>
+<td>3</td>
+</tr>
+<tr>
+<td>346</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong><br>由于下一步要计算项集有4个元素的情况，而T2，T3，T6只有3个元素，所以下次计数将不再扫描T2，T3，T6，设 <em>D2’’</em> 删除T2，T3，T6后为 <em>D2’’’</em></p>
+<table>
+<thead>
+<tr>
+<th>项目ID</th>
+<th>项集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>1346</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>2345</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>12346</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>13456</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>Step7.计算元素在频集L3中的出现次数：</strong></p>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>出现次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong><br>由于元素2出现次数只有1次，那么将不会出现元素数量为4的项集中，进行项集连接时可以忽略</p>
+</blockquote>
+<p><strong>Step8.由L3连接、扫描 <em>D’’’</em> 并计数产生候选集C4=L4:</strong></p>
+<table>
+<thead>
+<tr>
+<th>项集</th>
+<th>支持度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1346</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>由以上的演示可以看出：<br>1.根据新候选集中元素的出现次数决定排除一些不符合连接条件的元素，这就降低了组合的可能性，即降低循环判断的次数；<br>2.‘删除’一些不能支持频集的项目，生成新的数据库，从而逻辑地减少数据库中项目的数量。虽然有时间和I/O的开销，但是随着项目的减少，在循环次数增加的情况下，扫描次数的减少会逐渐提现出来。</p>
 </span>
       
     </div>
@@ -314,9 +1056,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
+            <a href="/tags/Apriori/" rel="tag">#Apriori</a>
           
-            <a href="/tags/数据挖掘知识体系/" rel="tag">#数据挖掘知识体系</a>
+            <a href="/tags/apriori/" rel="tag">#apriori</a>
+          
+            <a href="/tags/关联规则/" rel="tag">#关联规则</a>
+          
+            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
           
         </div>
       
@@ -325,12 +1071,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/entropy.html" rel="next" title="熵与信息量">
+                <i class="fa fa-chevron-left"></i> 熵与信息量
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/:decision-tree.html" rel="prev" title="决策树">
-                决策树 <i class="fa fa-chevron-right"></i>
+              <a href="/mathjax.html" rel="prev" title="hexo在Next主题下输入数学公式">
+                hexo在Next主题下输入数学公式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -358,8 +1108,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key=":data-mining.html"
-           data-title="数据挖掘概述" data-url="http://www.jianbin.info/:data-mining.html">
+      <div class="ds-thread" data-thread-key="association-rules.html"
+           data-title="关联规则" data-url="http://www.jianbin.info/association-rules.html">
       </div>
     
   </div>
@@ -466,7 +1216,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><span class="nav-number">1.</span> <span class="nav-text">什么是数据挖掘？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><span class="nav-number">2.</span> <span class="nav-text">数据挖掘的分析模型及算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5206_u6790_u6A21_u578B"><span class="nav-number">2.1.</span> <span class="nav-text">分析模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6316_u6398_u7B97_u6CD5"><span class="nav-number">2.2.</span> <span class="nav-text">挖掘算法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u51B3_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u539F_u7406"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ECF_u5178_u6848_u4F8B"><span class="nav-number">3.</span> <span class="nav-text">经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apriori_u7B97_u6CD5"><span class="nav-number">4.</span> <span class="nav-text">Apriori算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apriori_u6539_u8FDB_u7B97_u6CD5"><span class="nav-number">5.</span> <span class="nav-text">Apriori改进算法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
