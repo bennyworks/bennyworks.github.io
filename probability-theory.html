@@ -36,7 +36,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据挖掘,数据挖掘知识体系," />
+  <meta name="keywords" content="概率," />
 
 
 
@@ -52,20 +52,19 @@
 
 
 
-<meta name="description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
+<meta name="description" content="设A,B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
+多个事件的概率加法公式设$A_1,A_2,…,An$是n个随机事件，则有$$P(\bigcup^n{i=1}Ai) = \sum^n{i=1}P(Ai) - \sum{1 \leq i \leq j \leq n} P(A_iAj) + \sum {1\leq i \leq j \leq k \">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据挖掘概述">
-<meta property="og:url" content="http://www.jianbin.info/data-mining.html">
+<meta property="og:title" content="概率的基本定理">
+<meta property="og:url" content="http://www.jianbin.info/probability-theory.html">
 <meta property="og:site_name" content="数据挖掘杂谈">
-<meta property="og:description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
-<meta property="og:image" content="http://www.jianbin.info/data_mining.png">
-<meta property="og:updated_time" content="2016-08-07T03:36:59.907Z">
+<meta property="og:description" content="设A,B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
+多个事件的概率加法公式设$A_1,A_2,…,An$是n个随机事件，则有$$P(\bigcup^n{i=1}Ai) = \sum^n{i=1}P(Ai) - \sum{1 \leq i \leq j \leq n} P(A_iAj) + \sum {1\leq i \leq j \leq k \">
+<meta property="og:updated_time" content="2016-11-26T14:25:15.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据挖掘概述">
-<meta name="twitter:description" content="什么是数据挖掘？数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。
-知识发现的过程包括以下几个步骤：  1) 数据清理： 除噪声和删除不一致数据；  2) 数据集成： 多种数据源的组合；  3) 数据选择： 取和分析与任务相关的数据；  4) 数据变换： 数据变换和统一成适合挖掘的形式；  5) 数据挖掘： 使用智能方法提取数据格式；  6) 模式评估： 识别代表知识的有趣模">
+<meta name="twitter:title" content="概率的基本定理">
+<meta name="twitter:description" content="设A,B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
+多个事件的概率加法公式设$A_1,A_2,…,An$是n个随机事件，则有$$P(\bigcup^n{i=1}Ai) = \sum^n{i=1}P(Ai) - \sum{1 \leq i \leq j \leq n} P(A_iAj) + \sum {1\leq i \leq j \leq k \">
 
 
 
@@ -77,7 +76,7 @@
   };
 </script>
 
-  <title> 数据挖掘概述 | 数据挖掘杂谈 </title>
+  <title> 概率的基本定理 | 数据挖掘杂谈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -243,7 +242,7 @@
             
             
               
-                数据挖掘概述
+                概率的基本定理
               
             
           </h1>
@@ -252,8 +251,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-01T00:00:00+08:00" content="2016-01-01">
-              2016-01-01
+            <time itemprop="dateCreated" datetime="2016-11-26T22:23:16+08:00" content="2016-11-26">
+              2016-11-26
             </time>
           </span>
 
@@ -262,8 +261,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
-                    <span itemprop="name">数据挖掘</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -278,8 +277,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/data-mining.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="data-mining.html" itemprop="commentsCount"></span>
+                <a href="/probability-theory.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="probability-theory.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -298,14 +297,49 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><a href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F" class="headerlink" title="什么是数据挖掘？"></a>什么是数据挖掘？</h3><p>数据挖掘又称数据库中的知识发现，从大量的数据中挖掘有趣模式和知识的过程。</p>
-<p>知识发现的过程包括以下几个步骤：<br>  1) 数据清理： 除噪声和删除不一致数据；<br>  2) 数据集成： 多种数据源的组合；<br>  3) 数据选择： 取和分析与任务相关的数据；<br>  4) 数据变换： 数据变换和统一成适合挖掘的形式；<br>  5) 数据挖掘： 使用智能方法提取数据格式；<br>  6) 模式评估： 识别代表知识的有趣模式；<br>  7) 知识表示： 使用可视化和知识表示技术，向用户提供挖掘的知识。</p>
-<a id="more"></a>
-<h3 id="u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><a href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5" class="headerlink" title="数据挖掘的分析模型及算法"></a>数据挖掘的分析模型及算法</h3><h4 id="u5206_u6790_u6A21_u578B"><a href="#u5206_u6790_u6A21_u578B" class="headerlink" title="分析模型"></a>分析模型</h4><p>数据挖掘是一个交叉学科领域，吸纳了许多学科的技术，包括统计学、机器学习、数据库和数据仓库、信息检索、可视化技术等。</p>
-<p>在数据挖掘中，没有哪个方法可以解决所有问题，不同的实际问题，必须结合不同的领域知识，采用不同的数据挖掘方法，有的问题必须结合多种数据挖掘方法进行解决。在实际应用中，具体使用哪种方法主要取决于问题的类型以及数据的类型和规模。</p>
-<p>数据挖掘的方法一般分为预测型和描述型。预测型的方法一般有分类、预测、回归分析、时间序列分析四种，而描述型则分为聚类分析、关联分析、序列匹配三种。</p>
-<img src="/data_mining.png" alt="数据挖掘知识体系" title="数据挖掘知识体系">
-<h4 id="u6316_u6398_u7B97_u6CD5"><a href="#u6316_u6398_u7B97_u6CD5" class="headerlink" title="挖掘算法"></a>挖掘算法</h4><p>数据挖掘常见的算法主要有<a href="/decision-tree.html" title="决策树">决策树</a>、贝叶斯网络、遗传算法、神经网络(ANN<br>)、K邻近算法(KNN)、<a href="/association-rules.html" title="关联规则">关联规则</a>、回归分析、判别分析、<a href="/clustering.html" title="聚类分析">聚类分析</a>、主要成分分析及支持向量机等。</p>
+        <span itemprop="articleBody"><p>设A,B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)</p>
+<h4 id="u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F"><a href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F" class="headerlink" title="多个事件的概率加法公式"></a>多个事件的概率加法公式</h4><p>设$A_1,A_2,…,A<em>n$是n个随机事件，则有<br>$$<br>P(\bigcup^n</em>{i=1}A<em>i) = \sum^n</em>{i=1}P(A<em>i) - \sum</em>{1 \leq i \leq j \leq n} P(A_iA<em>j) + \sum </em>{1\leq i \leq j \leq k \leq n}P(A_iA_jA_k) + … + (-1)^{n-1}P(A_1A_2…A_n)<br>$$</p>
+<p>特别地，对三个事件A、B、C, 有<br>$$<br>P(A\bigcup B\bigcup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC)<br>$$</p>
+<h4 id="u9006_u4E8B_u4EF6_u6CD5_u5219"><a href="#u9006_u4E8B_u4EF6_u6CD5_u5219" class="headerlink" title="逆事件法则"></a>逆事件法则</h4><p>设A为任一事件，则$P(A) = 1 - P(\overline{A})$.</p>
+<h4 id="u82E5_24B_5Csubset_A_24_uFF0C_u5219_24P_28A-B_29__3D_P_28A_29_-_P_28B_29_24"><a href="#u82E5_24B_5Csubset_A_24_uFF0C_u5219_24P_28A-B_29__3D_P_28A_29_-_P_28B_29_24" class="headerlink" title="若$B\subset A$，则$P(A-B) = P(A) - P(B)$"></a>若$B\subset A$，则$P(A-B) = P(A) - P(B)$</h4><h3 id="u6761_u4EF6_u6982_u7387"><a href="#u6761_u4EF6_u6982_u7387" class="headerlink" title="条件概率"></a>条件概率</h3><h4 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h4><p>对于事件A、B，若P(A) &gt; 0，则称 $P(B|A) = {P(AB)\over{P(A)}}$ 为事件B在条件A发生下的条件概率</p>
+<h4 id="u6027_u8D28"><a href="#u6027_u8D28" class="headerlink" title="性质"></a>性质</h4><blockquote>
+<p>(1) 对于任一事件B，必有$P(B|A)\geq 0$；<br>(2) 若$A\subset B$，则P(B|A) = 1；<br>(3) 若$B_1,B_2,…,B<em>n$为一列两两互不相容事件，则有<br>$$<br>P(\sum^\infty</em>{k=1}B<em>k|A) = \sum</em>\infty_{k=1}P(B_k|A)<br>$$<br>(4) $P(B|A) + P(\overline{B}|A) = 1$;<br>(5) $P(B\bigcup C|A) = P(B|A) + P(C|A) - P(BC|A).$</p>
+</blockquote>
+<h4 id="u4E58_u6CD5_u5B9A_u7406"><a href="#u4E58_u6CD5_u5B9A_u7406" class="headerlink" title="乘法定理"></a>乘法定理</h4><h5 id="u5B9A_u7406"><a href="#u5B9A_u7406" class="headerlink" title="定理"></a>定理</h5><p>$$<br>P(AB) = P(A)P(B|A),P(A) &gt; 0<br>$$<br>$$<br>P(AB) = P(B)P(A|B),P(B) &gt; 0<br>$$<br>$$<br>P(A_1,A_2,…,A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A<em>2…A</em>{n-1})<br>$$</p>
+<h5 id="u6C42P_28AB_29_u4E0E_u6C42P_28B_7CA_29_u7684_u95EE_u9898_u7684_u533A_u522B"><a href="#u6C42P_28AB_29_u4E0E_u6C42P_28B_7CA_29_u7684_u95EE_u9898_u7684_u533A_u522B" class="headerlink" title="求P(AB)与求P(B|A)的问题的区别"></a>求P(AB)与求P(B|A)的问题的区别</h5><blockquote>
+<p>(1) 计算P(AB)的样本空间为$\Omega$，计算P(B|A)的样本空间为A；<br>(2) 凡涉及事件A与B“同时”发生用P(AB)，有包含关系或主从关系用P(B|A)</p>
+</blockquote>
+<h4 id="u72EC_u7ACB_u4E8B_u4EF6"><a href="#u72EC_u7ACB_u4E8B_u4EF6" class="headerlink" title="独立事件"></a>独立事件</h4><h5 id="u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB"><a href="#u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB" class="headerlink" title="两个事件相互独立"></a>两个事件相互独立</h5><p>设A，B是两个随机事件，若P(AB) = P(A)P(B)，则称时间A和事件B相互独立。</p>
+<h5 id="u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB_u7684_u6027_u8D28"><a href="#u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB_u7684_u6027_u8D28" class="headerlink" title="两个事件相互独立的性质"></a>两个事件相互独立的性质</h5><blockquote>
+<p>(1) 若P(A) &gt; 0 (或P(B) &gt; 0)，则事件A与事件B相互独立的充分必要条件是$P(B|A) = P(B)$ (或$P(A|B) = P(A))$.<br>(2) 若事件A与事件B相互独立，则下列各对事件也相互独立：<br>$$<br>A与\vec{B};\vec{A}与B;\vec{A}与\vec{B}<br>$$</p>
+</blockquote>
+<h5 id="u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><a href="#u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027" class="headerlink" title="三个事件的独立性"></a>三个事件的独立性</h5><p>设A,B,C为三个事件，若条件<br>$$<br>\begin{cases}<br>P(AB) = P(A)P(B) \<br>P(AC) = P(A)P(C) \<br>P(BC) = P(B)P(C)<br>\end{cases}<br>$$<br>成立，则称三个事件两两独立。<br>若A,B,C三个事件两两独立，且有P(ABC)=P(A)P(B)P(C)，则称A,B,C三个事件互相独立.</p>
+<h5 id="u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><a href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027" class="headerlink" title="多个事件的独立性"></a>多个事件的独立性</h5><p>设$A_1,A_2,…,A_n$为n个事件，对任意$k(1\leq k\leq n)，1\leq i_1&lt;i_2&lt;…&lt;i<em>n$，若<br>$$<br>P(A</em>{i<em>1}A</em>{i_2}…A<em>k) = P(A</em>{i<em>1})P(A</em>{i<em>2})…P(A</em>{i_k})<br>$$<br>则称n个时间相互独立.<br>若n个事件中任意两个事件都是相互独立的，则称这n个事件两两互相独立.</p>
+<h5 id="u591A_u4E2A_u4E8B_u4EF6_u4E92_u76F8_u72EC_u7ACB_u7684_u6027_u8D28"><a href="#u591A_u4E2A_u4E8B_u4EF6_u4E92_u76F8_u72EC_u7ACB_u7684_u6027_u8D28" class="headerlink" title="多个事件互相独立的性质"></a>多个事件互相独立的性质</h5><blockquote>
+<p>(1) 若n个事件$A_1,A_2,…,A_n$是相互独立的，则它们中的任意组合也互相独立；<br>(2) 若n个事件$A_1,A_2,…,A_n$是相互独立的，则$A_1,A_2,…,A_n,\overline{A_1},\overline{A_2},…,\overline{A_n}$这2n个事件中的任意n个事件也是相互独立的.<br>(3) 若$A_1,A_2,…,A_n$是n个相互独立的事件，则有<br>$$<br>P(A_1A_2…A<em>n) = \prod^n</em>{i=1} P(A<em>i)<br>$$<br>$$<br>P(\bigcup^n</em>{i=1} A<em>i) = 1 - \prod^n</em>{i=1} P(\overline{A_i})<br>$$</p>
+</blockquote>
+<p><strong>注意</strong></p>
+<blockquote>
+<ul>
+<li>在实际应用中，事件的独立性可以根据实际意义来判断，而不必根据定义来判断；</li>
+<li>n个事件$A_1,A_2,…,A_n$相互独立，必有$A_1,A_2,…,A_n$两两互相独立；但$A_1,A_2,…,A_n$两两相互独立，未必有$A_1,A_2,…,A_n$相互独立；</li>
+<li>若P(A) &gt; 0，P(B) &gt; 0，则A,B相互独立与互不相容不能同时成立.</li>
+</ul>
+</blockquote>
+<h3 id="u8D1D_u53F6_u65AF_u516C_u5F0F"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h3><h4 id="u5168_u6982_u7387_u516C_u5F0F"><a href="#u5168_u6982_u7387_u516C_u5F0F" class="headerlink" title="全概率公式"></a>全概率公式</h4><p>设$B_1,B<em>2,…$(有限个或无限个)为两两互不相容的事件，有<br>$$<br>\begin{cases}<br>\sum^n</em>{k=1}B_k = \Omega \<br>P(B_k) &gt; 0,k=1,2,…<br>\end{cases}<br>$$</p>
+<p>则对任一事件A，有$P(A)=\sum^\infty_{k=1}P(B_k)P(A|B_k)$.</p>
+<p><strong>注意</strong></p>
+<blockquote>
+<ul>
+<li>在使用全概率公式时，并不一定要$\sum B_k=\Omega$，只要$\sum B_k\supset A$成立，即能使用$A\sum B_k = A$，各$B_k$两两互不相容即可;</li>
+<li>用全概率公式求解概率问题的关键在于寻找$B_1,B_2,…,Bn$，而$B_1,B_2,…,B_n$应是导致A发生的各原因，所以用找原因的方法确定$B_1,B-2,…,B_n$比较方便.</li>
+</ul>
+</blockquote>
+<h4 id="u8D1D_u53F6_u65AF_u516C_u5F0F-1"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F-1" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>设$B_1,B<em>2,…$为一列(有限或无限个)两两互不相容的事件，P(A) &gt; 0，且<br>$$<br>\begin{cases}<br>\sum^\infty</em>{k=1} = \Omega \<br>P(B_k) &gt; 0, k = 1,2,…<br>\end{cases}<br>$$<br>则<br>$$<br>P(B_k|A) = \frac {P(B_k)P(A|B<em>k)}{\sum ^\infty</em>{j=1}P(B_j)P(A|B_k)}, k=1,2,…<br>$$</p>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>在全概率公式和贝叶斯公式中，$B_i$是导致结果A发生的多个原因之一.“由因溯果”用全概率公式，“由果溯因”用贝叶斯公式.</p>
+</blockquote>
 </span>
       
     </div>
@@ -314,9 +348,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据挖掘/" rel="tag">#数据挖掘</a>
-          
-            <a href="/tags/数据挖掘知识体系/" rel="tag">#数据挖掘知识体系</a>
+            <a href="/tags/概率/" rel="tag">#概率</a>
           
         </div>
       
@@ -325,13 +357,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/greek-letter-in-math.html" rel="next" title="数学符号的发音">
+                <i class="fa fa-chevron-left"></i> 数学符号的发音
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/decision-tree.html" rel="prev" title="决策树">
-                决策树 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -358,8 +390,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="data-mining.html"
-           data-title="数据挖掘概述" data-url="http://www.jianbin.info/data-mining.html">
+      <div class="ds-thread" data-thread-key="probability-theory.html"
+           data-title="概率的基本定理" data-url="http://www.jianbin.info/probability-theory.html">
       </div>
     
   </div>
@@ -466,7 +498,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EC0_u4E48_u662F_u6570_u636E_u6316_u6398_uFF1F"><span class="nav-number">1.</span> <span class="nav-text">什么是数据挖掘？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u6316_u6398_u7684_u5206_u6790_u6A21_u578B_u53CA_u7B97_u6CD5"><span class="nav-number">2.</span> <span class="nav-text">数据挖掘的分析模型及算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5206_u6790_u6A21_u578B"><span class="nav-number">2.1.</span> <span class="nav-text">分析模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6316_u6398_u7B97_u6CD5"><span class="nav-number">2.2.</span> <span class="nav-text">挖掘算法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F"><span class="nav-number">1.</span> <span class="nav-text">多个事件的概率加法公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u9006_u4E8B_u4EF6_u6CD5_u5219"><span class="nav-number">2.</span> <span class="nav-text">逆事件法则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u82E5_24B_5Csubset_A_24_uFF0C_u5219_24P_28A-B_29__3D_P_28A_29_-_P_28B_29_24"><span class="nav-number">3.</span> <span class="nav-text">若$B\subset A$，则$P(A-B) = P(A) - P(B)$</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6761_u4EF6_u6982_u7387"><span class="nav-number"></span> <span class="nav-text">条件概率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B9A_u4E49"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6027_u8D28"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E58_u6CD5_u5B9A_u7406"><span class="nav-number">3.</span> <span class="nav-text">乘法定理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u5B9A_u7406"><span class="nav-number">3.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u6C42P_28AB_29_u4E0E_u6C42P_28B_7CA_29_u7684_u95EE_u9898_u7684_u533A_u522B"><span class="nav-number">3.2.</span> <span class="nav-text">求P(AB)与求P(B|A)的问题的区别</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u72EC_u7ACB_u4E8B_u4EF6"><span class="nav-number">4.</span> <span class="nav-text">独立事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB"><span class="nav-number">4.1.</span> <span class="nav-text">两个事件相互独立</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB_u7684_u6027_u8D28"><span class="nav-number">4.2.</span> <span class="nav-text">两个事件相互独立的性质</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><span class="nav-number">4.3.</span> <span class="nav-text">三个事件的独立性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><span class="nav-number">4.4.</span> <span class="nav-text">多个事件的独立性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u591A_u4E2A_u4E8B_u4EF6_u4E92_u76F8_u72EC_u7ACB_u7684_u6027_u8D28"><span class="nav-number">4.5.</span> <span class="nav-text">多个事件互相独立的性质</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u8D1D_u53F6_u65AF_u516C_u5F0F"><span class="nav-number"></span> <span class="nav-text">贝叶斯公式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5168_u6982_u7387_u516C_u5F0F"><span class="nav-number">1.</span> <span class="nav-text">全概率公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u8D1D_u53F6_u65AF_u516C_u5F0F-1"><span class="nav-number">2.</span> <span class="nav-text">贝叶斯公式</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
