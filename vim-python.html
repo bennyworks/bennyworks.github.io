@@ -806,9 +806,17 @@ vim配置和插件以下配置和插件都是在Linux当前用户根目录下处
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        inlineMath: [['$', '$'], ["\\(", "\\)"]],
+        processEscapes: true
+      },
+      TeX: {
+        equationNumbers: {
+            autoNumber: "AMS"
+        }
+      },
+      messageStyle: "none",
+      SVG: {
+        blacker: 1
       }
     });
   </script>
@@ -823,7 +831,7 @@ vim配置和插件以下配置和插件都是在Linux当前用户根目录下处
   </script>
 
   
-    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
   
 
 

@@ -1018,9 +1018,17 @@ ID
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        inlineMath: [['$', '$'], ["\\(", "\\)"]],
+        processEscapes: true
+      },
+      TeX: {
+        equationNumbers: {
+            autoNumber: "AMS"
+        }
+      },
+      messageStyle: "none",
+      SVG: {
+        blacker: 1
       }
     });
   </script>
@@ -1035,7 +1043,7 @@ ID
   </script>
 
   
-    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
   
 
 
