@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>http://www.jianbin.info/probability-theory.html</loc>
+    <lastmod>2016-12-01T08:36:58.466Z</lastmod>
+    <data>
+        <display>
+        <title>概率的基本定理</title>
+        <pubTime>2016-11-26T14:23:16.000Z</pubTime>
+        
+        <tag>概率 </tag>
+         
+         
+           
+             
+              <breadCrumb title="数学" url="http://www.jianbin.info/categories/%E6%95%B0%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jianbin.info/mathjax.html</loc>
     <lastmod>2016-12-01T08:23:11.078Z</lastmod>
     <data>
@@ -22,26 +42,6 @@
            
              
               <breadCrumb title="markdown" url="http://www.jianbin.info/categories/markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jianbin.info/probability-theory.html</loc>
-    <lastmod>2016-11-27T09:20:20.672Z</lastmod>
-    <data>
-        <display>
-        <title>概率的基本定理</title>
-        <pubTime>2016-11-26T14:23:16.000Z</pubTime>
-        
-        <tag>概率 </tag>
-         
-         
-           
-             
-              <breadCrumb title="数学" url="http://www.jianbin.info/categories/%E6%95%B0%E5%AD%A6/"/>
           
         </display>
     </data>

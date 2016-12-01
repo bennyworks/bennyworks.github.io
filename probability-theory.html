@@ -60,7 +60,7 @@
 <meta property="og:site_name" content="数据挖掘杂谈">
 <meta property="og:description" content="加法定理两个事件的概率加法公式设A、B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
 多个事件的概率加法公式设$A_1,A_2,…,A_n$是n个随机事件，则有$$P(\bigcup_{i=1}^nA_i) = \sum^n_{i=1}P(A_i) - \sum_{1 \leq i \leq j \leq n} P(A_iA_j) + \sum _{">
-<meta property="og:updated_time" content="2016-11-27T09:20:20.672Z">
+<meta property="og:updated_time" content="2016-12-01T08:36:58.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率的基本定理">
 <meta name="twitter:description" content="加法定理两个事件的概率加法公式设A、B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
@@ -326,7 +326,7 @@
 <li>若P(A) &gt; 0，P(B) &gt; 0，则A,B相互独立与互不相容不能同时成立.</li>
 </ul>
 </blockquote>
-<h3 id="u8D1D_u53F6_u65AF_u516C_u5F0F"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h3><h4 id="u5168_u6982_u7387_u516C_u5F0F"><a href="#u5168_u6982_u7387_u516C_u5F0F" class="headerlink" title="全概率公式"></a>全概率公式</h4><p>设$B_1,B_2,…$(有限个或无限个)为两两互不相容的事件，有<br>$$<br>\begin{cases}<br>\sum^n_{k=1}B_k = \Omega \<br>P(B_k) &gt; 0,k=1,2,…<br>\end{cases}<br>$$</p>
+<h3 id="u8D1D_u53F6_u65AF_u516C_u5F0F"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h3><h4 id="u5168_u6982_u7387_u516C_u5F0F"><a href="#u5168_u6982_u7387_u516C_u5F0F" class="headerlink" title="全概率公式"></a>全概率公式</h4><p>设$B_1,B_2,…$(有限个或无限个)为两两互不相容的事件，有<br>$$<br>\begin{cases}<br>\sum^n_{k=1}B_k = \Omega \\<br>P(B_k) &gt; 0,k=1,2,…<br>\end{cases}<br>$$</p>
 <p>则对任一事件A，有$P(A)=\sum^\infty_{k=1}P(B_k)P(A|B_k)$.</p>
 <p><strong>注意</strong></p>
 <blockquote>
@@ -758,12 +758,36 @@
 
   
   
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]], processEscapes: true }, TeX: { equationNumbers: { autoNumber: "AMS" } }, messageStyle: "none", SVG: { blacker: 1 }});
-    </script>
-    <script src="https://www.zybuluo.com/static/editor/libs/mathJax.js"></script>
-    <!--mathjax source code is here: https://github.com/mathjax/MathJax.-->
-    <script src="https://www.zybuluo.com/static/MathJax/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ["\\(", "\\)"]],
+        processEscapes: true
+      },
+      TeX: {
+        equationNumbers: {
+            autoNumber: "AMS"
+        }
+      },
+      messageStyle: "none",
+      SVG: {
+        blacker: 1
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+  
 
 
   
