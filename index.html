@@ -224,6 +224,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -307,36 +316,27 @@
         
           <span itemprop="articleBody">
             
-              <h3 id="u52A0_u6CD5_u5B9A_u7406"><a href="#u52A0_u6CD5_u5B9A_u7406" class="headerlink" title="加法定理"></a>加法定理</h3><h4 id="u4E24_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F"><a href="#u4E24_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F" class="headerlink" title="两个事件的概率加法公式"></a>两个事件的概率加法公式</h4><p>设A,B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)</p>
-<h4 id="u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F"><a href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F" class="headerlink" title="多个事件的概率加法公式"></a>多个事件的概率加法公式</h4><p>设$A_1,A_2,…,A_n$是n个随机事件，则有</p>
-<p>$$<br>P(\bigcup_{i=1}^nA<em>i) = \sum\</em>{i=1}^nP(A<em>i) - \sum\</em>{1 \leq i \leq j \leq n} P(A_iA<em>j) + \sum\</em>{1\leq i \leq j \leq k \leq n}P(A_iA_jA_k) + … + (-1)^{n-1}P(A_1A_2…A_n)<br>$$</p>
-<p>特别地，对三个事件A、B、C, 有</p>
-<p>$$<br>P(A\bigcup B\bigcup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC)<br>$$</p>
+              <h3 id="u52A0_u6CD5_u5B9A_u7406"><a href="#u52A0_u6CD5_u5B9A_u7406" class="headerlink" title="加法定理"></a>加法定理</h3><h4 id="u4E24_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F"><a href="#u4E24_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F" class="headerlink" title="两个事件的概率加法公式"></a>两个事件的概率加法公式</h4><p>设A、B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)</p>
+<h4 id="u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F"><a href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u6982_u7387_u52A0_u6CD5_u516C_u5F0F" class="headerlink" title="多个事件的概率加法公式"></a>多个事件的概率加法公式</h4><p>设$A_1,A_2,…,A_n$是n个随机事件，则有<br>$$<br>P(\bigcup_{i=1}^nA_i) = \sum^n_{i=1}P(A_i) - \sum_{1 \leq i \leq j \leq n} P(A_iA_j) + \sum _{1\leq i \leq j \leq k \leq n}P(A_iA_jA_k) + … + (-1)^{n-1}P(A_1A_2…A_n)<br>$$</p>
+<p>特别地，对三个事件A、B、C, 有<br>$$<br>P(A\bigcup B\bigcup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC)<br>$$</p>
 <h4 id="u9006_u4E8B_u4EF6_u6CD5_u5219"><a href="#u9006_u4E8B_u4EF6_u6CD5_u5219" class="headerlink" title="逆事件法则"></a>逆事件法则</h4><p>设A为任一事件，则$P(A) = 1 - P(\overline{A})$.</p>
 <h4 id="u82E5_24B_5Csubset_A_24_uFF0C_u5219_24P_28A-B_29__3D_P_28A_29_-_P_28B_29_24"><a href="#u82E5_24B_5Csubset_A_24_uFF0C_u5219_24P_28A-B_29__3D_P_28A_29_-_P_28B_29_24" class="headerlink" title="若$B\subset A$，则$P(A-B) = P(A) - P(B)$"></a>若$B\subset A$，则$P(A-B) = P(A) - P(B)$</h4><h3 id="u6761_u4EF6_u6982_u7387"><a href="#u6761_u4EF6_u6982_u7387" class="headerlink" title="条件概率"></a>条件概率</h3><h4 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h4><p>对于事件A、B，若P(A) &gt; 0，则称 $P(B|A) = {P(AB)\over{P(A)}}$ 为事件B在条件A发生下的条件概率</p>
 <h4 id="u6027_u8D28"><a href="#u6027_u8D28" class="headerlink" title="性质"></a>性质</h4><blockquote>
-<p>(1) 对于任一事件B，必有$P(B|A)\geq 0$；<br>(2) 若$A\subset B$，则P(B|A) = 1；<br>(3) 若$B_1,B_2,…,B<em>n$为一列两两互不相容事件，则有$P(\sum^\infty</em>{k=1}B<em>k|A) = \sum^\infty</em>{k=1}P(B_k|A)$<br>(4) $P(B|A) + P(\overline{B}|A) = 1$;<br>(5) $P(B\bigcup C|A) = P(B|A) + P(C|A) - P(BC|A).$</p>
+<p>(1) 对于任一事件B，必有$P(B|A)\geq 0$；<br>(2) 若$A\subset B$，则P(B|A) = 1；<br>(3) 若$B_1,B_2,…,B_n$为一列两两互不相容事件，则有$P(\sum^\infty_{k=1}B_k|A) = \sum_\infty_{k=1}P(B_k|A)$<br>(4) $P(B|A) + P(\overline{B}|A) = 1$;<br>(5) $P(B\bigcup C|A) = P(B|A) + P(C|A) - P(BC|A).$</p>
 </blockquote>
-<h4 id="u4E58_u6CD5_u5B9A_u7406"><a href="#u4E58_u6CD5_u5B9A_u7406" class="headerlink" title="乘法定理"></a>乘法定理</h4><h5 id="u5B9A_u7406"><a href="#u5B9A_u7406" class="headerlink" title="定理"></a>定理</h5><p>$$<br>P(AB) = P(A)P(B|A),P(A) &gt; 0<br>$$<br>$$<br>P(AB) = P(B)P(A|B),P(B) &gt; 0<br>$$<br>$$<br>P(A_1,A_2,…,A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A<em>2…A</em>{n-1})<br>$$</p>
+<h4 id="u4E58_u6CD5_u5B9A_u7406"><a href="#u4E58_u6CD5_u5B9A_u7406" class="headerlink" title="乘法定理"></a>乘法定理</h4><h5 id="u5B9A_u7406"><a href="#u5B9A_u7406" class="headerlink" title="定理"></a>定理</h5><p>$$<br>P(AB) = P(A)P(B|A),P(A) &gt; 0<br>$$<br>$$<br>P(AB) = P(B)P(A|B),P(B) &gt; 0<br>$$<br>$$<br>P(A_1,A_2,…,A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A_2…A_{n-1})<br>$$</p>
 <h5 id="u6C42P_28AB_29_u4E0E_u6C42P_28B_7CA_29_u7684_u95EE_u9898_u7684_u533A_u522B"><a href="#u6C42P_28AB_29_u4E0E_u6C42P_28B_7CA_29_u7684_u95EE_u9898_u7684_u533A_u522B" class="headerlink" title="求P(AB)与求P(B|A)的问题的区别"></a>求P(AB)与求P(B|A)的问题的区别</h5><blockquote>
 <p>(1) 计算P(AB)的样本空间为$\Omega$，计算P(B|A)的样本空间为A；<br>(2) 凡涉及事件A与B“同时”发生用P(AB)，有包含关系或主从关系用P(B|A)</p>
 </blockquote>
 <h4 id="u72EC_u7ACB_u4E8B_u4EF6"><a href="#u72EC_u7ACB_u4E8B_u4EF6" class="headerlink" title="独立事件"></a>独立事件</h4><h5 id="u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB"><a href="#u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB" class="headerlink" title="两个事件相互独立"></a>两个事件相互独立</h5><p>设A，B是两个随机事件，若P(AB) = P(A)P(B)，则称时间A和事件B相互独立。</p>
 <h5 id="u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB_u7684_u6027_u8D28"><a href="#u4E24_u4E2A_u4E8B_u4EF6_u76F8_u4E92_u72EC_u7ACB_u7684_u6027_u8D28" class="headerlink" title="两个事件相互独立的性质"></a>两个事件相互独立的性质</h5><blockquote>
-<p>(1) 若P(A) &gt; 0 (或P(B) &gt; 0)，则事件A与事件B相互独立的充分必要条件是P(B|A) = P(B) (或P(A|B) = P(A)).<br>(2) 若事件A与事件B相互独立，则下列各对事件也相互独立：</p>
+<p>(1) 若P(A) &gt; 0 (或P(B) &gt; 0)，则事件A与事件B相互独立的充分必要条件是$P(B|A) = P(B)$ (或$P(A|B) = P(A))$.<br>(2) 若事件A与事件B相互独立，则下列各对事件也相互独立：<br>$$<br>A与\vec{B};\vec{A}与B;\vec{A}与\vec{B}<br>$$</p>
 </blockquote>
-<p>$$<br>A与\vec{B};\vec{A}与B;\vec{A}与\vec{B}<br>$$</p>
-<h5 id="u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><a href="#u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027" class="headerlink" title="三个事件的独立性"></a>三个事件的独立性</h5><p>设A,B,C为三个事件，若条件</p>
-<p>$$<br>\begin{cases}<br>P(AB) = P(A)P(B) \<br>P(AC) = P(A)P(C) \<br>P(BC) = P(B)P(C)<br>\end{cases}<br>$$</p>
-<p>成立，则称三个事件两两独立。<br>若A,B,C三个事件两两独立，且有P(ABC)=P(A)P(B)P(C)，则称A,B,C三个事件互相独立.</p>
-<h5 id="u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><a href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027" class="headerlink" title="多个事件的独立性"></a>多个事件的独立性</h5><p>设$A_1,A_2,…,A_n$为n个事件，对任意$k(1\leq k\leq n)，1\leq i_1&lt;i_2&lt;…&lt;i_n$，若</p>
-<p>$$<br>P(A_{i<em>1}A</em>{i_2}…A<em>k) = P(A</em>{i<em>1})P(A</em>{i<em>2})…P(A</em>{i_k})<br>$$</p>
-<p>则称n个时间相互独立.<br>若n个事件中任意两个事件都是相互独立的，则称这n个事件两两互相独立.</p>
+<h5 id="u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><a href="#u4E09_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027" class="headerlink" title="三个事件的独立性"></a>三个事件的独立性</h5><p>设A,B,C为三个事件，若条件<br>$$<br>\begin{cases}<br>P(AB) = P(A)P(B) \<br>P(AC) = P(A)P(C) \<br>P(BC) = P(B)P(C)<br>\end{cases}<br>$$<br>成立，则称三个事件两两独立。<br>若A,B,C三个事件两两独立，且有P(ABC)=P(A)P(B)P(C)，则称A,B,C三个事件互相独立.</p>
+<h5 id="u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027"><a href="#u591A_u4E2A_u4E8B_u4EF6_u7684_u72EC_u7ACB_u6027" class="headerlink" title="多个事件的独立性"></a>多个事件的独立性</h5><p>设$A_1,A_2,…,A_n$为n个事件，对任意$k(1\leq k\leq n)，1\leq i_1&lt;i_2&lt;…&lt;i_n$，若<br>$$<br>P(A_{i_1}A_{i_2}…A_k) = P(A_{i_1})P(A_{i_2})…P(A_{i_k})<br>$$<br>则称n个时间相互独立.<br>若n个事件中任意两个事件都是相互独立的，则称这n个事件两两互相独立.</p>
 <h5 id="u591A_u4E2A_u4E8B_u4EF6_u4E92_u76F8_u72EC_u7ACB_u7684_u6027_u8D28"><a href="#u591A_u4E2A_u4E8B_u4EF6_u4E92_u76F8_u72EC_u7ACB_u7684_u6027_u8D28" class="headerlink" title="多个事件互相独立的性质"></a>多个事件互相独立的性质</h5><blockquote>
-<p>(1) 若n个事件$A_1,A_2,…,A_n$是相互独立的，则它们中的任意组合也互相独立；<br>(2) 若n个事件$A_1,A_2,…,A_n$是相互独立的，则$A_1,A_2,…,A_n,\overline{A_1},\overline{A_2},…,\overline{A_n}$这2n个事件中的任意n个事件也是相互独立的.<br>(3) 若$A_1,A_2,…,A_n$是n个相互独立的事件，则有</p>
+<p>(1) 若n个事件$A_1,A_2,…,A_n$是相互独立的，则它们中的任意组合也互相独立；<br>(2) 若n个事件$A_1,A_2,…,A_n$是相互独立的，则$A_1,A_2,…,A_n,\overline{A_1},\overline{A_2},…,\overline{A_n}$这2n个事件中的任意n个事件也是相互独立的.<br>(3) 若$A_1,A_2,…,A_n$是n个相互独立的事件，则有<br>$$<br>P(A_1A_2…A_n) = \prod^n_{i=1} P(A_i)<br>$$<br>$$<br>P(\bigcup^n_{i=1} A_i) = 1 - \prod^n_{i=1} P(\overline{A_i})<br>$$</p>
 </blockquote>
-<p>$$<br>P(A_1A_2…A<em>n) = \prod^n</em>{i=1} P(A_i)<br>$$</p>
-<p>$$<br>P(\bigcup^n_{i=1} A<em>i) = 1 - \prod^n</em>{i=1} P(\overline{A_i})<br>$$</p>
 <p><strong>注意</strong></p>
 <blockquote>
 <ul>
@@ -345,8 +345,7 @@
 <li>若P(A) &gt; 0，P(B) &gt; 0，则A,B相互独立与互不相容不能同时成立.</li>
 </ul>
 </blockquote>
-<h3 id="u8D1D_u53F6_u65AF_u516C_u5F0F"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h3><h4 id="u5168_u6982_u7387_u516C_u5F0F"><a href="#u5168_u6982_u7387_u516C_u5F0F" class="headerlink" title="全概率公式"></a>全概率公式</h4><p>设$B_1,B_2,…$(有限个或无限个)为两两互不相容的事件，有</p>
-<p>$$<br>\begin{cases}<br>\sum^n_{k=1}B_k = \Omega \<br>P(B_k) &gt; 0,k=1,2,…<br>\end{cases}<br>$$</p>
+<h3 id="u8D1D_u53F6_u65AF_u516C_u5F0F"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h3><h4 id="u5168_u6982_u7387_u516C_u5F0F"><a href="#u5168_u6982_u7387_u516C_u5F0F" class="headerlink" title="全概率公式"></a>全概率公式</h4><p>设$B_1,B_2,…$(有限个或无限个)为两两互不相容的事件，有<br>$$<br>\begin{cases}<br>\sum^n_{k=1}B_k = \Omega \<br>P(B_k) &gt; 0,k=1,2,…<br>\end{cases}<br>$$</p>
 <p>则对任一事件A，有$P(A)=\sum^\infty_{k=1}P(B_k)P(A|B_k)$.</p>
 <p><strong>注意</strong></p>
 <blockquote>
@@ -355,10 +354,7 @@
 <li>用全概率公式求解概率问题的关键在于寻找$B_1,B_2,…,Bn$，而$B_1,B_2,…,B_n$应是导致A发生的各原因，所以用找原因的方法确定$B_1,B-2,…,B_n$比较方便.</li>
 </ul>
 </blockquote>
-<h4 id="u8D1D_u53F6_u65AF_u516C_u5F0F-1"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F-1" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>设$B_1,B_2,…$为一列(有限或无限个)两两互不相容的事件，P(A) &gt; 0，且</p>
-<p>$$<br>\begin{cases}<br>\sum^\infty_{k=1} = \Omega \<br>P(B_k) &gt; 0, k = 1,2,…<br>\end{cases}<br>$$</p>
-<p>则</p>
-<p>$$<br>P(B_k|A) = \frac {P(B_k)P(A|B<em>k)}{\sum ^\infty</em>{j=1}P(B_j)P(A|B_k)}, k=1,2,…<br>$$</p>
+<h4 id="u8D1D_u53F6_u65AF_u516C_u5F0F-1"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F-1" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>设$B_1,B_2,…$为一列(有限或无限个)两两互不相容的事件，P(A) &gt; 0，且<br>$$<br>\begin{cases}<br>\sum^\infty_{k=1} = \Omega \<br>P(B_k) &gt; 0, k = 1,2,…<br>\end{cases}<br>$$<br>则<br>$$<br>P(B_k|A) = \frac {P(B_k)P(A|B_k)}{\sum ^\infty_{j=1}P(B_j)P(A|B_k)}, k=1,2,…<br>$$</p>
 <p><strong>注意</strong></p>
 <blockquote>
 <p>在全概率公式和贝叶斯公式中，$B_i$是导致结果A发生的多个原因之一.“由因溯果”用全概率公式，“由果溯因”用贝叶斯公式.</p>
@@ -1649,119 +1645,6 @@
 <p>聚类与分类不同，聚类的类别取决于数据本身，而分类的类别是由数据分析人员预先定义好的。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/clustering.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mathjax.html" itemprop="url">
-                  hexo在Next主题下输入数学公式
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-03-04T19:38:21+08:00" content="2016-03-04">
-              2016-03-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">markdown</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/mathjax.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="mathjax.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>打开文件themes/next/_config.yml，在大概162行将 <strong>mathjax</strong> 对应的值修改成 <strong>true</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">157</span> <span class="preprocessor"># ---------------------------------</span></span><br><span class="line"><span class="number">158</span> <span class="preprocessor"># Third Party Services Settings</span></span><br><span class="line"><span class="number">159</span> <span class="preprocessor"># ---------------------------------</span></span><br><span class="line"><span class="number">160</span> </span><br><span class="line"><span class="number">161</span> <span class="preprocessor"># MathJax Support</span></span><br><span class="line"><span class="number">162</span> mathjax: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="u5982_u4F55_u63D2_u5165_u516C_u5F0F"><a href="#u5982_u4F55_u63D2_u5165_u516C_u5F0F" class="headerlink" title="如何插入公式"></a>如何插入公式</h3><p>LaTeX的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
-<p>行中公式可以用如下两种方法表示：</p>
-<p>(数学公式)　或　￥数学公式￥（要把人民币符号换成美元符号）</p>
-<p>独立公式可以用如下两种方法表示：</p>
-<p>[数学公式]　或　￥￥数学公式￥￥（要把人民币符号换成美元符号）</p>
-<p>例子：J\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}</p>
-<p>显示：$J\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}$</p>
-<h3 id="u5982_u4F55_u8F93_u5165_u4E0A_u4E0B_u6807"><a href="#u5982_u4F55_u8F93_u5165_u4E0A_u4E0B_u6807" class="headerlink" title="如何输入上下标"></a>如何输入上下标</h3><p>^表示上标, _表示下标。如果上下标的内容多于一个字符，要用{}把这些内容括起来当成一个整体。上下标是可以嵌套的，也可以同时使用。<br>例子：x^{y^z}=(1+{\rm e}^x)^{-2xy^w}<br>显示：$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$</p>
-<p>另外，如果要在左右两边都有上下标，可以用\sideset命令。<br>例子：\sideset{^12}{^34}\bigotimes<br>显示：$\sideset{^12}{^34}\bigotimes$</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/mathjax.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

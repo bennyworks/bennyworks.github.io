@@ -3,8 +3,34 @@
 
     
   <url>
+    <loc>http://www.jianbin.info/mathjax.html</loc>
+    <lastmod>2016-12-01T08:23:11.078Z</lastmod>
+    <data>
+        <display>
+        <title>hexo在Next主题下输入数学公式</title>
+        <pubTime>2016-03-04T11:38:21.000Z</pubTime>
+        
+        <tag>markdown </tag>
+         
+        <tag>math </tag>
+         
+        <tag>mathjax </tag>
+         
+        <tag>数学公式 </tag>
+         
+         
+           
+             
+              <breadCrumb title="markdown" url="http://www.jianbin.info/categories/markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.jianbin.info/probability-theory.html</loc>
-    <lastmod>2016-11-26T16:02:38.725Z</lastmod>
+    <lastmod>2016-11-27T09:20:20.672Z</lastmod>
     <data>
         <display>
         <title>概率的基本定理</title>
@@ -204,32 +230,6 @@
            
              
               <breadCrumb title="数据挖掘" url="http://www.jianbin.info/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.jianbin.info/mathjax.html</loc>
-    <lastmod>2016-03-05T12:47:43.357Z</lastmod>
-    <data>
-        <display>
-        <title>hexo在Next主题下输入数学公式</title>
-        <pubTime>2016-03-04T11:38:21.000Z</pubTime>
-        
-        <tag>markdown </tag>
-         
-        <tag>math </tag>
-         
-        <tag>mathjax </tag>
-         
-        <tag>数学公式 </tag>
-         
-         
-           
-             
-              <breadCrumb title="markdown" url="http://www.jianbin.info/categories/markdown/"/>
           
         </display>
     </data>
