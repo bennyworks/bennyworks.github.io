@@ -60,7 +60,7 @@
 <meta property="og:site_name" content="数据挖掘杂谈">
 <meta property="og:description" content="加法定理两个事件的概率加法公式设A、B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
 多个事件的概率加法公式设$A_1,A_2,…,A_n$是n个随机事件，则有$$P(\bigcup_{i=1}^nA_i) = \sum^n_{i=1}P(A_i) - \sum_{1 \leq i \leq j \leq n} P(A_iA_j) + \sum _{">
-<meta property="og:updated_time" content="2016-12-01T10:16:22.743Z">
+<meta property="og:updated_time" content="2016-12-06T03:54:40.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率的基本定理">
 <meta name="twitter:description" content="加法定理两个事件的概率加法公式设A、B为两个事件，则有 P(A $\bigcup$ B) = P(A) + P(B) - P(AB)
@@ -332,10 +332,10 @@
 <blockquote>
 <ul>
 <li>在使用全概率公式时，并不一定要$\sum B_k=\Omega$，只要$\sum B_k\supset A$成立，即能使用$A\sum B_k = A$，各$B_k$两两互不相容即可;</li>
-<li>用全概率公式求解概率问题的关键在于寻找$B_1,B_2,…,Bn$，而$B_1,B_2,…,B_n$应是导致A发生的各原因，所以用找原因的方法确定$B_1,B-2,…,B_n$比较方便.</li>
+<li>用全概率公式求解概率问题的关键在于寻找$B_1,B_2,…,Bn$，而$B_1,B_2,…,B_n$应是导致A发生的各原因，所以用找原因的方法确定$B_1,B_2,…,B_n$比较方便.</li>
 </ul>
 </blockquote>
-<h4 id="u8D1D_u53F6_u65AF_u516C_u5F0F-1"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F-1" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>设$B_1,B_2,…$为一列(有限或无限个)两两互不相容的事件，P(A) &gt; 0，且<br>$$<br>\begin{cases}<br>\sum^\infty_{k=1} = \Omega \\<br>P(B_k) &gt; 0, k = 1,2,…<br>\end{cases}<br>$$<br>则<br>$$<br>P(B_k|A) = \frac {P(B_k)P(A|B_k)}{\sum ^\infty_{j=1}P(B_j)P(A|B_k)}, k=1,2,…<br>$$</p>
+<h4 id="u8D1D_u53F6_u65AF_u516C_u5F0F-1"><a href="#u8D1D_u53F6_u65AF_u516C_u5F0F-1" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>设$B_1,B_2,…$为一列(有限或无限个)两两互不相容的事件，P(A) &gt; 0，且<br>$$<br>\begin{cases}<br>\sum^\infty_{k=1} = \Omega \\<br>P(B_k) &gt; 0, k = 1,2,…<br>\end{cases}<br>$$<br>则<br>$$<br>P(B_k|A) = \frac {P(B_k)P(A|B_k)}{\sum ^\infty_{k=1}P(B_k)P(A|B_k)}, k=1,2,…<br>$$</p>
 <p><strong>注意</strong></p>
 <blockquote>
 <p>在全概率公式和贝叶斯公式中，$B_i$是导致结果A发生的多个原因之一.“由因溯果”用全概率公式，“由果溯因”用贝叶斯公式.</p>
