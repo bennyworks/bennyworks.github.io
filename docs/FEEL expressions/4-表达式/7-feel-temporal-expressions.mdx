@@ -1,0 +1,200 @@
+---
+id: feel-temporal-expressions
+title: Temporal 表达式
+---
+
+### 字面量
+
+创建一个新的时间值，可以以下列方式之一编写：
+- 使用时间函数（例如 `date("2020-04-06")`）
+- using the `@` - notation (e.g. `@"2020-04-06"`)
+- 使用`@`标记，后跟一个字符串，该字符串表示一个日期或时间（例如 `@"2020-04-06"`）
+
+```java
+date("2020-04-06")
+@"2020-04-06"
+
+time("08:00:00")
+time("08:00:00+02:00")
+time("08:00:00@Europe/Berlin")
+@"08:00:00"
+@"08:00:00+02:00"
+@"08:00:00@Europe/Berlin"
+
+date and time("2020-04-06T08:00:00")
+date and time("2020-04-06T08:00:00+02:00")
+date and time("2020-04-06T08:00:00@Europe/Berlin")
+@"2020-04-06T08:00:00"
+@"2020-04-06T08:00:00+02:00"
+@"2020-04-06T08:00:00@Europe/Berlin"
+
+duration("P5D")
+duration("PT6H")
+@"P5D"
+@"PT6H"
+
+duration("P1Y6M")
+duration("P3M")
+@"P1Y6M"
+@"P3M"
+```
+
+如果日期或日期时间字面量不代表有效的日历日期，则该值为 `null`。例如，`@"2024-06-31"` 是无效的，因为6月只有30天。
+
+### 加法
+
+加法运算符定义了以下类型的运算，如果进行加法的值超出以下的类型，则结果为 `null`。
+| 第一个参数 | 第二个参数 | 结果 |
+| --- | --- | --- |
+| date | duration | date |
+| time | days-time-duration | time |
+| date-time | duration | date-time |
+| duration | date | date |
+| duration | time | time |
+| duration | date-time | date-time |
+| duration | duration | duration |
+
+```java
+date("2020-04-06") + duration("P1D")
+// date("2020-04-07")
+
+time("08:00:00") + duration("PT1H")
+// time("09:00:00")
+
+date and time("2020-04-06T08:00:00") + duration("P7D")
+// date and time("2020-04-13T08:00:00")
+
+duration("P2D") + duration("P5D")
+// duration("P7D")
+
+```
+
+### 减法
+
+减法运算符定义了以下类型的运算，如果进行减法的值超出以下的类型，则结果为 `null`。
+
+如果其中一个值具有时区或时间偏移量，则另一个值也必须具有时区或时间偏移量。否则，结果为 `null`。
+
+| 第一个参数 | 第二个参数 | 结果 |
+| --- | --- | --- |
+| date | date | days-time-duration |
+| date | duration | date |
+| time | time | days-time-duration |
+| time | days-time-duration | time |
+| date-time | date-time | days-time-duration |
+| date-time | duration | date-time |
+| days-time-duration | days-time-duration | days-time-duration |
+| years-months-duration | years-months-duration | years-months-duration |
+
+```java
+date("2020-04-06") - date("2020-04-01")
+// duration("P5D")
+
+date("2020-04-06") - duration("P5D")
+// date("2020-04-01")
+
+time("08:00:00") - time("06:00:00")
+// duration("PT2H")
+
+time("08:00:00") - duration("PT2H")
+// time("06:00:00")
+
+duration("P7D") - duration("P2D")
+// duration("P5D")
+
+duration("P1Y") - duration("P3M")
+// duration("P9M")
+```
+
+### 乘法
+
+乘法运算法运算符定义了以下类型的运算，如果进行乘法的值超出以下的类型，则结果为 `null`。
+| 第一个参数 | 第二个参数 | 结果 |
+| --- | --- | --- |
+| days-time-duration | number | days-time-duration |
+| number | days-time-duration | days-time-duration |
+| years-months-duration | number | years-months-duration |
+| number | years-months-duration | years-months-duration |
+
+```java
+duration("P1D") * 5
+// duration("P5D")
+
+duration("P1M") * 6
+// duration("P6M")
+```
+
+### 除法
+
+除法运算符定义了以下类型的运算，如果进行除法的值超出以下的类型，则结果为 `null`。
+| 第一个参数 | 第二个参数 | 结果 |
+| --- | --- | --- |
+| days-time-duration | days-time-duration | number |
+| days-time-duration | number | days-time-duration |
+| years-months-duration | years-months-duration | number |
+| years-months-duration | number | years-months-duration |
+
+```java
+duration("P5D") / duration("P1D")
+// 5
+
+duration("P5D") / 5
+// duration("P1D")
+
+duration("P1Y") / duration("P1M")
+// 12
+
+duration("P1Y") / 12
+// duration("P1M")
+
+```
+
+### 属性
+
+一个时间值有多个属性，用于其组件。以下属性可用于给定类型：
+| 属性 | 用途 | 说明 |
+| --- | --- | --- |
+| year | date, date-time | 返回表示年份的数字 |
+| month | date, date-time | 返回表示月份的数字，区间为 [1..12], 其中，1 表示一月份 |
+| day | date, date-time | 返回表示日期的数字，区间为 [1..31] |
+| weekday | date, date-time | 返回表示星期的数字，区间为 [1..7], 其中，1 表示星期一 |
+| hour | time, date-time | 返回表示小时的数字，区间为 [0..23] |
+| minute | time, date-time | 返回表示分钟的数字，区间为 [0..59] |
+| second | time, date-time | 返回表示秒钟的数字，区间 [0..59] |
+| time offset | time, date-time | 返回对应时区的时间偏移量 或 null |
+| timezone | time, date-time | 返回时区标识符 或 null |
+| days | days-time-duration | 返回值为数字的标准日期组件 |
+| hours | days-time-duration | 返回值区间为 [0..23] 的标准小时组件 |
+| minutes | days-time-duration | 返回值区间为 [0..59] 的标准分钟组件 |
+| seconds | days-time-duration | 返回值为 [0..59] 的标准秒钟组件 |
+| years | years-months-duration | 返回值为数字的标准年份组件 |
+| months | years-months-duration | 返回值区间为 [0..11] 的标准月份组件 |
+
+```java
+date("2020-04-06").year
+// 2020
+
+date("2020-04-06").month
+// 4
+
+date("2020-04-06").weekday
+// 1
+
+time("08:00:00").hour
+// 8
+
+date and time("2020-04-06T08:00:00+02:00").time offset
+// duration("PT2H")
+
+date and time("2020-04-06T08:00:00@Europe/Berlin").timezone
+// "Europe/Berlin"
+
+duration("PT2H30M").hours
+// 2
+
+duration("PT2H30M").minutes
+// 30
+
+duration("P6M").months
+// 6
+```

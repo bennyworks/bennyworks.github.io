@@ -1,0 +1,186 @@
+---
+id: feel-data-types
+title: FEEL数据类型
+description: FEEL数据类型
+---
+
+FEEL 定义以下数据类型：
+
+### Null
+
+没有值，空，或无（即值不存在）。
+
+- Java 类型：`null`
+
+```java
+null
+```
+
+### Number
+
+一个整数或浮点数。这个数字可以是负数。
+
+- 不是数字（NaN）、正无穷大/负无穷大表示为 `null`
+- Java类型：`java.math.BigDecimal`
+
+```java
+1
+
+2.3
+
+.4
+
+-5
+```
+
+### String
+
+A sequence of characters enclosed in double quotes `"`. The sequence can also contain escaped characters starting with `\` (e.g. `\'`, `\"`, `\\`, `\n`, `\r`, `\t`, unicode like `\u269D` or `\U101EF`).
+
+一组用双引号`""` 包围的字符。该序列也可以包含以`\` 开头的转义字符（例如`\'`, `\"`, `\\`, `\n`, `\r`, `\t`、unicode 如`\u269D` 或者 `\U101EF`）。
+
+- Java 类型：`java.lang.String`
+
+```java
+"valid"
+```
+
+### Boolean
+
+一个布尔值。它要么是`true`要么是`false`。
+
+- Java 类型：`java.lang.Boolean`
+
+```java
+true
+
+false
+```
+
+### Date
+
+一个不包含时间部分的日期值。
+
+- 格式：`yyyy-MM-dd`.
+- Java 类型：`java.time.LocalDate`
+
+```java
+date("2017-03-10")
+
+@"2017-03-10"
+```
+
+### Time
+
+一个本地或时区时间。该时间可以有偏移量或时区标识。
+
+- 格式：`HH:mm:ss` / `HH:mm:ss+/-HH:mm` / `HH:mm:ss@ZoneId`
+- Java 类型：`java.time.LocalTime` / `java.time.OffsetTime`
+
+```java
+time("11:45:30")
+time("13:30")
+time("11:45:30+02:00")
+time("10:31:10@Europe/Paris")
+
+@"11:45:30"
+@"13:30"
+@"11:45:30+02:00"
+@"10:31:10@Europe/Paris"
+```
+
+### Date-time
+
+一个包含本地时间或时区的时间日期。时间可以有时区偏移或时区标识。
+
+- 格式：`yyyy-MM-dd'T'HH:mm:ss` / `yyyy-MM-dd'T'HH:mm:ss+/-HH:mm` / `yyyy-MM-dd'T'HH:mm:ss@ZoneId`
+- Java 类型：`java.time.LocalDateTime` / `java.time.DateTime`
+
+```java
+date and time("2015-09-18T10:31:10")
+date and time("2015-09-18T10:31:10+01:00")
+date and time("2015-09-18T10:31:10@Europe/Paris")
+
+@"2015-09-18T10:31:10"
+@"2015-09-18T10:31:10+01:00"
+@"2015-09-18T10:31:10@Europe/Paris"
+```
+
+### Days-time-duration
+
+基于秒的持续时间。它可以包含天数、小时、分钟和秒。
+
+- 格式：`PxDTxHxMxS`
+- Java 类型：`java.time.Duration`
+
+```java
+// 持续4天
+duration("P4D")
+
+// 持续2小时
+duration("PT2H")
+
+// 持续30分钟
+duration("PT30M")
+
+// 持续1天6小时
+duration("P1DT6H")
+
+@"P4D"
+@"PT2H"
+@"PT30M"
+@"P1DT6H"
+```
+
+### Years-months-duration
+
+基于日历的持续时间。它可以包含年和月。
+
+- 格式：`PxYxM`
+- Java 类型：`java.time.Period`
+
+```java
+// 持续2年
+duration("P2Y")
+
+// 持续6个月
+duration("P6M")
+
+// 持续1年6个月
+duration("P1Y6M")
+
+@"P2Y"
+@"P6M"
+@"P1Y6M"
+```
+
+### List
+
+一个元素列表。这些元素可以是任何类型。列表可以为空。
+
+- Java 类型：`java.util.List`
+
+```java
+[]
+[1,2,3]
+["a","b"]
+
+[["list"], "of", [["lists"]]]
+```
+
+### Context
+
+一个的条目列表，每个条目都有一个key和一个value。key可以是名称或字符串，value可以是任何类型，context可以为空。
+
+- Java 类型：`java.util.Map`
+
+```java
+{}
+
+{a:1}
+{b: 2, c: "valid"}
+{nested: {d: 3}}
+
+{"a": 1}
+{"b": 2, "c": "valid"}
+```

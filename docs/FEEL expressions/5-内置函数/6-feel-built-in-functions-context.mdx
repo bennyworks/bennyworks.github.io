@@ -1,0 +1,154 @@
+---
+id: feel-built-in-functions-context
+title: context 函数
+---
+
+### get value(context, key)
+
+根据给定的键返回context条目的值。
+
+
+**函数声明**
+
+```
+get value(context: context, key: string): Any
+```
+
+**示例**
+
+```
+get value({foo: 123}, "foo")
+// 123
+
+get value({a: 1}, "b")
+// null
+```
+
+### get value(context, keys)
+
+<Highlight color="#c54302">Camunda Extension</Highlight>
+
+根据给定键定义的context路径，获取context条目的值。
+
+如果`keys`包含键`[k1, k2]`，则返回context中嵌套条目`k1.k2`的值。
+
+如果`keys`为空或由键定义的嵌套条目在上下文中不存在，则返回`null`。
+
+**函数声明**
+
+```
+get value(context: context, keys: list<string>): Any
+```
+
+**示例**
+
+```
+get value({x:1, y: {z:0}}, ["y", "z"])
+// 0
+
+get value({x: {y: {z:0}}}, ["x", "y"])
+// {z:0}
+
+get value({a: {b: 3}}, ["b"])
+// null
+```
+
+### get entries(context)
+
+将context的条目作为键值对列表返回。
+
+**函数声明**
+
+```
+get entries(context: context): list<context>
+```
+
+返回值是一个context列表。每个context包含两个条目，"key" 和 "value"。
+
+**示例**
+
+```
+get entries({foo: 123})
+// [{key: "foo", value: 123}]
+```
+
+### context put(context, key, value)
+
+Adds a new entry with the given key and value to the context. Returns a new context that includes the entry.
+将给定的键和值的条目添加到context中，并返回一个包含该条目的新context。
+
+**函数声明**
+
+```
+context put(context: context, key: string, value: Any): context
+```
+
+**示例**
+
+```
+context put({x:1}, "y", 2)
+// {x:1, y:2}
+```
+
+:::info[提示]
+
+函数`context put()`替换了以前的函数`put()`（Camunda扩展）。以前的函数已被弃用，不应再使用。
+
+:::
+
+### context put(context, keys, value)
+
+将给定值的条目添加到context中，条目的路径由keys定义，并返回一个包含该条目的新context。
+
+如果`keys`包含键`[k1, k2]`，则将嵌套条目`k1.k2 = value`添加到context中。
+
+如果context中已经存在具有相同键的条目，则覆盖该值。
+
+如果`keys`为空，则返回`null`。
+
+**函数声明**
+
+```
+context put(context: context, keys: list<string>, value: Any): context
+```
+
+**示例**
+
+```
+context put({x:1}, ["y"], 2)
+// {x:1, y:2}
+
+context put({x:1, y: {z:0}}, ["y", "z"], 2)
+// {x:1, y: {z:2}}
+
+context put({x:1}, ["y", "z"], 2)
+// {x:1, y: {z:2}}
+```
+
+### context merge(contexts)
+
+合并给定的contexts。返回一个包含给定contexts的所有条目的新context。
+
+如果context中已经存在具有相同键的条目，则覆盖该值。条目按照contexts列表中的顺序覆盖。
+
+**函数声明**
+
+```
+context merge(contexts: list<context>): context
+```
+
+**示例**
+
+```
+context merge([{x:1}, {y:2}])
+// {x:1, y:2}
+
+context merge([{x:1, y: 0}, {y:2}])
+// {x:1, y:2}
+```
+
+:::info[提示]
+
+函数`context merge()`替换了以前的函数`put all()`（Camunda扩展）。以前的函数已被弃用，不应再使用。
+
+:::

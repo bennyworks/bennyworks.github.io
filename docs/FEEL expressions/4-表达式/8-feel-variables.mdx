@@ -1,0 +1,67 @@
+---
+id: feel-variables
+title: Variables 变量
+---
+
+# 变量
+
+### 访问变量
+
+通过变量名访问变量的值。
+
+```java
+a + b
+```
+
+如果变量的值是一个context，则该context的条目可以[通过它的key来访问](./6-feel-context-expressions.mdx#获取条目条目路径)。
+
+```java
+a.b
+
+```
+
+如果不存在给定名称的变量，则表达式返回`null`。
+
+:::tip
+如果变量为`null`或可选，请使用[控制检查](./2-feel-boolean-expressions.mdx#空值检查)。
+
+```java
+a != null and a.b > 10
+```
+:::
+
+### 变量名
+
+变量的名称可以是任何包含`_`符号的字母数字字符串。对于单词组合，建议使用`camelCase`或`snake_case`格式。不允许使用`kebab-case`格式，因为它包含运算符`-`。
+
+在表达式中访问变量时，请记住变量名是区分大小写的。
+
+变量名的限制：
+- 不使用数字开头（例如`1stChoice`不允许；您可以使用`firstChoice`代替）;
+- 不包含空格（例如`order number`不允许；您可以使用`orderNumber`代替）;
+- 不包含运算符（例如`+`，`-`，`*`，`/`，`=`，`>`，`<`，`?`，`.`）;
+- 不使用字面量（例如`null`，`true`，`false`） 或 保留关键字（例如`function`，`if`，`then`，`else`，`for`，`return`，`between`，`instance`，`of`，`not`，`in`，`and`，`or`，`some`，`every`，`satisfies`）。
+
+
+### 转义变量名
+
+<Highlight color="#c54302">Camunda Extension</Highlight>
+
+如果一个变量名或context的key包含任何特殊字符（例如空格、破折号等），则可以将名称包装在单反引号/反引号中（例如``foo bar``）。
+
+```java
+`first name`
+
+`tracking-id`
+
+order.`total price`
+```
+
+:::tip
+
+请使用[`get value()`](../5-内置函数/6-feel-built-in-functions-context.mdx#get-valuecontext-key)函数来检索任意键的上下文值。
+
+```java
+get value(order, "total price")
+```
+:::

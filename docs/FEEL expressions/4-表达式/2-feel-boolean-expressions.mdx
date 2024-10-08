@@ -1,0 +1,201 @@
+---
+id: feel-boolean-expressions
+title: Boolean 表达式
+---
+
+### 字面量
+
+创建一个新的boolean值。
+
+```java
+true
+
+false
+```
+
+### 比较
+
+使用以下运算符比较两个值，使用以下运算符之一。
+
+进行比较的两个值必须具有相同的类型。否则，结果为`null`。
+
+| 运算符 | 说明 | 支持类型 |
+| --- | --- | --- |
+| = | 等于 | 任意类型 |
+| != | 不等于 | 任意类型 |
+| \< | 小于 | number, date, time, date-time, duration |
+| \<= | 小于或等于 | number, date, time, date-time, duration |
+| > | 大于 | number, date, time, date-time, duration |
+| >= | 大于或等于 | number, date, time, date-time, duration |
+| 在 [x] 和 [y] 之间 | 写成 (_ >= x and _ \<= y) | number, date, time, date-time, duration |
+
+```java
+5 = 5
+// true
+
+5 != 5
+// false
+
+date("2020-04-05") < date("2020-04-06")
+// true
+
+time("08:00:00") <= time("08:00:00")
+// true
+
+duration("P1D") > duration("P5D")
+// false
+
+duration("P1Y") >= duration("P6M")
+// true
+
+5 between 3 and 7
+// true
+
+date("2020-04-06") between date("2020-04-05") and date("2020-04-09")
+// true
+
+```
+
+:::warning[注意]
+
+等于运算符只有一个等号（例如`x = y`）。在其他语言中，运算符有两个等号（例如`x == y`）。
+
+:::
+
+### 空值检查
+
+任何值或变量都可以与`null`进行比较，以检查它是否等于`null`，或者它是否存在。
+
+将 `null` 与非 `null` 比较，结果为 `false`。如果值是 `null` 或变量不存在，则返回 `true`。
+
+将`context`条目与 `null` 比较，结果为 `true`，如果条目的值为 `null` 或`context`不包含具有此键的条目。
+
+
+```java
+null = null
+// true
+
+"foo" = null
+// false
+
+{x: null}.x = null
+// true
+
+{}.y = null
+// true
+
+```
+
+### 逻辑且
+
+将多个布尔值组合在一起，遵循以下三元运算逻辑：
+- 如果所有值都是`true`，则结果为`true`。
+- 如果有一个值是`false`，则结果为`false`。
+- 否则，结果为`null`（即如果值不是布尔值）。
+
+```java
+true and true
+// true
+
+true and false
+// false
+
+true and null
+// null
+
+true and "otherwise"
+// null
+
+false and null
+// false
+
+false and "otherwise"
+// false
+
+```
+
+### 逻辑或
+
+将多个布尔值组合在一起，遵循以下三元运算逻辑：
+- 如果至少有一个值是`true`，则结果为`true`。
+- 如果所有值都是`false`，则结果为`false`。
+- 否则，结果为`null`（即如果值不是布尔值）。
+
+``` java
+true or false
+// true
+
+false or false
+// false
+
+true or null
+// true
+
+true or "otherwise"
+// true
+
+false or null
+// null
+
+false or "otherwise"
+// null
+
+```
+
+### 类型检查
+
+检查值是否为给定类型。可用的类型名称：
+- `boolean`
+- `number`
+- `string`
+- `date`
+- `time`
+- `date and time`
+- `days and time duration`
+- `years and months duration`
+- `list`
+- `context`
+- `function`
+- `Any`
+
+使用类型`Any`来检查值是否不是`null`。
+
+```java
+1 instance of number
+// true
+
+1 instance of string
+// false
+
+1 instance of Any
+// true
+
+null instance of Any
+// false
+
+duration("P3M") instance of years and months duration
+// true
+
+duration("PT4H") instance of days and time duration
+// true
+
+```
+
+### in的一元测试
+
+使用给定值进行[一元测试](../3-feel-unary-tests.mdx)。关键字`in`将值与一元测试分隔开。
+
+```java
+5 in (3..7)
+// true
+
+date("2021-06-04") in [date("2021-05-01")..date("2021-05-31")]
+// false
+
+5 in (3,5,7)
+// true
+
+5 in [2,4,6,8]
+// false
+
+```

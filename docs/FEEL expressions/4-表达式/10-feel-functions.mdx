@@ -1,0 +1,42 @@
+---
+id: feel-functions
+title: Functions 函数
+---
+
+### 调用内置函数
+
+调用一个内置函数（例如 [`contains()`](../5-内置函数/3-feel-built-in-functions-string.mdx#containsstring-match)）或通过其名称调用用户定义的函数。函数的参数可以按位置或按名称传递。
+
+- 按位置：仅按函数定义的顺序传递参数值（例如 `f(1,2)`）。
+- 按名称：以参数名称作为前缀传递参数值，则可以是任意顺序（例如 `f(a: 1, b: 2)`）。
+
+```java
+contains("me@camunda.com", ".com")
+// true
+
+contains(string: "me@camunda.com", match: ".de")
+// false
+```
+
+:::info[提示]
+
+如果不存在具有给定名称的函数，或者参数类型与函数签名不匹配，则调用将返回 `null`。
+
+:::
+
+### 调用用户定义的函数
+
+```java
+function(a,b) e
+```
+
+使用参数名称列表和一个表达式（即函数体）定义一个函数。当函数被调用时，它将值赋给参数，并评估表达式。
+
+在一个表达式中，可以在context中定义和调用函数。
+
+```java
+{
+  age: function(birthday) (today() - birthday).years
+}
+
+```

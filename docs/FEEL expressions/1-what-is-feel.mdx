@@ -1,0 +1,39 @@
+---
+id: what-is-feel
+title: 什么是 FEEL？
+description: FEEL是一种用于表达业务规则的语言，它允许您以简单、直观的方式定义业务逻辑。
+date: 2024-09-26T10:00
+---
+
+**Friendly Enough Expression Language (FEEL)** 旨在以一种易于业务专业人员和开发人员理解的方式编写表达式。在Camunda中，FEEL用于在BPMN图、DMN图和表单的上下文中定义表达式。FEEL在对象管理组（OMG）的DMN规范中有所规定。
+
+### 学习 FEEL
+为了更好地理解 FEEL 及其在 Camunda 中的集成方式，您可以查阅以下资源：
+- [Camunda 8 表达式](https://docs.camunda.io/docs/components/concepts/expressions/)：了解我们的平台中如何使用表达式；
+- [FEEL 语法和运算符](./4-表达式/1-feel-expressions-introduction.mdx)：了解如何编写基本的表达式；
+- [内置函数](./5-内置函数/1-feel-built-in-functions-introduction.mdx)：了解 FEEL 引擎提供的函数。
+
+
+### FEEL 引擎
+为了运算您的表达式，Camunda 根据用例使用了两种不同的 FEEL 引擎：FEEL Scala（Java FEEL 引擎）和 feelin（JavaScript FEEL 引擎）。两者都支持基本的 FEEL 语法和函数。您可以在下面的Playground中尝试您的表达式。
+
+
+#### FEEL Scala (Java FEEL engine)
+<font color="#c54302">**FEEL Scala**</font> 是一个基于 Java 的 FEEL 引擎，集成在我们的平台的后端。它主要负责运算 BPMN图 和 DMN图 中的表达式。
+
+:::tip[提示]
+
+FEEL Scala 引擎支持一组标准 DMN FEEL 的扩展。文档通过以下标签标记它们：
+
+<Highlight color="#c54302">Camunda Extension</Highlight>
+
+:::
+
+尝试在 [FEEL Scala Playground](https://camunda.github.io/feel-scala/docs/playground/) 中编写表达式。
+
+#### feelin (JavaScript FEEL engine)
+
+<font color="#c54302">**feelin**</font> 是一个基于 JavaScript 的 FEEL 引擎，专为在浏览器中使用而设计，用于 [Camunda 表单](https://docs.camunda.io/docs/components/modeler/forms/camunda-forms-reference/)和[模板](https://docs.camunda.io/docs/components/modeler/forms/configuration/forms-config-templating-syntax/)。目前，feelin 不支持 [Camunda 扩展](https://docs.camunda.io/docs/components/modeler/feel/what-is-feel/#camunda-extensions)。
+
+
+尝试在 [feelin Playground](https://nikku.github.io/feel-playground/) 中编写表达式。

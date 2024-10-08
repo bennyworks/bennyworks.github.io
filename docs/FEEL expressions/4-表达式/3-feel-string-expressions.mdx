@@ -1,0 +1,31 @@
+---
+id: feel-string-expressions
+title: String 表达式
+---
+
+### 字面量
+
+创建一个新值。
+
+```
+"valid"
+```
+
+### 加法拼接
+
+使用加法拼接字符串。结果是一个包含两个字符串字符的字符串。
+
+```java
+"foo" + "bar"
+// "foobar"
+```
+
+:::tip[提示]
+
+拼接仅适用于字符串值。对于其他类型，可以使用[`string()`](../5-内置函数/9-feel-built-in-functions-conversion.mdx#stringfrom)函数将值首先转换为字符串。
+
+:::
+
+```java
+"order-" + string(123)
+```
