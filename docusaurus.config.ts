@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: '数字化技术',
+  tagline: '集成AI和流程自动化',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -76,20 +76,15 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'componentsSidebar',
           position: 'left',
-          label: 'Components',
+          label: 'Cammunda组件',
         },
         {
           type: 'docSidebar',
           sidebarId: 'guidesSidebar',
           position: 'left',
-          label: 'Guides',
+          label: 'Cammunda指南',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/blog', label: '博客', position: 'left'},
       ],
     },
     footer: {
