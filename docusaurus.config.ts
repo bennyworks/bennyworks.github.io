@@ -17,6 +17,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'bennyworks', // Usually your GitHub org/user name.
   projectName: 'bennyworks.github.io', // Usually your repo name.
+  deploymentBranch: 'deployment',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -136,6 +137,38 @@ const config: Config = {
       //theme: prismThemes.github,
       theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      // Algolia 提供的应用 ID
+      appId: 'YOUR_APP_ID',
+
+      //  公开 API 密钥：提交它没有危险
+      apiKey: 'YOUR_SEARCH_API_KEY',
+
+      indexName: 'YOUR_INDEX_NAME',
+
+      // 可选：见下文
+      contextualSearch: true,
+
+      // 可选：声明哪些域名需要用 window.location 型的导航而不是 history.push。 适用于 Algolia 配置会爬取多个文档站点，而我们想要用 window.location.href 在它们之间跳转时。
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // 可选：替换 Algolia 的部分网址。 在使用相同搜索索引支持多个不同 baseUrl 的部署时非常有用。 你可以在 “from” 中使用正则表达式或字符串。 比方说，localhost:3000 和 myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      // 可选：Algolia 搜索参数
+      searchParameters: {},
+
+      // 可选：默认启用的搜索页路径（传递 `false` 以禁用它）
+      searchPagePath: 'search',
+
+      // 可选：Docsearch 的 insights 功能是否启用（默认为 `false`）
+      insights: false,
+
+      //... 其他 Algolia 参数
     },
   } satisfies Preset.ThemeConfig,
 };
