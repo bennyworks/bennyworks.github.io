@@ -140,12 +140,12 @@ const config: Config = {
     },
     algolia: {
       // Algolia 提供的应用 ID
-      appId: 'YOUR_APP_ID',
+      appId: 'Z7T47CG9YS',
 
       //  公开 API 密钥：提交它没有危险
-      apiKey: 'YOUR_SEARCH_API_KEY',
+      apiKey: 'a554f149912bf81a3d10a40d2e50b9c6',
 
-      indexName: 'YOUR_INDEX_NAME',
+      indexName: 'chenjianbin',
 
       // 可选：见下文
       contextualSearch: true,
